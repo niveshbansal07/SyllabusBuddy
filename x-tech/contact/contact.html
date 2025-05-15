@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../home/style.css">
   <link rel="stylesheet" href="contact.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="../Images/syllabusBuddy-Logo.png" type="image/icon">
+  <link rel="icon" href="../Images/syllabusBuddy-Logo.png" type="image/icon">
 
 </head>
 
@@ -24,7 +24,7 @@
     <p style="text-align:center;">We’d love to hear from you! Whether you're a student, coder, or educator — drop your
       questions or suggestions anytime.</p>
 
-    <form id="contactForm">
+    <form id="contactForm" action="https://formsubmit.co/syllabusbuddy2025@gmail.com" method="POST">
       <div class="form-group">
         <input type="text" name="name" id="name" placeholder=" " required>
         <label for="name">Your Name</label>
@@ -37,6 +37,13 @@
         <textarea name="message" id="message" placeholder=" " required></textarea>
         <label for="message">Describe Your Query or Feedback</label>
       </div>
+
+      <!-- Optional: Redirect after submission -->
+      <input type="hidden" name="_next" value="https://syllabus-buddy.vercel.app/x-tech/contact/thankyou.html">
+
+      <!-- Optional: Disable CAPTCHA -->
+      <input type="hidden" name="_captcha" value="false">
+
       <button type="submit" class="btn-submit">Send Message</button>
     </form>
 
@@ -79,26 +86,7 @@
         hamburger.innerHTML = "☰";
       }
     }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("contactForm");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
-
-        const whatsappNumber = "91XXXXXXXXXX"; // Replace with your number
-        const encodedMsg = encodeURIComponent(
-          `Hello, I'm ${name}\nEmail: ${email}\nQuery: ${message}`
-        );
-
-        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMsg}`;
-        window.open(whatsappURL, "_blank");
-      });
-    });
+    
   </script>
 
 

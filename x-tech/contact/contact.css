@@ -121,3 +121,10 @@
     .social-follow span:hover {
       transform: scale(1.2);
     }
+
+    @media (max-width: 768px){
+      .contact-features{
+        display: flex;
+        flex-direction: column;
+      }
+    }
