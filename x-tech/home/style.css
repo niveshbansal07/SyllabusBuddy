@@ -70,7 +70,7 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #0044cc;
+  color: #000000;
 }
 
 .nav-links {
@@ -258,6 +258,7 @@ footer {
   align-items: flex-start;
   max-width: 1200px;
   margin: auto;
+  gap: 30px;
 }
 
 .footer-logo {
@@ -324,6 +325,41 @@ footer {
 .footer-links a:hover {
   color: #00ffcc;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+
+  .footer-logo {
+  flex: 1 1 100px;
+}
+
+  .footer-links {
+    margin-top: 0;       /* remove any top margin */
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links div {
+    min-width: auto;
+  }
+
+  .footer-logo .animated-logo {
+    font-size: 2em;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+  }
+}
+
 
 /*----------------------- FOOTER END ---------------- */
 
