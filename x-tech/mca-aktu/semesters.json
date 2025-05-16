@@ -1,0 +1,206 @@
+[
+  {
+    "semester": "Semester 1",
+    "subjects": [
+      {
+        "title": "Mathematical Foundation for Computer Science",
+        "years": {
+          "2022": "https://drive.google.com/file/d/1lewZH7OQv1F1msZz8HvCtgvh1B_yEDUQ/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1_oQjAUMGB117puCfjTwmecVpT19t8joR/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1QO_4LIC7ApKEO0Q8WPTVHhJ9wcFow6HG/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Computer Fundamental & Office Automation",
+        "years": {
+          "2022": "https://drive.google.com/file/d/109sidWII0qOOCqI3DrEspV23ws-lSlXa/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1YLHCf0xnHnmQFoI0m2JljfkN731LIlD2/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1-HMchYuWdzrjVNwtQnHcwMyWPnVcj4K3/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Programming in “C”",
+        "years": {
+          "2023": "https://drive.google.com/file/d/1kANZ3rCXrNDmEAxZs3x-HsATR9UVB8oN/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1tcI-DWln1oJ8VzHTMAUy9VLpN8bbz4QD/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Digital Electronics & Computer Organization",
+        "years": {
+          "2023": "https://drive.google.com/file/d/1hK7RdvhCh1fVp_LETv7N7QmjnLS0IL-J/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1KoK8jhLEIQezp3i9ramO05vDPebA5EcS/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Business Communication",
+        "years": {
+          "2021": "https://drive.google.com/file/d/1neGlfG_FubSwI6qu9krwz10PKvghc0dH/view?usp=drive_link",
+          "2022": "https://drive.google.com/file/d/1ydnSN0Q7CZ5TOnv8DGdHWnhj_R9rq8Ar/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1ZkAaHov7TO9GmpuDsxkDKERUAxeUl_KL/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1mWxi5PRVP8Q_YuZZsWQ2Uq9YN_Xw-9Cq/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Environmental Studies",
+        "years": {
+          "2022": "https://drive.google.com/file/d/1r9SjI1pFtDjt7k0oIbQf7ROOBUvVnUAL/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1wbbeOb5g6UdVBAM-W9NGWug3pSEcuWW3/view?usp=drive_link"
+        }
+      }
+    ]
+  },
+  {
+    "semester": "Semester 2",
+    "subjects": [
+      {
+        "title": "Mathematical Foundation for Computer Science",
+        "years": {
+          "2022": "https://drive.google.com/file/d/1lewZH7OQv1F1msZz8HvCtgvh1B_yEDUQ/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1_oQjAUMGB117puCfjTwmecVpT19t8joR/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1QO_4LIC7ApKEO0Q8WPTVHhJ9wcFow6HG/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Computer Fundamental & Office Automation",
+        "years": {
+          "2022": "https://drive.google.com/file/d/109sidWII0qOOCqI3DrEspV23ws-lSlXa/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1YLHCf0xnHnmQFoI0m2JljfkN731LIlD2/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1-HMchYuWdzrjVNwtQnHcwMyWPnVcj4K3/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Programming in “C”",
+        "years": {
+          "2023": "https://drive.google.com/file/d/1kANZ3rCXrNDmEAxZs3x-HsATR9UVB8oN/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1tcI-DWln1oJ8VzHTMAUy9VLpN8bbz4QD/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Digital Electronics & Computer Organization",
+        "years": {
+          "2023": "https://drive.google.com/file/d/1hK7RdvhCh1fVp_LETv7N7QmjnLS0IL-J/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1KoK8jhLEIQezp3i9ramO05vDPebA5EcS/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Business Communication",
+        "years": {
+          "2021": "https://drive.google.com/file/d/1neGlfG_FubSwI6qu9krwz10PKvghc0dH/view?usp=drive_link",
+          "2022": "https://drive.google.com/file/d/1ydnSN0Q7CZ5TOnv8DGdHWnhj_R9rq8Ar/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1ZkAaHov7TO9GmpuDsxkDKERUAxeUl_KL/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1mWxi5PRVP8Q_YuZZsWQ2Uq9YN_Xw-9Cq/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Environmental Studies",
+        "years": {
+          "2022": "https://drive.google.com/file/d/1r9SjI1pFtDjt7k0oIbQf7ROOBUvVnUAL/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1wbbeOb5g6UdVBAM-W9NGWug3pSEcuWW3/view?usp=drive_link"
+        }
+      }
+    ]
+  },
+  {
+    "semester": "Semester 3",
+    "subjects": [
+      {
+        "title": "Mathematical Foundation for Computer Science",
+        "years": {
+          "2022": "https://drive.google.com/file/d/1lewZH7OQv1F1msZz8HvCtgvh1B_yEDUQ/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1_oQjAUMGB117puCfjTwmecVpT19t8joR/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1QO_4LIC7ApKEO0Q8WPTVHhJ9wcFow6HG/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Computer Fundamental & Office Automation",
+        "years": {
+          "2022": "https://drive.google.com/file/d/109sidWII0qOOCqI3DrEspV23ws-lSlXa/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1YLHCf0xnHnmQFoI0m2JljfkN731LIlD2/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1-HMchYuWdzrjVNwtQnHcwMyWPnVcj4K3/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Programming in “C”",
+        "years": {
+          "2023": "https://drive.google.com/file/d/1kANZ3rCXrNDmEAxZs3x-HsATR9UVB8oN/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1tcI-DWln1oJ8VzHTMAUy9VLpN8bbz4QD/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Digital Electronics & Computer Organization",
+        "years": {
+          "2023": "https://drive.google.com/file/d/1hK7RdvhCh1fVp_LETv7N7QmjnLS0IL-J/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1KoK8jhLEIQezp3i9ramO05vDPebA5EcS/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Business Communication",
+        "years": {
+          "2021": "https://drive.google.com/file/d/1neGlfG_FubSwI6qu9krwz10PKvghc0dH/view?usp=drive_link",
+          "2022": "https://drive.google.com/file/d/1ydnSN0Q7CZ5TOnv8DGdHWnhj_R9rq8Ar/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1ZkAaHov7TO9GmpuDsxkDKERUAxeUl_KL/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1mWxi5PRVP8Q_YuZZsWQ2Uq9YN_Xw-9Cq/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Environmental Studies",
+        "years": {
+          "2022": "https://drive.google.com/file/d/1r9SjI1pFtDjt7k0oIbQf7ROOBUvVnUAL/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1wbbeOb5g6UdVBAM-W9NGWug3pSEcuWW3/view?usp=drive_link"
+        }
+      }
+    ]
+  },
+  {
+    "semester": "Semester 4",
+    "subjects": [
+      {
+        "title": "Mathematical Foundation for Computer Science",
+        "years": {
+          "2022": "https://drive.google.com/file/d/1lewZH7OQv1F1msZz8HvCtgvh1B_yEDUQ/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1_oQjAUMGB117puCfjTwmecVpT19t8joR/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1QO_4LIC7ApKEO0Q8WPTVHhJ9wcFow6HG/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Computer Fundamental & Office Automation",
+        "years": {
+          "2022": "https://drive.google.com/file/d/109sidWII0qOOCqI3DrEspV23ws-lSlXa/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1YLHCf0xnHnmQFoI0m2JljfkN731LIlD2/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1-HMchYuWdzrjVNwtQnHcwMyWPnVcj4K3/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Programming in “C”",
+        "years": {
+          "2023": "https://drive.google.com/file/d/1kANZ3rCXrNDmEAxZs3x-HsATR9UVB8oN/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1tcI-DWln1oJ8VzHTMAUy9VLpN8bbz4QD/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Digital Electronics & Computer Organization",
+        "years": {
+          "2023": "https://drive.google.com/file/d/1hK7RdvhCh1fVp_LETv7N7QmjnLS0IL-J/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1KoK8jhLEIQezp3i9ramO05vDPebA5EcS/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Business Communication",
+        "years": {
+          "2021": "https://drive.google.com/file/d/1neGlfG_FubSwI6qu9krwz10PKvghc0dH/view?usp=drive_link",
+          "2022": "https://drive.google.com/file/d/1ydnSN0Q7CZ5TOnv8DGdHWnhj_R9rq8Ar/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1ZkAaHov7TO9GmpuDsxkDKERUAxeUl_KL/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1mWxi5PRVP8Q_YuZZsWQ2Uq9YN_Xw-9Cq/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "Environmental Studies",
+        "years": {
+          "2022": "https://drive.google.com/file/d/1r9SjI1pFtDjt7k0oIbQf7ROOBUvVnUAL/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1wbbeOb5g6UdVBAM-W9NGWug3pSEcuWW3/view?usp=drive_link"
+        }
+      }
+    ]
+  }
+]
