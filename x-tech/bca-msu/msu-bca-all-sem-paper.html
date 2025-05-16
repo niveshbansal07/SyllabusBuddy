@@ -494,30 +494,24 @@
         </a> -->
       </div>
 
-       <h4>Sample Papers - NEW <i>(2025)</i></h4>
+      <h4>Sample Papers - NEW <i>(2025)</i></h4>
       <div class="sample-grid">
-        <a
-          href="https://drive.google.com/file/d/108SDq3jR48rconjMAsDN9iLpeAd3GKxF/view?usp=drive_link">
+        <a href="https://drive.google.com/file/d/108SDq3jR48rconjMAsDN9iLpeAd3GKxF/view?usp=drive_link">
           <div class="sample-card">1</div>
         </a>
-        <a
-          href="https://drive.google.com/file/d/10UDW2emtR-R0VtB833hyZqpsYd2h1Pyz/view?usp=drive_link">
+        <a href="https://drive.google.com/file/d/10UDW2emtR-R0VtB833hyZqpsYd2h1Pyz/view?usp=drive_link">
           <div class="sample-card">2</div>
         </a>
-        <a
-          href="https://drive.google.com/file/d/10JpGohWxVU2UwIVOluPIr0Cv_MX5kugS/view?usp=drive_link">
+        <a href="https://drive.google.com/file/d/10JpGohWxVU2UwIVOluPIr0Cv_MX5kugS/view?usp=drive_link">
           <div class="sample-card">3</div>
         </a>
-        <a
-          href="https://drive.google.com/file/d/10CIQixrI7cmhQpM3NlMcMf6gmDxb-HXr/view?usp=drive_link">
+        <a href="https://drive.google.com/file/d/10CIQixrI7cmhQpM3NlMcMf6gmDxb-HXr/view?usp=drive_link">
           <div class="sample-card">4</div>
         </a>
-        <a
-          href="https://drive.google.com/file/d/10ANsJNIOf_BX5P60m_nFQxHPVu7fWZjj/view?usp=drive_link">
+        <a href="https://drive.google.com/file/d/10ANsJNIOf_BX5P60m_nFQxHPVu7fWZjj/view?usp=drive_link">
           <div class="sample-card">5</div>
         </a>
-        <a
-          href="https://drive.google.com/file/d/10VaBmDA5sgCiAywatmXvca3gqEXpyecZ/view?usp=drive_link">
+        <a href="https://drive.google.com/file/d/10VaBmDA5sgCiAywatmXvca3gqEXpyecZ/view?usp=drive_link">
           <div class="sample-card">6</div>
         </a>
       </div>
@@ -804,6 +798,33 @@
   <!-- Script -->
   <button id="scrollTopBtn" title="Go to top">↑</button>
   <script src="../script/include.js"></script>
+  <script>
+    // Replace this with your Adsterra direct link
+    const adLink = "https://www.profitableratecpm.com/j9mj7e73eh?key=1a9f3c908465ef639dae2d8a4abbc5df";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Intercept all <a> tags with download links
+      document.querySelectorAll("a").forEach(link => {
+        const href = link.getAttribute("href");
+        if (href && href.includes("drive.google.com")) {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const downloadLink = link.getAttribute("href");
+            localStorage.setItem("pendingDownload", downloadLink);
+            window.location.href = adLink;
+          });
+        }
+      });
+
+      // When returning from Adsterra, auto-redirect to download
+      const downloadLink = localStorage.getItem("pendingDownload");
+      if (downloadLink) {
+        localStorage.removeItem("pendingDownload");
+        window.location.href = downloadLink;
+      }
+    });
+
+  </script>
 </body>
 
 </html>
