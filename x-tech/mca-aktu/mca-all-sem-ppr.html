@@ -46,58 +46,22 @@
 
 
 
-    <script>
+    
 
+    <script>
         const adLink = "https://www.profitableratecpm.com/j9mj7e73eh?key=1a9f3c908465ef639dae2d8a4abbc5df";
 
-        function handleDownloadAfterAd() {
-            const pending = localStorage.getItem("pendingDownload");
-            if (pending) {
-                localStorage.removeItem("pendingDownload");
-                // Wait a moment to avoid race condition on back navigation
-                setTimeout(() => {
-                    window.location.href = pending;
-                }, 500); // You can increase delay if needed
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            handleDownloadAfterAd(); // trigger download if coming back from ad
-
-            document.querySelectorAll("a").forEach(link => {
-                const href = link.getAttribute("href");
-                if (href && href.includes("drive.google.com")) {
-                    link.addEventListener("click", (e) => {
-                        e.preventDefault();
-                        localStorage.setItem("pendingDownload", href);
-                        window.location.href = adLink; // open ad in same tab
-                    });
-                }
-            });
-        });
-
-        // Also catch when coming back from ad (browser back)
-        window.addEventListener("pageshow", (event) => {
-            if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
-                handleDownloadAfterAd();
-            }
-        });
-
-    </script>
-
-
-
-    <script>
         async function loadSemesters() {
             try {
                 const response = await fetch('semesters.json');
                 const semestersData = await response.json();
-
                 const container = document.getElementById("semesters-container");
 
                 semestersData.forEach(sem => {
                     container.appendChild(createSemesterDOM(sem));
                 });
+
+                setupAdLinks(); // Setup ad behavior after DOM is ready
             } catch (error) {
                 console.error("Error loading semesters data:", error);
             }
@@ -127,6 +91,7 @@
                 Object.entries(subject.years).forEach(([year, link]) => {
                     const a = document.createElement("a");
                     a.href = link;
+                    a.className = "download-link";
 
                     const card = document.createElement("div");
                     card.className = "year-card";
@@ -143,9 +108,46 @@
             return semesterEl;
         }
 
-        document.addEventListener("DOMContentLoaded", loadSemesters);
+        function setupAdLinks() {
+            document.querySelectorAll("a.download-link").forEach(link => {
+                const href = link.getAttribute("href");
+                if (href && (href.includes("drive.google.com") || href.includes("docs.google.com"))) {
+                    link.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        localStorage.setItem("pendingDownload", href);
+                        window.location.href = adLink;
+                    });
+                }
+            });
+        }
+
+        function handleDownloadAfterAd() {
+            const pending = localStorage.getItem("pendingDownload");
+            if (pending) {
+                localStorage.removeItem("pendingDownload");
+                setTimeout(() => {
+                    window.location.href = pending;
+                }, 500);
+            }
+        }
+
+        // Run on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            loadSemesters();
+            handleDownloadAfterAd();
+        });
+
+        // Detect back navigation (from ad page)
+        window.addEventListener("pageshow", (event) => {
+            if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+                handleDownloadAfterAd();
+            }
+        });
     </script>
 
+
+
+    
 </body>
 
 </html>
