@@ -796,30 +796,8 @@
   <button id="scrollTopBtn" title="Go to top">↑</button>
   <script src="../script/include.js"></script>
   <script>
-    // Replace this with your Adsterra direct link
-    // const adLink = "https://www.profitableratecpm.com/j9mj7e73eh?key=1a9f3c908465ef639dae2d8a4abbc5df";
+    console.log(document.querySelectorAll("a"))
 
-    // document.addEventListener("DOMContentLoaded", () => {
-    //   // Intercept all <a> tags with download links
-    //   document.querySelectorAll("a").forEach(link => {
-    //     const href = link.getAttribute("href");
-    //     if (href && href.includes("drive.google.com")) {
-    //       link.addEventListener("click", (e) => {
-    //         e.preventDefault();
-    //         const downloadLink = link.getAttribute("href");
-    //         localStorage.setItem("pendingDownload", downloadLink);
-    //         window.location.href = adLink;
-    //       });
-    //     }
-    //   });
-
-    //   // When returning from Adsterra, auto-redirect to download
-    //   const downloadLink = localStorage.getItem("pendingDownload");
-    //   if (downloadLink) {
-    //     localStorage.removeItem("pendingDownload");
-    //     window.location.href = downloadLink;
-    //   }
-    // });
 
     const adLink = "https://www.profitableratecpm.com/j9mj7e73eh?key=1a9f3c908465ef639dae2d8a4abbc5df";
 
@@ -839,7 +817,7 @@
 
       document.querySelectorAll("a").forEach(link => {
         const href = link.getAttribute("href");
-        if (href && href.includes("drive.google.com")) {
+        if (href && href.includes("drive.google.com")||href && href.includes("docs.google.com")) {
           link.addEventListener("click", (e) => {
             e.preventDefault();
             localStorage.setItem("pendingDownload", href);
@@ -849,6 +827,8 @@
       });
     });
 
+    
+
     // Also catch when coming back from ad (browser back)
     window.addEventListener("pageshow", (event) => {
       if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
@@ -857,17 +837,7 @@
     });
 
 
-    // const adLink = "https://go.adsterra.com/your-ad-link";
 
-    // document.addEventListener("DOMContentLoaded", () => {
-    //   document.querySelectorAll("a").forEach(link => {
-    //     const href = link.getAttribute("href");
-    //     if (href && href.includes("drive.google.com")) {
-    //       const encoded = encodeURIComponent(href);
-    //       link.setAttribute("href", `redirect.html?target=${encoded}`);
-    //     }
-    //   });
-    // });
   </script>
 </body>
 
