@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSU BCA PYQ | SyllabusBuddy</title>
+    <link rel="stylesheet" href="../home/style.css">
+    <link rel="stylesheet" href="../css/sem-paper.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/syllabusBuddy-Logo.png" type="image/icon">
+
+</head>
+
+<body>
+
+    <!-- Navbar  -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- SEMESTER 1 -->
+
+    <!-- HTML Container -->
+    <div id="semesters-container"></div>
+
+    <!-- Script to load JSON and build semesters -->
+
+
+
+    <!-- SEMESTER 2 -->
+
+
+
+
+
+
+    <!-- Footer  -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Script -->
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+
+
+
+
+    <script src="../script/include.js"></script>
+
+
+
+    <script>
+
+        const adLink = "https://www.profitableratecpm.com/j9mj7e73eh?key=1a9f3c908465ef639dae2d8a4abbc5df";
+
+        function handleDownloadAfterAd() {
+            const pending = localStorage.getItem("pendingDownload");
+            if (pending) {
+                localStorage.removeItem("pendingDownload");
+                // Wait a moment to avoid race condition on back navigation
+                setTimeout(() => {
+                    window.location.href = pending;
+                }, 500); // You can increase delay if needed
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            handleDownloadAfterAd(); // trigger download if coming back from ad
+
+            document.querySelectorAll("a").forEach(link => {
+                const href = link.getAttribute("href");
+                if (href && href.includes("drive.google.com")) {
+                    link.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        localStorage.setItem("pendingDownload", href);
+                        window.location.href = adLink; // open ad in same tab
+                    });
+                }
+            });
+        });
+
+        // Also catch when coming back from ad (browser back)
+        window.addEventListener("pageshow", (event) => {
+            if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+                handleDownloadAfterAd();
+            }
+        });
+
+    </script>
+
+
+
+    <script>
+        async function loadSemesters() {
+            try {
+                const response = await fetch('semesters.json');
+                const semestersData = await response.json();
+
+                const container = document.getElementById("semesters-container");
+
+                semestersData.forEach(sem => {
+                    container.appendChild(createSemesterDOM(sem));
+                });
+            } catch (error) {
+                console.error("Error loading semesters data:", error);
+            }
+        }
+
+        function createSemesterDOM(sem) {
+            const semesterEl = document.createElement("div");
+            semesterEl.className = "semester";
+
+            const header = document.createElement("div");
+            header.className = "semester-header";
+            header.textContent = sem.semester;
+            semesterEl.appendChild(header);
+
+            sem.subjects.forEach(subject => {
+                const subjectEl = document.createElement("div");
+                subjectEl.className = "subject";
+
+                const title = document.createElement("div");
+                title.className = "subject-title";
+                title.innerHTML = `<h3>${subject.title}</h3>`;
+                subjectEl.appendChild(title);
+
+                const yearGrid = document.createElement("div");
+                yearGrid.className = "year-grid";
+
+                Object.entries(subject.years).forEach(([year, link]) => {
+                    const a = document.createElement("a");
+                    a.href = link;
+
+                    const card = document.createElement("div");
+                    card.className = "year-card";
+                    card.textContent = year;
+
+                    a.appendChild(card);
+                    yearGrid.appendChild(a);
+                });
+
+                subjectEl.appendChild(yearGrid);
+                semesterEl.appendChild(subjectEl);
+            });
+
+            return semesterEl;
+        }
+
+        document.addEventListener("DOMContentLoaded", loadSemesters);
+    </script>
+
+</body>
+
+</html>
