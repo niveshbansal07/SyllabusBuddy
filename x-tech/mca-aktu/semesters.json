@@ -3,49 +3,49 @@
     "semester": "Semester 1",
     "subjects": [
       {
-        "title": "Mathematical Foundation for Computer Science",
-        "years": {
-          "2022": "https://drive.google.com/file/d/1lewZH7OQv1F1msZz8HvCtgvh1B_yEDUQ/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1_oQjAUMGB117puCfjTwmecVpT19t8joR/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1QO_4LIC7ApKEO0Q8WPTVHhJ9wcFow6HG/view?usp=drive_link"
-        }
-      },
-      {
-        "title": "Computer Fundamental & Office Automation",
-        "years": {
-          "2022": "https://drive.google.com/file/d/109sidWII0qOOCqI3DrEspV23ws-lSlXa/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1YLHCf0xnHnmQFoI0m2JljfkN731LIlD2/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1-HMchYuWdzrjVNwtQnHcwMyWPnVcj4K3/view?usp=drive_link"
-        }
-      },
-      {
         "title": "Programming in “C”",
         "years": {
-          "2023": "https://drive.google.com/file/d/1kANZ3rCXrNDmEAxZs3x-HsATR9UVB8oN/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1tcI-DWln1oJ8VzHTMAUy9VLpN8bbz4QD/view?usp=drive_link"
+          "2020": "https://drive.google.com/file/d/1LOdQQUXOtiyVHoxDSN0q6gbH8Fy5UxTM/view?usp=sharing",
+          "2022": "https://drive.google.com/file/d/1Zxjcb_QDOeVuS4AHJ7TMn_RgxkbVJlzF/view?usp=sharing",
+          "2023": "https://drive.google.com/file/d/1qwjT6XIm1lMJBum6W931_zSp4DPS84B6/view?usp=sharing",
+          "2024": "https://drive.google.com/file/d/1xGz8ckJd2ccXUXIY61vsdZwRl-53UY5P/view?usp=sharing"
         }
       },
       {
-        "title": "Digital Electronics & Computer Organization",
+        "title": "Fundamental of Computers and Emerging Technologies",
         "years": {
-          "2023": "https://drive.google.com/file/d/1hK7RdvhCh1fVp_LETv7N7QmjnLS0IL-J/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1KoK8jhLEIQezp3i9ramO05vDPebA5EcS/view?usp=drive_link"
+          "2020": "https://drive.google.com/file/d/1Uo-MQuPxXKSHnKYeQMQXHojhapZYNlq4/view?usp=sharing",
+          "2022": "https://drive.google.com/file/d/1s3hLDpMczV84eCTOxW136z6a1uwzQZQS/view?usp=sharing",
+          "2023": "https://drive.google.com/file/d/1T2YEb1njcErCW5TAOy4y2ZhU52fcpodv/view?usp=sharing",
+          "2024": "https://drive.google.com/file/d/1QPbN3fJ0tfVgEyvL5NelG2FLI7PMctKf/view?usp=sharing"
         }
       },
       {
-        "title": "Business Communication",
+        "title": "Computer Organization and Architecture",
         "years": {
-          "2021": "https://drive.google.com/file/d/1neGlfG_FubSwI6qu9krwz10PKvghc0dH/view?usp=drive_link",
-          "2022": "https://drive.google.com/file/d/1ydnSN0Q7CZ5TOnv8DGdHWnhj_R9rq8Ar/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1ZkAaHov7TO9GmpuDsxkDKERUAxeUl_KL/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1mWxi5PRVP8Q_YuZZsWQ2Uq9YN_Xw-9Cq/view?usp=drive_link"
+          "2020": "https://drive.google.com/file/d/174O0MzdQPTG49T-BPXZjYZk9TwNeqa9E/view?usp=sharing",
+          "2022": "https://drive.google.com/file/d/174O0MzdQPTG49T-BPXZjYZk9TwNeqa9E/view?usp=sharing",
+          "2023": "https://drive.google.com/file/d/1dbICQ5OvvgRfNz_p56k0XCvkTdE5vNqX/view?usp=sharing",
+          "2024": "https://drive.google.com/file/d/1BLXmjQjIgvxpp6VYwQ4Fe1231gYhWIAd/view?usp=sharing"
         }
       },
       {
-        "title": "Environmental Studies",
+        "title": "Discrete Mathematics",
         "years": {
-          "2022": "https://drive.google.com/file/d/1r9SjI1pFtDjt7k0oIbQf7ROOBUvVnUAL/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1wbbeOb5g6UdVBAM-W9NGWug3pSEcuWW3/view?usp=drive_link"
+          "2020": "https://drive.google.com/file/d/1LbmdTEVvbUXnnBNQv4c-6hr_XGhUTbXg/view?usp=sharing",
+          "2021": "https://drive.google.com/file/d/1XoVSFDXF02mbpOr_sV99zoHIejHPR1bO/view?usp=sharing",
+          "2022": "https://drive.google.com/file/d/1MIcMDB43zljA0lrOFzHvedXx7a5nS0oF/view?usp=sharing",
+          "2023": "https://drive.google.com/file/d/1dYvXLlfOPe3cDZT0krcihNVzcRPNg3vR/view?usp=sharing",
+          "2024": "https://drive.google.com/file/d/19JaRzh3_LPDSa_ksQMW78rSuk2m7dlMN/view?usp=sharing"
+        }
+      },
+      {
+        "title": "PRINCIPLES OF MANAGEMENT & COMMUNICATION",
+        "years": {
+          "2020": "https://drive.google.com/file/d/1pF-foilxW_OfW5EK2n8NlRLPxcdWIoXR/view?usp=sharing",
+          "2022": "https://drive.google.com/file/d/1Rz2g7tH7tC7Eo7XEc0JlxOmlv0mCMb5m/view?usp=sharing",
+          "2023": "https://drive.google.com/file/d/1SFHsIYdSSEIPOwS115eiTsnwoedYrm-i/view?usp=sharing",
+          "2024": "https://drive.google.com/file/d/1gxMV4iW1Nkis4FtU8CzbTiN9YBb_CMen/view?usp=sharing"
         }
       }
     ]
@@ -54,49 +54,47 @@
     "semester": "Semester 2",
     "subjects": [
       {
-        "title": "Mathematical Foundation for Computer Science",
+        "title": "THEORY OF AUTOMATA & FORMAL LANGUAGES",
         "years": {
-          "2022": "https://drive.google.com/file/d/1lewZH7OQv1F1msZz8HvCtgvh1B_yEDUQ/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1_oQjAUMGB117puCfjTwmecVpT19t8joR/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1QO_4LIC7ApKEO0Q8WPTVHhJ9wcFow6HG/view?usp=drive_link"
+          "2019": "https://drive.google.com/file/d/1cQw-vaoKc7wjd4mcQpn-74b8Vbt9uy59/view?usp=sharing",
+          "2022": "https://drive.google.com/file/d/1yKlrrBVEgXqowl6blgYSZ4lOypKnk82W/view?usp=sharing",
+          "2023": "https://drive.google.com/file/d/1db2AmaTW9EJ-bMe8_TsP-OBjhAmCOV4m/view?usp=sharing"
         }
       },
       {
-        "title": "Computer Fundamental & Office Automation",
+        "title": "CYBER SECURITY",
         "years": {
-          "2022": "https://drive.google.com/file/d/109sidWII0qOOCqI3DrEspV23ws-lSlXa/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1YLHCf0xnHnmQFoI0m2JljfkN731LIlD2/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1-HMchYuWdzrjVNwtQnHcwMyWPnVcj4K3/view?usp=drive_link"
+          "2022": "https://drive.google.com/file/d/1x93lz0ExWTNmfiGAdGIxqFRvH-epUkfE/view?usp=sharing",
+          "2023": "https://drive.google.com/file/d/17BkXqNgWLFqZxpaacwb8IdGtnQbXiSD-/view?usp=sharing"
         }
       },
       {
-        "title": "Programming in “C”",
+        "title": "DATABASE MANAGEMENT SYSTEM",
         "years": {
-          "2023": "https://drive.google.com/file/d/1kANZ3rCXrNDmEAxZs3x-HsATR9UVB8oN/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1tcI-DWln1oJ8VzHTMAUy9VLpN8bbz4QD/view?usp=drive_link"
+          "2022": "https://drive.google.com/file/d/11ZqXhQubpj0suZxncjdRPG4jEUJ71wXi/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1N9PtVfYp1xACuBwFyUMkV3u3oO6qY3qp/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1wqiecnL6FaCrz2dzvMVDAx4thfJzsh5B/view?usp=sharing"
         }
       },
       {
-        "title": "Digital Electronics & Computer Organization",
+        "title": "DATA STRUCTURES AND ALGORITHMS",
         "years": {
-          "2023": "https://drive.google.com/file/d/1hK7RdvhCh1fVp_LETv7N7QmjnLS0IL-J/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1KoK8jhLEIQezp3i9ramO05vDPebA5EcS/view?usp=drive_link"
+          "2019": "https://drive.google.com/file/d/1lmPw-NhjEkgX6seXwhsXBJ9RVS7XqswL/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1POmQXSrRjsFEc2SJaSJAmXo_G4MBF6mJ/view?usp=drive_link"
         }
       },
       {
-        "title": "Business Communication",
+        "title": "OBJECT ORIENTED PROGRAMMING",
         "years": {
-          "2021": "https://drive.google.com/file/d/1neGlfG_FubSwI6qu9krwz10PKvghc0dH/view?usp=drive_link",
-          "2022": "https://drive.google.com/file/d/1ydnSN0Q7CZ5TOnv8DGdHWnhj_R9rq8Ar/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1ZkAaHov7TO9GmpuDsxkDKERUAxeUl_KL/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1mWxi5PRVP8Q_YuZZsWQ2Uq9YN_Xw-9Cq/view?usp=drive_link"
+          "2022": "https://drive.google.com/file/d/1HjonC4Pv5z1dpqraRqkWWQfwpKqOvxBr/view?usp=sharing",
+          "2023": "https://drive.google.com/file/d/1sDTYhQnXNHjyJhLP8vNX5pRI8aaEK7tG/view?usp=sharing"
         }
       },
       {
-        "title": "Environmental Studies",
+        "title": "OPERATING SYSTEM",
         "years": {
-          "2022": "https://drive.google.com/file/d/1r9SjI1pFtDjt7k0oIbQf7ROOBUvVnUAL/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1wbbeOb5g6UdVBAM-W9NGWug3pSEcuWW3/view?usp=drive_link"
+          "2022": "https://drive.google.com/file/d/1N0cw3IJx1WDelRTPSGf5l7Bp9l1y5o0r/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1qyUKmdWGRNYduK8-8Wibv5vl_hAnWq1n/view?usp=drive_link"
         }
       }
     ]
@@ -105,49 +103,64 @@
     "semester": "Semester 3",
     "subjects": [
       {
-        "title": "Mathematical Foundation for Computer Science",
+        "title": "ARTIFICIAL INTELLIGENCE",
         "years": {
-          "2022": "https://drive.google.com/file/d/1lewZH7OQv1F1msZz8HvCtgvh1B_yEDUQ/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1_oQjAUMGB117puCfjTwmecVpT19t8joR/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1QO_4LIC7ApKEO0Q8WPTVHhJ9wcFow6HG/view?usp=drive_link"
+          "2022": "https://drive.google.com/file/d/1_aCS0e80Snj7weFA7ByXs2V5bzeu__iP/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1D9cgGcfZzQ-bXFRD7A-rTLFPN7eB9-mX/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1GeqNyYIAyM1RKCJTuPujp9DYX4xgs4nv/view?usp=drive_link"
         }
       },
       {
-        "title": "Computer Fundamental & Office Automation",
+        "title": "BIG DATA",
         "years": {
-          "2022": "https://drive.google.com/file/d/109sidWII0qOOCqI3DrEspV23ws-lSlXa/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1YLHCf0xnHnmQFoI0m2JljfkN731LIlD2/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1-HMchYuWdzrjVNwtQnHcwMyWPnVcj4K3/view?usp=drive_link"
+          "2024": "https://drive.google.com/file/d/1seTAW8wDR-a8C8sJXtsoxg7d1ySltfY8/view?usp=drive_link"
         }
       },
       {
-        "title": "Programming in “C”",
+        "title": "CLOUD COMPUTING",
         "years": {
-          "2023": "https://drive.google.com/file/d/1kANZ3rCXrNDmEAxZs3x-HsATR9UVB8oN/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1tcI-DWln1oJ8VzHTMAUy9VLpN8bbz4QD/view?usp=drive_link"
+          "2022": "https://drive.google.com/file/d/18PMVPQYBPO2YWbou7aeXTNXvTGZ9lR11/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1ISJw-KayDLQkKMSnx7SWMVB6Rghi2AD6/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1USiuXXbmTbFKx_TjGuglQE8PdIoHPVdR/view?usp=drive_link"
         }
       },
       {
-        "title": "Digital Electronics & Computer Organization",
+        "title": "COMPUTER NETWORKING",
         "years": {
-          "2023": "https://drive.google.com/file/d/1hK7RdvhCh1fVp_LETv7N7QmjnLS0IL-J/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1KoK8jhLEIQezp3i9ramO05vDPebA5EcS/view?usp=drive_link"
+          "2022": "https://drive.google.com/file/d/1Qhx4g8zy5WCL9kj6ibxkGGXGIYVXDyzi/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1p-vfvLwqfqNNbYdOyjuI1Ku9OpTssPhR/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1LWv_BafIfwI9PnRqhpBmWehnQP8j0B43/view?usp=drive_link"
         }
       },
       {
-        "title": "Business Communication",
+        "title": "SOFTWARE ENGINEERING",
         "years": {
-          "2021": "https://drive.google.com/file/d/1neGlfG_FubSwI6qu9krwz10PKvghc0dH/view?usp=drive_link",
-          "2022": "https://drive.google.com/file/d/1ydnSN0Q7CZ5TOnv8DGdHWnhj_R9rq8Ar/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1ZkAaHov7TO9GmpuDsxkDKERUAxeUl_KL/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1mWxi5PRVP8Q_YuZZsWQ2Uq9YN_Xw-9Cq/view?usp=drive_link"
+          "2023": "https://drive.google.com/file/d/1k12ET7DZO2kVY-qjwDUVia8DZv-fiMgC/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1fZItrXwKuU59GLgJytZ3IOfwPS0K-U6U/view?usp=drive_link"
         }
       },
       {
-        "title": "Environmental Studies",
+        "title": "SOFTWARE PROJECT MANAGER",
         "years": {
-          "2022": "https://drive.google.com/file/d/1r9SjI1pFtDjt7k0oIbQf7ROOBUvVnUAL/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1wbbeOb5g6UdVBAM-W9NGWug3pSEcuWW3/view?usp=drive_link"
+          "2022": "https://drive.google.com/file/d/14obVCYI2xUZYk2XbYRmQE4Iec83jmOlG/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1G_gzMTF4G1IXCbvcYoopZfd5VJqWZglz/view?usp=sharing",
+          "2024": "https://drive.google.com/file/d/1RQ5D16urdH6yoJhIGIgIRx_44xt8jMHf/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "SOFTWARE TESTING",
+        "years": {
+          "2023": "https://drive.google.com/file/d/17W5zVJ7rNb4kp1VlR27C8W0_GFdUl-rl/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1bd2uP59wl7bK-I6g7EErFWkdKXjIUh2T/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "WEB TECHNOLOGY",
+        "years": {
+          "2020": "https://drive.google.com/file/d/1b5TYFEG-a_DI_2i9cBnCwdvtSuDOXcYo/view?usp=drive_link",
+          "2022": "https://drive.google.com/file/d/1XRsXIR1Dvdml0MpvCcANCHMi7VWObq4X/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1MeZPCA6v8lh0IbjolGZ9FxWpfrglm55h/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1LvgYxMG1ehkUvQU13fD1ju64A9ckcm1S/view?usp=drive_link"
         }
       }
     ]
@@ -156,49 +169,58 @@
     "semester": "Semester 4",
     "subjects": [
       {
-        "title": "Mathematical Foundation for Computer Science",
+        "title": "BLOCKCHAIN ARCHITECTURE",
         "years": {
-          "2022": "https://drive.google.com/file/d/1lewZH7OQv1F1msZz8HvCtgvh1B_yEDUQ/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1_oQjAUMGB117puCfjTwmecVpT19t8joR/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1QO_4LIC7ApKEO0Q8WPTVHhJ9wcFow6HG/view?usp=drive_link"
+          "2022": "https://drive.google.com/file/d/1tQujcDrUC3XFDM1b_37WolIK-pm19tQV/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1GS9Ml5MhvKNM6-uUXkqTI-vcOYig9Hye/view?usp=drive_link"
         }
       },
       {
-        "title": "Computer Fundamental & Office Automation",
+        "title": "DISTRIBUTED DATABASE",
         "years": {
-          "2022": "https://drive.google.com/file/d/109sidWII0qOOCqI3DrEspV23ws-lSlXa/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1YLHCf0xnHnmQFoI0m2JljfkN731LIlD2/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1-HMchYuWdzrjVNwtQnHcwMyWPnVcj4K3/view?usp=drive_link"
+          "2022": "https://drive.google.com/file/d/16s-Ntbx_McoiH3bLSifTbVl2a_xxSUGX/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1NxaaZo669cxu39dS9PcqkgRjvllNOzJI/view?usp=drive_link"
         }
       },
       {
-        "title": "Programming in “C”",
+        "title": "INTERNET OF THINGS",
         "years": {
-          "2023": "https://drive.google.com/file/d/1kANZ3rCXrNDmEAxZs3x-HsATR9UVB8oN/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1tcI-DWln1oJ8VzHTMAUy9VLpN8bbz4QD/view?usp=drive_link"
+          "2022": "https://drive.google.com/file/d/13MYbfBqLAM60MvngdfXTGpNVVmXG-nP0/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1-ajuvc2soiAOTgP_Ttn6eLMURI2RSuw6/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1LC2r_eU-6km6F2ah3i8NVibs1V29LGGS/view?usp=drive_link"
         }
       },
       {
-        "title": "Digital Electronics & Computer Organization",
+        "title": "MOBILE COMPUTING",
         "years": {
-          "2023": "https://drive.google.com/file/d/1hK7RdvhCh1fVp_LETv7N7QmjnLS0IL-J/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1KoK8jhLEIQezp3i9ramO05vDPebA5EcS/view?usp=drive_link"
+          "2023": "https://drive.google.com/file/d/1nJFIIv9W9iy_h8oIqbgDBaNAG09GYrqy/view?usp=drive_link",
+          "2024": "https://drive.google.com/file/d/1Rh79FiMjL8ZfIiDrj9n24lg5pzkDbwB7/view?usp=drive_link"
         }
       },
       {
-        "title": "Business Communication",
+        "title": "MODERN APPLICATION TECHNIQUES",
         "years": {
-          "2021": "https://drive.google.com/file/d/1neGlfG_FubSwI6qu9krwz10PKvghc0dH/view?usp=drive_link",
-          "2022": "https://drive.google.com/file/d/1ydnSN0Q7CZ5TOnv8DGdHWnhj_R9rq8Ar/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1ZkAaHov7TO9GmpuDsxkDKERUAxeUl_KL/view?usp=drive_link",
-          "2024": "https://drive.google.com/file/d/1mWxi5PRVP8Q_YuZZsWQ2Uq9YN_Xw-9Cq/view?usp=drive_link"
+          "2022": "https://drive.google.com/file/d/1Xn4sHaOq-yG6uS96SZxN8jomIdol1xpq/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1bD0SZNCf68fq9yPrjGjrDKEddctOjdkJ/view?usp=drive_link"
         }
       },
       {
-        "title": "Environmental Studies",
+        "title": "NEURAL NETWORK",
         "years": {
-          "2022": "https://drive.google.com/file/d/1r9SjI1pFtDjt7k0oIbQf7ROOBUvVnUAL/view?usp=drive_link",
-          "2023": "https://drive.google.com/file/d/1wbbeOb5g6UdVBAM-W9NGWug3pSEcuWW3/view?usp=drive_link"
+          "2022": "https://drive.google.com/file/d/1tav-dvLIoHTW8Q1okSG2sw00Bf5LEqnI/view?usp=drive_link",
+          "2023": "https://drive.google.com/file/d/1X9hpTCh76dJcQC-eWJ9sGeUtUZtqcX-t/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "SOFT COMPUTING",
+        "years": {
+          "2023": "https://drive.google.com/file/d/1F5xYfYpkg50s5N2tPvh2WwV350On_fyr/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "SOFTWARE QUALITY ENGINEERING",
+        "years": {
+          "2024": "https://drive.google.com/file/d/1Y3JpGJrX-1Z8lmliwpTWBSch2vHxbgci/view?usp=drive_link"
         }
       }
     ]
