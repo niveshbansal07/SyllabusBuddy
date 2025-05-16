@@ -24,14 +24,14 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
     text-align: center;
     padding: 20px;
-    height: 140px;
+    height: 200px;
     margin-top: 20px;
     width: 100%;
     max-width: 500px;
 }
 
 .year-grid {
-    margin-top: 10px;
+    margin: 10px 0px;
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -57,6 +57,37 @@
 }
 
 .year-card:hover {
+    transform: scale(1.05);
+    background: #007be5;
+}
+
+.sample-grid{
+     margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sample-card {
+    background: #1e90ff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    font-weight: bold;
+    animation: zoomIn 1s ease;
+    width: 30px;
+    height: 40px;
+}
+
+.sample-grid a {
+    text-decoration: none;
+    color: white;
+}
+
+.sample-card:hover {
     transform: scale(1.05);
     background: #007be5;
 }
