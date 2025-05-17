@@ -63,3 +63,18 @@
     font-size: 20px;
   }
 }
+
+
+
+header, .inline-rect, .sidebar, .mobile-bottom-ad { margin: 20px auto; text-align:center; }
+
+/* Responsive hide/show */
+@media (max-width: 767px) {
+  .sidebar { display:none; }          /* no sidebar on small screens */
+  header { display:none; }            /* hide big leaderboard on phones */
+}
+
+@media (min-width: 768px) {
+  .mobile-bottom-ad { display:none; } /* only show mobile banner on phones */
+}
+
