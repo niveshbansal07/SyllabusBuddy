@@ -66,7 +66,7 @@
 
 
 
-header, .inline-rect, .sidebar, .mobile-bottom-ad { margin: 20px auto; text-align:center; }
+/* header, .inline-rect, .sidebar, .mobile-bottom-ad { margin: 20px auto; text-align:center; } */
 
 /* Responsive hide/show */
 @media (max-width: 767px) {
