@@ -100,7 +100,64 @@
         hamburger.innerHTML = "☰";
       }
     }
+
+
+
+
+
+
+
+    sem.subjects.forEach((subject, index) => {
+  const subjectEl = document.createElement("div");
+  subjectEl.className = "subject";
+
+  const title = document.createElement("div");
+  title.className = "subject-title";
+  title.innerHTML = `<h3>${subject.title}</h3>`;
+  subjectEl.appendChild(title);
+
+  const yearGrid = document.createElement("div");
+  yearGrid.className = "year-grid";
+
+  Object.entries(subject.years).forEach(([year, link]) => {
+    const a = document.createElement("a");
+    a.href = link;
+
+    const card = document.createElement("div");
+    card.className = "year-card";
+    card.textContent = year;
+
+    a.appendChild(card);
+    yearGrid.appendChild(a);
+  });
+
+  subjectEl.appendChild(yearGrid);
+  semesterEl.appendChild(subjectEl);
+
+  // 🔽 Insert Ad after the 3rd subject
+  if ((index + 1) % 3 === 0) {
+    const adWrapper = document.createElement("div");
+    adWrapper.style.textAlign = "center";
+    adWrapper.style.margin = "24px 0";
+    adWrapper.innerHTML = `
+      <script type="text/javascript">
+        atOptions = {
+          'key'    : '9f4111cddaa67d11dd759fb43736ec82',
+          'format' : 'iframe',
+          'height' : 250,
+          'width'  : 300,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/9f4111cddaa67d11dd759fb43736ec82/invoke.js"></script>
+    `;
+    semesterEl.appendChild(adWrapper);
+  }
+});
+
   </script>
+
+  
 </body>
 
 </html>
