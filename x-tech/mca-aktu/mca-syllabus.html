@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCA AKTU Syllabus, Notes | SyllabusBuddy</title>
+    <link rel="stylesheet" href="../home/style.css">
+    <link rel="stylesheet" href="../css/year-semester.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/syllabusBuddy-Logo.png" type="image/icon">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8452146197004922"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- Navbar  -->
+    <div id="navbar-placeholder"></div>
+
+
+
+    <!-- <div class="syllabus-header">
+        MCA Syllabus - <span class="university-name"></span>
+    </div>
+
+    <div id="syllabus-content"></div> -->
+    <div class="syllabus-university-header">MCA Syllabus - <span class="University-name">AKTU</span></div>
+
+
+    <div id="mca-container"></div>
+
+    <!-- Footer  -->
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../script/include.js"></script>
+
+    <script>
+        async function loadSyllabusJSON() {
+            try {
+                const response = await fetch("syllabus.json");
+                const data = await response.json();
+
+                const syllabusContainer = document.getElementById("mca-container"); // <-- Make sure this exists in your HTML
+
+                data.years.forEach((yearData, yearIndex) => {
+                    // Create Year Header
+                    const yearHeading = document.createElement("h3");
+                    yearHeading.className = "year-box";
+                    yearHeading.textContent = `Y E A R - ${yearIndex + 1}`;
+                    syllabusContainer.appendChild(yearHeading);
+
+                    // Semester Container
+                    const semesterContainer = document.createElement("div");
+                    semesterContainer.className = "semester-container";
+
+                    yearData.semesters.forEach((semester) => {
+                        const semesterBox = document.createElement("div");
+                        semesterBox.className = "semester-box";
+
+                        // Semester Link & Heading
+                        const semesterLink = document.createElement("a");
+                        semesterLink.href = semester.link;
+
+                        const semesterHeading = document.createElement("h2");
+                        semesterHeading.textContent = semester.name;
+                        semesterLink.appendChild(semesterHeading);
+                        semesterBox.appendChild(semesterLink);
+
+                        // Subject List
+                        const subjectList = document.createElement("ul");
+                        subjectList.className = "semester-unit";
+
+                        semester.subjects.forEach((subject) => {
+                            const subjectItem = document.createElement("li");
+                            const subjectLink = document.createElement("a");
+                            subjectLink.href = subject.link;
+                            subjectLink.textContent = subject.title;
+                            subjectItem.appendChild(subjectLink);
+                            subjectList.appendChild(subjectItem);
+                        });
+
+                        semesterBox.appendChild(subjectList);
+                        semesterContainer.appendChild(semesterBox);
+                    });
+
+                    syllabusContainer.appendChild(semesterContainer);
+                });
+            } catch (error) {
+                console.error("Failed to load or parse syllabus.json:", error);
+            }
+        }
+
+        // Call the function on page load
+        loadSyllabusJSON();
+    </script>
+
+
+</body>
+
+</html>
