@@ -1,0 +1,188 @@
+{
+  "university": "AKTU",
+  "program": "MCA",
+  "years": [
+    {
+      "year": 1,
+      "semesters": [
+        {
+          "name": "SEMESTER - I",
+          "link": "mca-sem-1.html",
+          "subjects": [
+            {
+              "title": "Discrete Mathematics",
+              "link": "mca-sem-1-subject-dm.html"
+            },
+            {  
+              "title": "Fundamental of Computers & Emerging Technologies",
+              "link": "mca-sem-1-subject-fcet.html"
+            },
+            {
+              "title": "Problem Solving using C",
+              "link": "mca-sem-1-subject-psuc.html"
+            },
+            {
+              "title": "Principles of Management & Communication",
+              "link": "mca-sem-1-subject-pmc.html"
+            },
+            {
+              "title": "Computer Organization & Architecture",
+              "link": "mca-sem-1-subject-coa.html"
+            }
+          ]
+        },
+        {
+          "name": "SEMESTER - II",
+          "link": "mca-sem-2.html",
+          "subjects": [
+            {
+              "title": "Theory of Automata & Formal Languages",
+              "link": "mca-sem-2-subject-automata.html"
+            },
+            {
+              "title": "Object Oriented Programming",
+              "link": "mca-sem-2-subject-oops.html"
+            },
+            {
+              "title": "Operating Systems",
+              "link": "mca-sem-2-subject-os.html"
+            },
+            {
+              "title": "Database Management Systems",
+              "link": "mca-sem-2-subject-dbms.html"
+            },
+            {
+              "title": "Data Structures and Algorithms",
+              "link": "mca-sem-2-subject-dsa.html"
+            },
+            {
+              "title": "Cyber Security",
+              "link": "mca-sem-2-subject-cyber.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2,
+      "semesters": [
+        {
+          "name": "SEMESTER - I",
+          "link": "mca-sem-3.html",
+          "subjects": [
+            {
+              "title": "Artificial Intelligence",
+              "link": "mca-sem-3-subject-ai.html"
+            },
+            {  
+              "title": "Software Engineering",
+              "link": "mca-sem-3-subject-se.html"
+            },
+            {
+              "title": "Computer Based Optimization Techniques",
+              "link": "mca-sem-3-subject-cbot.html"
+            },
+            {
+              "title": "Cryptography & Network Security ",
+              "link": "mca-sem-3-subject-cns.html"
+            },
+            {
+              "title": "Neural Network",
+              "link": "mca-sem-3-subject-nn.html"
+            },
+            {
+              "title": "Software Project Management ",
+              "link": "mca-sem-3-subject-spm.html"
+            },
+            {
+              "title": "Android Operating System ",
+              "link": "mca-sem-3-subject-aos.html"
+            },
+            {
+              "title": "Big Data",
+              "link": "mca-sem-3-subject-bigdata.html"
+            },
+            {
+              "title": "Introduction to Machine Learning",
+              "link": "mca-sem-3-subject-iml.html"
+            },
+            {
+              "title": "Web Technology",
+              "link": "mca-sem-3-subject-wt.html"
+            },
+            {
+              "title": "Cloud Computing",
+              "link": "mca-sem-3-subject-cc.html"
+            },
+            {
+              "title": "Simulation & Modeling",
+              "link": "mca-sem-3-subject-modeling.html"
+            },
+            {
+              "title": "Soft Computing ",
+              "link": "mca-sem-3-subject-softcomputing.html"
+            }
+          ]
+        },
+        {
+          "name": "SEMESTER - II",
+          "link": "mca-sem-4.html",
+          "subjects": [
+            {
+              "title": "Blockchain Architecture",
+              "link": "mca-sem-4-subject-blockchain.html"
+            },
+            {
+              "title": "Data Warehousing & Data Mining",
+              "link": "mca-sem-4-subject-datamining.html"
+            },
+            {
+              "title": "Pattern Recognition",
+              "link": "mca-sem-4-subject-pr.html"
+            },
+            {
+              "title": "Data Analytics",
+              "link": "mca-sem-4-subject-da.html"
+            },
+            {
+              "title": "Computer Networks",
+              "link": "mca-sem-4-subject-cn.html"
+            },
+            {
+              "title": "Software Testing and Quality Assurance",
+              "link": "mca-sem-4-subject-stqa.html"
+            },
+            {
+              "title": "Internet of Things",
+              "link": "mca-sem-4-subject-iot.html"
+            },
+            {
+              "title": "Modern Application Development",
+              "link": "mca-sem-4-subject-mad.html"
+            },
+            {
+              "title": "Distributed Database Systems",
+              "link": "mca-sem-4-subject-dds.html"
+            },
+            {
+              "title": "Mobile Computing",
+              "link": "mca-sem-4-subject-mobilecomputing.html"
+            },
+            {
+              "title": "Natural Language Processing",
+              "link": "mca-sem-4-subject-nlp.html"
+            },
+            {
+              "title": "Compiler Design",
+              "link": "mca-sem-4-subject-compdesign.html"
+            },
+            {
+              "title": "Deep Learning",
+              "link": "mca-sem-4-subject-dl.html"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
