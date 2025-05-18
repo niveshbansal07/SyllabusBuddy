@@ -1,0 +1,1 @@
+Sitemap: https://syllabus-buddy.vercel.app/sitemap.xml
