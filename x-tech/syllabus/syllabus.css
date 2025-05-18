@@ -50,15 +50,9 @@
 .university-btn:hover {
     background: #002e99;
 }
- body {
-    padding-bottom: 91px;   /* 90 px banner + 10 px breathing room */
-  }
-
-  #adsterra-bottom-banner { height: 90px; }
-
-  /* phones: hide or swap */
-/*   @media (max-width: 767px) {
-    #adsterra-bottom-banner { display: none; }
-    body { padding-bottom: 0; }  /* remove extra space */
+ /* body {
+    padding-bottom: 91px;   
   } */
+
+  /* #adsterra-bottom-banner { height: 90px; } */
 
