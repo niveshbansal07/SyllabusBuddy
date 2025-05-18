@@ -46,7 +46,7 @@
 
 
 
-    
+
 
     <script>
         const adLink = "https://www.profitableratecpm.com/byexf0t23z?key=d7715f97b2bb34b526c407a717ce0540";
@@ -57,19 +57,21 @@
                 const semestersData = await response.json();
                 const container = document.getElementById("semesters-container");
 
-                semestersData.forEach(sem => {
-                    container.appendChild(createSemesterDOM(sem));
+                semestersData.forEach((sem, idx) => {
+                    container.appendChild(createSemesterDOM(sem, idx));
                 });
 
                 setupAdLinks(); // Setup ad behavior after DOM is ready
+                scrollToHashIfPresent(); 
             } catch (error) {
                 console.error("Error loading semesters data:", error);
             }
         }
 
-        function createSemesterDOM(sem) {
+        function createSemesterDOM(sem, idx) {
             const semesterEl = document.createElement("div");
             semesterEl.className = "semester";
+            semesterEl.id = "sem" + (idx + 1)
 
             const header = document.createElement("div");
             header.className = "semester-header";
@@ -107,6 +109,19 @@
 
             return semesterEl;
         }
+
+
+        // Scroll to anchor after semesters are loaded
+        function scrollToHashIfPresent() {
+            const hash = window.location.hash;
+            if (hash) {
+                const target = document.querySelector(hash);
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+        }
+
 
         function setupAdLinks() {
             document.querySelectorAll("a.download-link").forEach(link => {
@@ -147,7 +162,7 @@
 
 
 
-    
+
 </body>
 
 </html>
