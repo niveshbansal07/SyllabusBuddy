@@ -1,4 +1,5 @@
 {
+  "name": "syllabus-buddy",
   "headers": [
     {
       "source": "/sitemap.xml",
@@ -8,6 +9,12 @@
           "value": "application/xml"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
     }
   ]
 }
