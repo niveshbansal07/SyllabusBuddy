@@ -15,6 +15,10 @@
     {
       "source": "/",
       "destination": "/index.html"
+    },
+    {
+      "source": "/ads.txt",
+      "destination": "/ads.txt"
     }
   ]
 }
