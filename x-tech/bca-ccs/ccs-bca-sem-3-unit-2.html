@@ -60,6 +60,674 @@
         </div>
     </div>
 
+<div class="topic-container" id="unit1">
+    <h1>UNIT-I: Introduction to Data Structure and its Characteristics Array</h1>
+
+    <section class="section">
+        <h2>1. Introduction to Data Structures</h2>
+        <p>
+            A <strong>data structure</strong> is a way of organizing and storing data to enable efficient access and modification. It provides a framework for managing and utilizing data effectively in computational problems.
+        </p>
+        <ul>
+            <li><strong>Characteristics of Data Structures:</strong></li>
+            <ul>
+                <li>Efficiency in storage and retrieval.</li>
+                <li>Flexibility in terms of size and access patterns.</li>
+                <li>Scalability for complex problems.</li>
+            </ul>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Representation of Single and Multidimensional Arrays</h2>
+        <p>
+            Arrays are a collection of elements of the same type stored in contiguous memory locations. They can be single-dimensional or multi-dimensional.
+        </p>
+        <pre class="matrix">
+    Example: Single-dimensional array
+    int arr[5] = {1, 2, 3, 4, 5};
+
+    Example: Two-dimensional array
+    int matrix[2][3] = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Sparse Arrays</h2>
+        <p>
+            A <strong>sparse array</strong> is an array in which most of the elements are zero or empty. Special representations are used to store only the non-zero elements efficiently.
+        </p>
+        <pre class="matrix">
+    Example: Sparse matrix (2D array with mostly zeros)
+    0  0  3
+    0  4  0
+    5  0  0
+
+    Stored as:
+    Row   Column   Value
+    0     2        3
+    1     1        4
+    2     0        5
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Lower and Upper Triangular Matrices</h2>
+        <p>
+            In a <strong>lower triangular matrix</strong>, all elements above the main diagonal are zero, while in an <strong>upper triangular matrix</strong>, all elements below the main diagonal are zero.
+        </p>
+        <pre class="matrix">
+    Example: Lower triangular matrix
+    1  0  0
+    4  2  0
+    5  3  3
+
+    Example: Upper triangular matrix
+    1  2  3
+    0  4  5
+    0  0  6
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Tridiagonal Matrices with Vector Representation</h2>
+        <p>
+            A <strong>tridiagonal matrix</strong> is a square matrix in which non-zero elements are present only on the main diagonal, the diagonal above it, and the diagonal below it. It can be represented using three vectors.
+        </p>
+        <pre class="matrix">
+    Example: Tridiagonal matrix
+    2  3  0  0
+    4  5  6  0
+    0  7  8  9
+    0  0  1  2
+
+    Stored as:
+    Diagonal below main: {4, 7, 1}
+    Main diagonal: {2, 5, 8, 2}
+    Diagonal above main: {3, 6, 9}
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Stacks and Queues</h1>
+
+    <section class="section">
+        <h2>1. Introduction to Stacks</h2>
+        <p>
+            A <strong>stack</strong> is a linear data structure that follows the <strong>LIFO</strong> (Last In, First Out) principle. Elements are added and removed only from the top of the stack.
+        </p>
+        <p><strong>Primitive Operations:</strong></p>
+        <ul>
+            <li><strong>Push:</strong> Add an element to the top of the stack.</li>
+            <li><strong>Pop:</strong> Remove and return the top element of the stack.</li>
+            <li><strong>Peek/Top:</strong> View the top element without removing it.</li>
+        </ul>
+        <pre class="matrix">
+    Example:
+    Stack: []
+    Push(5): [5]
+    Push(10): [5, 10]
+    Pop(): [5] (returns 10)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Stack Applications</h2>
+        <p>
+            Stacks are used in various applications:
+        </p>
+        <ul>
+            <li><strong>Expression evaluation:</strong> Evaluate mathematical expressions.</li>
+            <li><strong>Backtracking:</strong> Solve problems like maze traversal or undo operations.</li>
+            <li><strong>Function call management:</strong> Manage function calls in recursive programming.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Infix, Postfix, and Prefix Expressions</h2>
+        <p>
+            <strong>Infix:</strong> Operators are between operands (e.g., A + B).<br>
+            <strong>Postfix:</strong> Operators follow operands (e.g., AB+).<br>
+            <strong>Prefix:</strong> Operators precede operands (e.g., +AB).
+        </p>
+        <pre class="matrix">
+    Example:
+    Infix: (A + B) * C
+    Prefix: * + A B C
+    Postfix: A B + C *
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Evaluation of Postfix Expressions</h2>
+        <p>
+            Postfix expressions are evaluated using a stack. Operands are pushed onto the stack, and operators are applied to the top two elements.
+        </p>
+        <pre class="matrix">
+    Example:
+    Postfix: 5 6 + 2 *
+    Steps:
+    Push(5), Push(6), Pop(6, 5), Push(11), Push(2), Pop(2, 11), Push(22)
+    Result: 22
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Conversion Between Prefix, Infix, and Postfix</h2>
+        <p>
+            Conversions involve changing the order of operators and operands based on the type of expression:
+        </p>
+        <pre class="matrix">
+    Example:
+    Infix to Postfix:
+    Infix: A + B * C
+    Postfix: A B C * +
+
+    Infix to Prefix:
+    Infix: A + B * C
+    Prefix: + A * B C
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Introduction to Queues</h2>
+        <p>
+            A <strong>queue</strong> is a linear data structure that follows the <strong>FIFO</strong> (First In, First Out) principle. Elements are added at the rear and removed from the front.
+        </p>
+        <p><strong>Primitive Operations:</strong></p>
+        <ul>
+            <li><strong>Enqueue:</strong> Add an element to the rear of the queue.</li>
+            <li><strong>Dequeue:</strong> Remove and return the front element of the queue.</li>
+        </ul>
+        <pre class="matrix">
+    Example:
+    Queue: []
+    Enqueue(5): [5]
+    Enqueue(10): [5, 10]
+    Dequeue(): [10] (returns 5)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. D-Queues and Priority Queues</h2>
+        <p>
+            <strong>Deque (Double-Ended Queue):</strong> A deque allows insertion and deletion from both ends.<br>
+            <strong>Priority Queue:</strong> A queue where elements are dequeued based on their priority rather than their position.
+        </p>
+        <pre class="matrix">
+    Example:
+    Deque:
+    PushFront(5): [5]
+    PushBack(10): [5, 10]
+    PopFront(): [10] (returns 5)
+
+    Priority Queue:
+    Enqueue(3, High): [3]
+    Enqueue(1, Low): [3, 1]
+    Dequeue(): [1] (returns 3, as it has higher priority)
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Lists</h1>
+
+    <section class="section">
+        <h2>1. Introduction to Linked Lists</h2>
+        <p>
+            A <strong>linked list</strong> is a dynamic data structure consisting of nodes where each node contains data and a reference to the next node in the sequence. It provides flexibility in memory allocation and efficient insertion/deletion.
+        </p>
+        <pre class="matrix">
+    Example:
+    Node Structure:
+    struct Node {
+        int data;
+        Node* next;
+    };
+    List: 10 → 20 → 30 → NULL
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Sequential and Linked Lists</h2>
+        <p>
+            <strong>Sequential List:</strong> Also known as an array, it uses contiguous memory for elements.<br>
+            <strong>Linked List:</strong> Uses nodes where memory is dynamically allocated.
+        </p>
+        <pre class="matrix">
+    Example:
+    Sequential List:
+    int arr[3] = {10, 20, 30};
+
+    Linked List:
+    Head → [10|Next] → [20|Next] → [30|NULL]
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Operations on Linked Lists</h2>
+        <p>Linked lists support several operations:</p>
+        <ul>
+            <li><strong>Traversal:</strong> Accessing each node sequentially.</li>
+            <li><strong>Insertion:</strong> Adding a new node at the beginning, end, or a specific position.</li>
+            <li><strong>Deletion:</strong> Removing a node by its value or position.</li>
+            <li><strong>Searching:</strong> Finding a node with a specific value.</li>
+        </ul>
+        <pre class="matrix">
+    Example: Traversal
+    Node* temp = head;
+    while (temp != NULL) {
+        cout << temp->data;
+        temp = temp->next;
+    }
+
+    Example: Insertion at End
+    Node* newNode = new Node();
+    newNode->data = 40;
+    newNode->next = NULL;
+    temp->next = newNode;
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Two-Way Lists (Doubly Linked Lists)</h2>
+        <p>
+            A <strong>doubly linked list</strong> is a linked list in which each node contains references to both its previous and next nodes, allowing traversal in both directions.
+        </p>
+        <pre class="matrix">
+    Example:
+    Node Structure:
+    struct Node {
+        int data;
+        Node* prev;
+        Node* next;
+    };
+    List: NULL ← 10 ⇔ 20 ⇔ 30 → NULL
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Use of Headers</h2>
+        <p>
+            A <strong>header node</strong> is a special node at the beginning of a list that does not store data but provides a reference to the first node. It simplifies list operations by avoiding edge cases.
+        </p>
+        <pre class="matrix">
+    Example:
+    Header Node: [Header|Next] → [10|Next] → [20|Next] → [30|NULL]
+    Benefits:
+    - Simplifies insertion and deletion at the beginning of the list.
+    - Provides consistent traversal.
+        </pre>
+    </section>
+</div>
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Trees</h1>
+
+    <section class="section">
+        <h2>1. Introduction and Terminology</h2>
+        <p>
+            A <strong>tree</strong> is a hierarchical data structure consisting of nodes. The topmost node is called the <strong>root</strong>, and each node may have child nodes.
+        </p>
+        <ul>
+            <li><strong>Node:</strong> An element in the tree.</li>
+            <li><strong>Edge:</strong> Connection between nodes.</li>
+            <li><strong>Root:</strong> The topmost node of the tree.</li>
+            <li><strong>Leaf:</strong> A node with no children.</li>
+            <li><strong>Subtree:</strong> A tree formed by a node and its descendants.</li>
+            <li><strong>Height:</strong> The length of the longest path from the root to a leaf.</li>
+        </ul>
+        <pre class="matrix">
+    Example:
+    Tree Structure:
+        A (Root)
+       / \
+      B   C
+     / \
+    D   E
+    Nodes: A, B, C, D, E
+    Root: A
+    Leaves: C, D, E
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Traversal of Binary Trees</h2>
+        <p>
+            Traversal refers to visiting all nodes in a tree in a specific order. Common traversal methods include:
+        </p>
+        <ul>
+            <li><strong>Inorder:</strong> Left subtree → Root → Right subtree</li>
+            <li><strong>Preorder:</strong> Root → Left subtree → Right subtree</li>
+            <li><strong>Postorder:</strong> Left subtree → Right subtree → Root</li>
+        </ul>
+        <pre class="matrix">
+    Example:
+    Binary Tree:
+        A
+       / \
+      B   C
+     / \
+    D   E
+
+    Inorder: D → B → E → A → C
+    Preorder: A → B → D → E → C
+    Postorder: D → E → B → C → A
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Recursive Algorithms for Tree Operations</h2>
+        <p>
+            Recursive algorithms simplify tree operations such as traversal, insertion, and deletion by leveraging the self-referential nature of trees.
+        </p>
+        <pre class="matrix">
+    Example: Inorder Traversal
+    void inorder(Node* root) {
+        if (root != NULL) {
+            inorder(root->left);
+            cout << root->data << " ";
+            inorder(root->right);
+        }
+    }
+
+    Example: Insertion
+    Node* insert(Node* root, int key) {
+        if (root == NULL) {
+            root = new Node(key);
+        } else if (key < root->data) {
+            root->left = insert(root->left, key);
+        } else {
+            root->right = insert(root->right, key);
+        }
+        return root;
+    }
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Binary Search Tree (BST)</h2>
+        <p>
+            A <strong>Binary Search Tree (BST)</strong> is a binary tree where:
+        </p>
+        <ul>
+            <li>Each node's left subtree contains only nodes with values less than the node's value.</li>
+            <li>Each node's right subtree contains only nodes with values greater than the node's value.</li>
+        </ul>
+        <pre class="matrix">
+    Example:
+    BST:
+        10
+       /  \
+      5    15
+     / \   / \
+    3   7 12  18
+
+    Properties:
+    - Inorder traversal of BST gives sorted order: 3 → 5 → 7 → 10 → 12 → 15 → 18
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: B-Trees</h1>
+
+    <section class="section">
+        <h2>1. Introduction</h2>
+        <p>
+            A <strong>B-Tree</strong> is a self-balancing search tree designed for systems that read and write large blocks of data. It maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time.
+        </p>
+        <pre class="matrix">
+    Key Properties of B-Trees:
+    - All leaf nodes are at the same level.
+    - A node can have multiple keys and child pointers.
+    - Ensures balanced height for efficient operations.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. The Invention of B-Tree</h2>
+        <p>
+            The <strong>B-Tree</strong> was invented by Rudolf Bayer and Edward M. McCreight in 1972 as a solution to efficiently manage and index data stored on disk. It addressed the limitations of binary search trees in handling large datasets.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>3. Statement of the Problem</h2>
+        <p>
+            The main problem with binary search trees (BSTs) is that they can become unbalanced, leading to inefficient operations. For instance:
+        </p>
+        <ul>
+            <li>Insertions or deletions may cause skewed trees, resulting in <strong>O(n)</strong> time complexity for operations.</li>
+            <li>BSTs do not efficiently utilize disk storage when managing large datasets.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. Indexing with Binary Search Trees</h2>
+        <p>
+            Indexing with <strong>binary search trees</strong> uses the structure of BSTs to manage sorted data. However, unbalanced trees can degrade performance, especially with repeated insertions and deletions.
+        </p>
+        <pre class="matrix">
+    Example:
+    Insertions:
+    Sequence: 10, 20, 30, 40
+    Resulting BST:
+        10
+         \
+          20
+            \
+             30
+               \
+                40
+    Skewed structure → inefficient operations
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. A Better Approach to Tree Indexes</h2>
+        <p>
+            B-Trees offer a better approach by:
+        </p>
+        <ul>
+            <li>Allowing multiple keys in a node, reducing the height of the tree.</li>
+            <li>Balancing the tree dynamically during insertions and deletions.</li>
+            <li>Minimizing disk I/O operations, making it ideal for database indexing.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. B-Trees</h2>
+        <p>
+            A <strong>B-Tree</strong> of order <code>m</code> has the following properties:
+        </p>
+        <ul>
+            <li>Each node has at most <code>m</code> children.</li>
+            <li>Each internal node (except the root) has at least <code>ceil(m/2)</code> children.</li>
+            <li>All leaf nodes are at the same level.</li>
+        </ul>
+        <pre class="matrix">
+    Example:
+    Order-3 B-Tree:
+        [10 | 20]
+       /   |   \
+    [5]  [15]  [25 | 30]
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Working Up from the Bottom</h2>
+        <p>
+            B-Trees are constructed by inserting elements and ensuring the tree remains balanced by splitting nodes and adjusting parent nodes.
+        </p>
+        <pre class="matrix">
+    Example:
+    Insert: 10, 20, 5, 15, 25, 30
+    Step 1: Insert 10, 20 → [10 | 20]
+    Step 2: Insert 5 → [5 | 10 | 20]
+    Step 3: Split node → [10] with children [5] and [20]
+    Step 4: Continue with subsequent insertions, adjusting as needed.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>8. Example for Creating a B-Tree</h2>
+        <p>
+            To create a B-Tree:
+        </p>
+        <ol>
+            <li>Insert elements one by one.</li>
+            <li>Split nodes when they exceed the allowed number of keys.</li>
+            <li>Adjust parent nodes to maintain balance.</li>
+        </ol>
+        <pre class="matrix">
+    Example:
+    Order-3 B-Tree, Insert: 10, 20, 30, 40, 50
+    1. Insert 10 → [10]
+    2. Insert 20 → [10 | 20]
+    3. Insert 30 → [10 | 20 | 30] (Node full, split)
+       Result: [20] with children [10] and [30]
+    4. Insert 40 → Adjust structure
+    Final Tree:
+        [20 | 40]
+       /    |    \
+    [10]  [30]  [50]
+        </pre>
+    </section>
+</div>
+<div class="topic-container" id="unit6">
+    <h1>UNIT-VI: Sorting and Searching Techniques</h1>
+
+    <section class="section">
+        <h2>1. Sorting Techniques</h2>
+        <p>
+            Sorting is the process of arranging elements in a specific order (ascending or descending). Common sorting techniques include:
+        </p>
+        <ul>
+            <li><strong>Insertion Sort:</strong> Builds the sorted list one item at a time.</li>
+            <li><strong>Selection Sort:</strong> Repeatedly selects the smallest element and places it in the correct position.</li>
+            <li><strong>Merge Sort:</strong> Divides the array into halves, sorts them, and merges them back.</li>
+            <li><strong>Heap Sort:</strong> Uses a heap data structure to sort elements efficiently.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Insertion Sort</h2>
+        <p>
+            <strong>Insertion Sort</strong> works by picking one element at a time and inserting it into its correct position in the sorted part of the array.
+        </p>
+        <pre class="matrix">
+    Example:
+    Array: [4, 3, 2, 1]
+    Steps:
+    1. Start with the first element (already sorted).
+    2. Pick 3, compare with 4 → Insert before 4 → [3, 4, 2, 1]
+    3. Pick 2 → [2, 3, 4, 1]
+    4. Pick 1 → [1, 2, 3, 4]
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Selection Sort</h2>
+        <p>
+            <strong>Selection Sort</strong> repeatedly finds the smallest element from the unsorted portion and places it at the beginning.
+        </p>
+        <pre class="matrix">
+    Example:
+    Array: [4, 3, 2, 1]
+    Steps:
+    1. Find the smallest element (1) → Swap with 4 → [1, 3, 2, 4]
+    2. Find the next smallest (2) → Swap with 3 → [1, 2, 3, 4]
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Merge Sort</h2>
+        <p>
+            <strong>Merge Sort</strong> is a divide-and-conquer algorithm that splits the array, sorts each half, and merges them.
+        </p>
+        <pre class="matrix">
+    Example:
+    Array: [4, 3, 2, 1]
+    Steps:
+    1. Split into halves → [4, 3] and [2, 1]
+    2. Sort each half → [3, 4] and [1, 2]
+    3. Merge → [1, 2, 3, 4]
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Heap Sort</h2>
+        <p>
+            <strong>Heap Sort</strong> uses a binary heap to sort the elements. The maximum (or minimum) is repeatedly extracted and placed in sorted order.
+        </p>
+        <pre class="matrix">
+    Example:
+    Array: [4, 3, 2, 1]
+    Steps:
+    1. Build a max heap → [4, 3, 2, 1]
+    2. Extract max (4) → Place at the end → [3, 2, 1, 4]
+    3. Repeat until sorted → [1, 2, 3, 4]
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Searching Techniques</h2>
+        <p>
+            Searching is the process of finding a specific element in a data set. Common techniques include:
+        </p>
+        <ul>
+            <li><strong>Linear Search:</strong> Checks each element one by one.</li>
+            <li><strong>Binary Search:</strong> Divides the array into halves and searches in the appropriate half (only works on sorted arrays).</li>
+            <li><strong>Hashing:</strong> Maps keys to values using a hash function for fast lookups.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>7. Linear Search</h2>
+        <pre class="matrix">
+    Example:
+    Array: [10, 20, 30, 40]
+    Search for 30:
+    Steps:
+    1. Compare 30 with 10 → No
+    2. Compare 30 with 20 → No
+    3. Compare 30 with 30 → Yes (Found)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>8. Binary Search</h2>
+        <pre class="matrix">
+    Example:
+    Sorted Array: [10, 20, 30, 40, 50]
+    Search for 30:
+    Steps:
+    1. Compare with middle element (30) → Found
+    Efficient for large sorted datasets.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>9. Hashing</h2>
+        <p>
+            <strong>Hashing</strong> uses a hash function to compute an index into a table, from which the desired value can be found.
+        </p>
+        <pre class="matrix">
+    Example:
+    Keys: [101, 202, 303]
+    Hash Function: key % 10
+    Hash Table:
+    Index: 1 → 101
+    Index: 2 → 202
+    Index: 3 → 303
+        </pre>
+    </section>
+</div>
+
 
      <!-- Footer  -->
     <div id="footer-placeholder"></div>

@@ -54,7 +54,542 @@
         </div>
     </div>
 
+<div class="topic-container" id="unit1">
+    <h1>UNIT-I: Introduction</h1>
 
+    <section class="section">
+        <h2>1. Introducing Object-Oriented Approach</h2>
+        <p>The <strong>object-oriented approach</strong> is a programming paradigm based on the concept of objects, which can contain data and methods. This approach promotes modularity, code reusability, and scalability.</p>
+        <pre class="matrix">
+    Example:
+    Consider a class "Car" with attributes like color, model, and methods like start() and stop().
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Relating to Other Paradigms</h2>
+        <p>Object-oriented programming (OOP) differs significantly from other paradigms:</p>
+        <ul>
+            <li><strong>Functional programming:</strong> Focuses on immutable data and pure functions.</li>
+            <li><strong>Data decomposition:</strong> Focuses on breaking data into smaller, manageable parts.</li>
+        </ul>
+        <pre class="matrix">
+    Example:
+    Functional: A function add(a, b) returns a + b.
+    OOP: A class Calculator with method add(a, b) implements addition.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Basic Terms and Ideas</h2>
+        <ul>
+            <li><strong>Abstraction:</strong> Hiding unnecessary details and showing only the essential features.</li>
+            <li><strong>Encapsulation:</strong> Wrapping data and methods into a single unit (class).</li>
+            <li><strong>Inheritance:</strong> Enabling a class to acquire properties and behavior of another class.</li>
+            <li><strong>Polymorphism:</strong> Allowing entities to take multiple forms (e.g., method overloading).</li>
+        </ul>
+        <pre class="matrix">
+    Example:
+    Class Vehicle: Attributes (speed, color), Method (move()).
+    Class Car inherits Vehicle and adds Method (openSunroof()).
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Review of C</h2>
+        <p>The <strong>C language</strong> is a procedural programming language. Object-oriented programming builds upon the foundations of procedural paradigms but organizes code into objects.</p>
+        <pre class="matrix">
+    Example:
+    C: 
+    void add(int a, int b) { return a + b; }
+    C++: 
+    class Calculator {
+        public: int add(int a, int b) { return a + b; }
+    };
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Differences Between C and C++</h2>
+        <p>C++ enhances C with object-oriented features such as:</p>
+        <ul>
+            <li><strong>cin</strong> and <strong>cout:</strong> Used for input and output instead of printf() and scanf().</li>
+            <li><strong>new</strong> and <strong>delete:</strong> Manage dynamic memory instead of malloc() and free().</li>
+            <li><strong>Operators:</strong> Can be overloaded in C++ to provide custom functionality.</li>
+        </ul>
+        <pre class="matrix">
+    Example:
+    C:
+    int* p = (int*) malloc(sizeof(int));
+    C++:
+    int* p = new int;
+
+    // Deleting dynamically allocated memory
+    C: free(p);
+    C++: delete p;
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Classes and Objects</h1>
+
+    <section class="section">
+        <h2>1. Encapsulation and Information Hiding</h2>
+        <p><strong>Encapsulation</strong> is the bundling of data and methods that operate on the data within a class. It ensures <strong>information hiding</strong> by restricting access to certain components of an object using access specifiers (private, protected, public).</p>
+        <pre class="matrix">
+    Example:
+    class Car {
+        private:
+            string color;
+        public:
+            void setColor(string c) { color = c; }
+            string getColor() { return color; }
+    };
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Abstract Data Types (ADTs)</h2>
+        <p><strong>Abstract Data Types</strong> (ADTs) define a data structure and the operations that can be performed on it, without specifying implementation details.</p>
+        <pre class="matrix">
+    Example:
+    ADT Stack:
+    Operations: push(), pop(), peek().
+    Implementation: Array or Linked List.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Objects and Classes</h2>
+        <p>An <strong>object</strong> is an instance of a class. A <strong>class</strong> is a blueprint that defines attributes (data) and methods (functions).</p>
+        <pre class="matrix">
+    Example:
+    class Person {
+        string name;
+        int age;
+        void display() { cout << "Name: " << name << ", Age: " << age; }
+    };
+    Person p1;  // Object of class Person.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. State, Identity, and Behavior of an Object</h2>
+        <p>
+            <strong>State:</strong> Defined by the attributes of an object.<br>
+            <strong>Identity:</strong> Unique property to distinguish objects.<br>
+            <strong>Behavior:</strong> Defined by the methods of the object.
+        </p>
+        <pre class="matrix">
+    Example:
+    Object: Car
+    State: color = "red", speed = 100
+    Identity: Unique memory address
+    Behavior: start(), stop(), accelerate()
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Constructors and Destructors</h2>
+        <p><strong>Constructors</strong> are special methods called when an object is created. <strong>Destructors</strong> are called when an object is destroyed, ensuring resource cleanup.</p>
+        <pre class="matrix">
+    Example:
+    class Car {
+        Car() { cout << "Car created"; }   // Constructor
+        ~Car() { cout << "Car destroyed"; } // Destructor
+    };
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Default Parameter Values</h2>
+        <p>In C++, functions can have <strong>default parameter values</strong>, which are used if no argument is provided during the function call.</p>
+        <pre class="matrix">
+    Example:
+    void greet(string name = "Guest") {
+        cout << "Hello, " << name;
+    }
+    greet();  // Output: Hello, Guest
+    greet("Alice");  // Output: Hello, Alice
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Object Types</h2>
+        <p>In C++, objects can be classified into various types such as <strong>local objects</strong> (within a function) and <strong>global objects</strong> (accessible throughout the program).</p>
+        <pre class="matrix">
+    Example:
+    Local Object: 
+    void func() { Person p1; }
+    Global Object:
+    Person p2;
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>8. Garbage Collection and Dynamic Memory Allocation</h2>
+        <p>C++ does not have automatic garbage collection like some other languages. Instead, it uses <strong>dynamic memory allocation</strong> with operators like <strong>new</strong> and <strong>delete</strong>.</p>
+        <pre class="matrix">
+    Example:
+    int* p = new int(10);  // Dynamic allocation
+    delete p;  // Memory deallocation
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>9. Metaclass / Abstract Classes</h2>
+        <p>An <strong>abstract class</strong> is a class that cannot be instantiated and serves as a blueprint for derived classes. It may contain pure virtual functions.</p>
+        <pre class="matrix">
+    Example:
+    class Shape {
+        public:
+            virtual void draw() = 0;  // Pure virtual function
+    };
+    class Circle : public Shape {
+        void draw() { cout << "Drawing Circle"; }
+    };
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Inheritance and Polymorphism</h1>
+
+    <section class="section">
+        <h2>1. Inheritance</h2>
+        <p><strong>Inheritance</strong> allows a class (derived class) to inherit attributes and methods from another class (base class). This promotes code reuse and a hierarchical structure in the program.</p>
+        <pre class="matrix">
+    Example:
+    class Vehicle {
+        public:
+            int speed;
+            void move() { cout << "Vehicle moving"; }
+    };
+    class Car : public Vehicle {
+        public:
+            void openSunroof() { cout << "Sunroof opened"; }
+    };
+    Car c;
+    c.move();  // Inherited from Vehicle
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Class Hierarchy</h2>
+        <p>A <strong>class hierarchy</strong> organizes classes in a tree-like structure with the base class at the top and derived classes branching below.</p>
+        <pre class="matrix">
+    Example:
+    Base Class: Shape
+    Derived Classes: Circle, Rectangle, Triangle
+    Sub-derived Class: EquilateralTriangle (from Triangle)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Derivation Types: Public, Private & Protected</h2>
+        <p>C++ supports three types of class derivation:</p>
+        <ul>
+            <li><strong>Public:</strong> Members of the base class retain their access levels in the derived class.</li>
+            <li><strong>Private:</strong> All members of the base class become private in the derived class.</li>
+            <li><strong>Protected:</strong> Public and protected members of the base class become protected in the derived class.</li>
+        </ul>
+        <pre class="matrix">
+    Example:
+    class Base {
+        public: int x;
+    };
+    class Derived : public Base {};
+    // x remains public in Derived
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Aggregation and Composition</h2>
+        <p>
+            <strong>Aggregation:</strong> Represents a "has-a" relationship where the lifetime of the contained objects is independent of the container.<br>
+            <strong>Composition:</strong> Represents a "part-of" relationship where the contained objects' lifetime depends on the container.
+        </p>
+        <pre class="matrix">
+    Example:
+    Aggregation:
+    class Engine {};
+    class Car {
+        Engine* engine;  // Engine can exist without Car
+    };
+
+    Composition:
+    class Car {
+        Engine engine;  // Engine is part of Car
+    };
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Polymorphism</h2>
+        <p><strong>Polymorphism</strong> allows objects of different types to be treated as objects of a common base type. It enables flexibility and extensibility in programs.</p>
+        <pre class="matrix">
+    Example:
+    class Shape {
+        public: virtual void draw() { cout << "Drawing Shape"; }
+    };
+    class Circle : public Shape {
+        public: void draw() { cout << "Drawing Circle"; }
+    };
+    Shape* s = new Circle();
+    s->draw();  // Output: Drawing Circle
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Categorization of Polymorphism Techniques</h2>
+        <p>Polymorphism can be categorized into:</p>
+        <ul>
+            <li><strong>Compile-time polymorphism:</strong> Achieved using method overloading and operator overloading.</li>
+            <li><strong>Run-time polymorphism:</strong> Achieved using inheritance and virtual functions.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>7. Method Polymorphism</h2>
+        <p>Method polymorphism refers to multiple methods with the same name but different parameter lists.</p>
+        <pre class="matrix">
+    Example:
+    class Calculator {
+        public:
+            int add(int a, int b) { return a + b; }
+            float add(float a, float b) { return a + b; }
+    };
+    Calculator c;
+    c.add(3, 4);  // Calls int add
+    c.add(3.5f, 4.5f);  // Calls float add
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>8. Polymorphism by Parameter</h2>
+        <p>This technique involves using generic programming, such as templates, to implement polymorphism.</p>
+        <pre class="matrix">
+    Example:
+    template <class T>
+    class Box {
+        T value;
+    public:
+        void setValue(T v) { value = v; }
+        T getValue() { return value; }
+    };
+    Box<int> intBox;
+    intBox.setValue(10);
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>9. Operator Overloading</h2>
+        <p><strong>Operator overloading</strong> allows operators to be redefined for user-defined types.</p>
+        <pre class="matrix">
+    Example:
+    class Complex {
+        int real, imag;
+    public:
+        Complex operator+(const Complex& c) {
+            return Complex(real + c.real, imag + c.imag);
+        }
+    };
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>10. Parametric Polymorphism</h2>
+        <p><strong>Parametric polymorphism</strong> is achieved using templates, allowing code to operate on various types without modification.</p>
+        <pre class="matrix">
+    Example:
+    template <typename T>
+    T add(T a, T b) {
+        return a + b;
+    }
+    int x = add<int>(2, 3);
+    float y = add<float>(2.5, 3.5);
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Generic Function</h1>
+
+    <section class="section">
+        <h2>1. Template Functions</h2>
+        <p>
+            A <strong>template function</strong> allows the definition of functions that can work with any data type. This makes code more reusable and type-safe.
+        </p>
+        <pre class="matrix">
+    Example:
+    template <typename T>
+    T max(T a, T b) {
+        return (a > b) ? a : b;
+    }
+    int x = max(10, 20);      // Works with integers
+    float y = max(10.5, 20.3); // Works with floats
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Function Name Overloading</h2>
+        <p>
+            <strong>Function name overloading</strong> is the ability to define multiple functions with the same name but with different parameter lists in the same scope.
+        </p>
+        <pre class="matrix">
+    Example:
+    class Calculator {
+        public:
+            int add(int a, int b) { return a + b; }
+            double add(double a, double b) { return a + b; }
+    };
+    Calculator c;
+    c.add(3, 5);      // Calls int add
+    c.add(3.5, 4.5);  // Calls double add
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Overriding Inherited Methods</h2>
+        <p>
+            <strong>Method overriding</strong> occurs when a derived class redefines a method from the base class to provide specific functionality.
+        </p>
+        <pre class="matrix">
+    Example:
+    class Base {
+        public: 
+            virtual void display() { cout << "Base display"; }
+    };
+    class Derived : public Base {
+        public: 
+            void display() override { cout << "Derived display"; }
+    };
+    Base* obj = new Derived();
+    obj->display();  // Output: Derived display
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Run-Time Polymorphism</h2>
+        <p>
+            <strong>Run-time polymorphism</strong> is achieved through inheritance and virtual functions. The decision of which method to execute is made at runtime.
+        </p>
+        <pre class="matrix">
+    Example:
+    class Shape {
+        public:
+            virtual void draw() { cout << "Drawing Shape"; }
+    };
+    class Circle : public Shape {
+        public:
+            void draw() override { cout << "Drawing Circle"; }
+    };
+    Shape* s = new Circle();
+    s->draw();  // Output: Drawing Circle
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Multiple Inheritance</h2>
+        <p>
+            <strong>Multiple inheritance</strong> allows a class to inherit from more than one base class. This can lead to complexities like the <em>diamond problem</em>, which is managed using virtual inheritance.
+        </p>
+        <pre class="matrix">
+    Example:
+    class A {
+        public: void showA() { cout << "A"; }
+    };
+    class B {
+        public: void showB() { cout << "B"; }
+    };
+    class C : public A, public B {};
+    C obj;
+    obj.showA();  // Output: A
+    obj.showB();  // Output: B
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Files and Exception Handling</h1>
+
+    <section class="section">
+        <h2>1. Streams and Files</h2>
+        <p>
+            In C++, <strong>streams</strong> are used for input and output operations, while <strong>files</strong> allow storing and retrieving data permanently. The <code>fstream</code> library provides functionalities for file handling.
+        </p>
+        <pre class="matrix">
+    Example:
+    #include <fstream>
+    using namespace std;
+
+    ofstream outFile("example.txt");
+    outFile << "Hello, World!";  // Write to file
+    outFile.close();
+
+    ifstream inFile("example.txt");
+    string content;
+    inFile >> content;  // Read from file
+    cout << content;
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Namespaces</h2>
+        <p>
+            A <strong>namespace</strong> is a declarative region that provides a scope to the identifiers (functions, variables, etc.) to avoid name conflicts. The standard namespace in C++ is <code>std</code>.
+        </p>
+        <pre class="matrix">
+    Example:
+    namespace MyNamespace {
+        int x = 10;
+        void display() { cout << "Namespace Example"; }
+    }
+
+    using namespace MyNamespace;
+    display();  // Output: Namespace Example
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Exception Handling</h2>
+        <p>
+            <strong>Exception handling</strong> in C++ is used to manage runtime errors gracefully. The keywords <code>try</code>, <code>catch</code>, and <code>throw</code> are used to implement it.
+        </p>
+        <pre class="matrix">
+    Example:
+    try {
+        int a = 10, b = 0;
+        if (b == 0) throw "Division by zero!";
+        cout << a / b;
+    } catch (const char* msg) {
+        cout << "Error: " << msg;
+    }
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Generic Classes</h2>
+        <p>
+            <strong>Generic classes</strong> in C++ are implemented using templates to enable the creation of classes that can work with any data type.
+        </p>
+        <pre class="matrix">
+    Example:
+    template <class T>
+    class Box {
+        T value;
+    public:
+        void setValue(T v) { value = v; }
+        T getValue() { return value; }
+    };
+
+    Box<int> intBox;
+    intBox.setValue(5);
+    cout << intBox.getValue();  // Output: 5
+        </pre>
+    </section>
+</div>
 
      <!-- Footer  -->
     <div id="footer-placeholder"></div>

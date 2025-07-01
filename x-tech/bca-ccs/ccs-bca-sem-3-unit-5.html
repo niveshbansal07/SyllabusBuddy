@@ -54,6 +54,547 @@
     </div>
 </div>
 
+<div class="topic-container" id="unit1">
+    <h1>UNIT-I: Population, Sample and Data Condensation</h1>
+
+    <section class="section">
+        <h2>1. Definition and Scope of Statistics</h2>
+        <p>
+            Statistics is the science of collecting, organizing, analyzing, interpreting, and presenting data. It is widely used in fields like economics, medicine, engineering, and social sciences to make informed decisions.
+        </p>
+        <pre class="matrix">
+    Example:
+    Use in Medicine: Analyzing clinical trial data to evaluate treatment effectiveness.
+    Use in Economics: Analyzing GDP growth rates to assess economic performance.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Concept of Population and Sample</h2>
+        <p>
+            <strong>Population:</strong> The complete set of items or individuals under study.<br>
+            <strong>Sample:</strong> A subset of the population used for analysis to make inferences about the whole.
+        </p>
+        <pre class="matrix">
+    Example:
+    - Population: All students in a university.
+    - Sample: A group of 100 students selected randomly from the university.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Raw Data, Attributes, and Variables</h2>
+        <p>
+            <strong>Raw Data:</strong> Unprocessed data collected directly from observations or experiments.<br>
+            <strong>Attributes:</strong> Qualitative characteristics of data (e.g., gender, color).<br>
+            <strong>Variables:</strong> Quantitative characteristics that can vary (e.g., age, height).
+        </p>
+        <pre class="matrix">
+    Example:
+    Raw Data: {18, Male, 5.7ft; 20, Female, 5.4ft}
+    Attributes: Gender (Male/Female)
+    Variables: Age, Height
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Classification</h2>
+        <p>
+            Classification is the process of organizing raw data into meaningful categories to facilitate analysis. It can be based on qualitative or quantitative criteria.
+        </p>
+        <pre class="matrix">
+    Example:
+    - Age Groups: Below 20, 20-40, Above 40.
+    - Product Categories: Electronics, Apparel, Food.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Frequency Distribution</h2>
+        <p>
+            A frequency distribution organizes data into classes and shows the number of occurrences (frequency) in each class.
+        </p>
+        <pre class="matrix">
+    Example:
+    Test Scores:
+    Range      Frequency
+    0-20          5
+    21-40         10
+    41-60         15
+    61-80         8
+    81-100        2
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Cumulative Frequency Distribution</h2>
+        <p>
+            A cumulative frequency distribution shows the cumulative total of frequencies up to each class or category.
+        </p>
+        <pre class="matrix">
+    Example:
+    Test Scores:
+    Range      Frequency     Cumulative Frequency
+    0-20          5                 5
+    21-40         10                15
+    41-60         15                30
+    61-80         8                 38
+    81-100        2                 40
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Measures of Central Tendency</h1>
+
+    <section class="section">
+        <h2>1. Concept of Central Tendency</h2>
+        <p>
+            Measures of central tendency describe a central or typical value for a dataset. They summarize data with a single representative value to analyze distributions effectively.
+        </p>
+        <pre class="matrix">
+    Example:
+    - Test Scores: {50, 60, 70, 80, 90}
+    - Central Tendency: A single value representing the dataset, such as 70.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Requirements of a Good Measure of Central Tendency</h2>
+        <p>
+            A good measure of central tendency should have the following characteristics:
+        </p>
+        <ul>
+            <li><strong>Representativeness:</strong> Reflect the entire dataset.</li>
+            <li><strong>Stability:</strong> Remain consistent across different datasets with similar characteristics.</li>
+            <li><strong>Mathematical Simplicity:</strong> Easy to calculate and understand.</li>
+            <li><strong>Applicability:</strong> Suitable for further statistical analysis.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Arithmetic Mean</h2>
+        <p>
+            The arithmetic mean is the sum of all data points divided by the total number of data points. It is sensitive to extreme values.
+        </p>
+        <pre class="matrix">
+    Formula: Mean = (Σx) / n
+    Example:
+    Data: {10, 20, 30, 40, 50}
+    Mean = (10 + 20 + 30 + 40 + 50) / 5 = 30
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Median</h2>
+        <p>
+            The median is the middle value of a dataset when arranged in ascending or descending order. It is unaffected by extreme values.
+        </p>
+        <pre class="matrix">
+    Example:
+    Data: {10, 20, 30, 40, 50}
+    Median = 30 (middle value)
+    For even data points: Median = Average of two middle values.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Mode</h2>
+        <p>
+            The mode is the value that appears most frequently in a dataset. A dataset can have one mode (unimodal), two modes (bimodal), or more (multimodal).
+        </p>
+        <pre class="matrix">
+    Example:
+    Data: {10, 20, 20, 30, 40}
+    Mode = 20 (most frequent value)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Harmonic Mean</h2>
+        <p>
+            The harmonic mean is calculated as the reciprocal of the average of the reciprocals of the data points. It is used for rates and ratios.
+        </p>
+        <pre class="matrix">
+    Formula: Harmonic Mean = n / (Σ(1/x))
+    Example:
+    Data: {2, 3, 4}
+    Harmonic Mean = 3 / ((1/2) + (1/3) + (1/4)) = 2.77
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Geometric Mean</h2>
+        <p>
+            The geometric mean is the nth root of the product of n data points. It is useful for growth rates.
+        </p>
+        <pre class="matrix">
+    Formula: Geometric Mean = (Πx)^(1/n)
+    Example:
+    Data: {2, 8}
+    Geometric Mean = √(2 × 8) = 4
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>8. Grouped and Ungrouped Data</h2>
+        <p>
+            Central tendency measures can be applied to both grouped and ungrouped data:
+        </p>
+        <ul>
+            <li><strong>Ungrouped Data:</strong> Individual data points.</li>
+            <li><strong>Grouped Data:</strong> Data organized into frequency distributions.</li>
+        </ul>
+        <pre class="matrix">
+    Example:
+    Grouped Data:
+    Class Interval    Frequency
+    10-20                3
+    20-30                5
+    30-40                2
+    Mean, Median, Mode calculated accordingly.
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Measures of Dispersion</h1>
+
+    <section class="section">
+        <h2>1. Concept of Dispersion</h2>
+        <p>
+            Dispersion refers to the spread or variability of a dataset. It provides insights into how data points are distributed around a central value, highlighting the degree of consistency or variability.
+        </p>
+        <pre class="matrix">
+    Example:
+    Dataset A: {5, 5, 5, 5, 5} → Low dispersion
+    Dataset B: {1, 5, 9, 13, 17} → High dispersion
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Absolute and Relative Measures of Dispersion</h2>
+        <p>
+            <strong>Absolute Measures:</strong> Expressed in the same units as the data (e.g., range, variance, standard deviation).<br>
+            <strong>Relative Measures:</strong> Expressed as ratios or percentages, enabling comparison across datasets (e.g., coefficient of variation).
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>3. Range</h2>
+        <p>
+            The range is the simplest measure of dispersion, calculated as the difference between the maximum and minimum values in a dataset.
+        </p>
+        <pre class="matrix">
+    Formula: Range = Maximum Value - Minimum Value
+    Example:
+    Dataset: {4, 8, 15, 16, 23}
+    Range = 23 - 4 = 19
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Variance</h2>
+        <p>
+            Variance measures the average squared deviation of each data point from the mean. It indicates the data's variability.
+        </p>
+        <pre class="matrix">
+    Formula: Variance (σ²) = Σ(Xi - X̄)² / N
+    Example:
+    Dataset: {2, 4, 6}
+    Mean (X̄) = 4
+    Variance = [(2-4)² + (4-4)² + (6-4)²] / 3 = 2.67
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Standard Deviation</h2>
+        <p>
+            The standard deviation is the square root of the variance. It provides a measure of dispersion in the same units as the data.
+        </p>
+        <pre class="matrix">
+    Formula: Standard Deviation (σ) = √Variance
+    Example:
+    Dataset: {2, 4, 6}
+    Variance = 2.67
+    Standard Deviation = √2.67 = 1.63
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Coefficient of Variation (CV)</h2>
+        <p>
+            The coefficient of variation is a relative measure of dispersion, calculated as the ratio of the standard deviation to the mean, expressed as a percentage.
+        </p>
+        <pre class="matrix">
+    Formula: CV = (Standard Deviation / Mean) × 100%
+    Example:
+    Dataset: {2, 4, 6}
+    Mean = 4, Standard Deviation = 1.63
+    CV = (1.63 / 4) × 100 = 40.75%
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Permutations and Combinations</h1>
+
+    <section class="section">
+        <h2>1. Permutations</h2>
+        <p>
+            A permutation is an arrangement of objects in a specific order. The number of permutations of ‘n’ dissimilar objects taken ‘r’ at a time is given by:
+        </p>
+        <pre class="matrix">
+    Formula:
+    nPr = n! / (n-r)!
+    Where n = total objects, r = objects selected.
+    Example:
+    For n = 5, r = 2:
+    5P2 = 5! / (5-2)! = 5 × 4 = 20
+        </pre>
+        <p>
+            <strong>With Repetition:</strong> When repetition is allowed, the formula is:
+        </p>
+        <pre class="matrix">
+    Formula:
+    n^r
+    Example:
+    For n = 3, r = 2:
+    3^2 = 9 permutations.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Combinations</h2>
+        <p>
+            A combination is a selection of objects without regard to order. The number of combinations of ‘r’ objects taken from ‘n’ objects is given by:
+        </p>
+        <pre class="matrix">
+    Formula:
+    nCr = n! / (r!(n-r)!)
+    Example:
+    For n = 5, r = 2:
+    5C2 = 5! / (2!(5-2)!) = (5 × 4) / (2 × 1) = 10
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Differences Between Permutations and Combinations</h2>
+        <p>
+            <strong>Permutations:</strong> Order matters.<br>
+            <strong>Combinations:</strong> Order does not matter.
+        </p>
+        <pre class="matrix">
+    Example:
+    Objects: {A, B}
+    Permutations: AB, BA (2 ways)
+    Combinations: {A, B} (1 way)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Applications</h2>
+        <p>
+            Permutations and combinations have a wide range of applications in probability, statistics, and real-life problems.
+        </p>
+        <pre class="matrix">
+    Examples:
+    1. Determining seating arrangements (Permutations).
+    2. Selecting a committee from a group of people (Combinations).
+    3. Calculating probabilities in card games.
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Sample Space, Events and Probability</h1>
+
+    <section class="section">
+        <h2>1. Experiments and Random Experiments</h2>
+        <p>
+            <strong>Experiment:</strong> A process or action that results in an outcome.<br>
+            <strong>Random Experiment:</strong> An experiment where the outcome is uncertain.
+        </p>
+        <pre class="matrix">
+    Example:
+    Experiment: Tossing a coin.
+    Outcome: Heads or Tails (random).
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Definition of Sample Space</h2>
+        <p>
+            The sample space is the set of all possible outcomes of a random experiment.
+        </p>
+        <pre class="matrix">
+    Example:
+    Tossing a coin: S = {Heads, Tails}
+    Rolling a die: S = {1, 2, 3, 4, 5, 6}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Events and Types of Events</h2>
+        <p>
+            An event is a subset of the sample space. Types of events include:
+        </p>
+        <ul>
+            <li><strong>Union of Events:</strong> Outcomes in either event A or B (A ∪ B).</li>
+            <li><strong>Intersection of Events:</strong> Outcomes common to A and B (A ∩ B).</li>
+            <li><strong>Mutually Exclusive Events:</strong> Events that cannot occur simultaneously.</li>
+            <li><strong>Complementary Events:</strong> All outcomes not in the event (A').</li>
+            <li><strong>Exhaustive Events:</strong> Events covering the entire sample space.</li>
+        </ul>
+        <pre class="matrix">
+    Example:
+    Rolling a die:
+    A = {1, 2, 3}, B = {4, 5, 6}
+    Mutually Exclusive: A ∩ B = ∅
+    Complement of A: A' = {4, 5, 6}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Classical Definition of Probability</h2>
+        <p>
+            Probability is the ratio of favorable outcomes to the total number of outcomes in the sample space.
+        </p>
+        <pre class="matrix">
+    Formula:
+    P(A) = Number of Favorable Outcomes / Total Number of Outcomes
+    Example:
+    Tossing a coin: P(Heads) = 1/2
+    Rolling a die: P(Even) = 3/6 = 1/2
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Addition Theorem of Probability (Without Proof)</h2>
+        <p>
+            For two events A and B:
+        </p>
+        <pre class="matrix">
+    Formula:
+    P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
+    Example:
+    A = Rolling an even number, B = Rolling a number > 3
+    P(A) = 3/6, P(B) = 3/6, P(A ∩ B) = 1/6
+    P(A ∪ B) = 3/6 + 3/6 - 1/6 = 5/6
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Conditional Probability</h2>
+        <p>
+            Conditional probability is the probability of an event A given that another event B has occurred.
+        </p>
+        <pre class="matrix">
+    Formula:
+    P(A|B) = P(A ∩ B) / P(B)
+    Example:
+    A = Rolling a 2, B = Rolling an even number
+    P(A|B) = P(A ∩ B) / P(B) = (1/6) / (3/6) = 1/3
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Independence of Two Events</h2>
+        <p>
+            Two events A and B are independent if the occurrence of one does not affect the probability of the other.
+        </p>
+        <pre class="matrix">
+    Formula:
+    P(A ∩ B) = P(A) × P(B)
+    Example:
+    Tossing two coins: 
+    A = First coin shows Heads, B = Second coin shows Tails
+    P(A ∩ B) = P(A) × P(B) = 1/2 × 1/2 = 1/4
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit6">
+    <h1>UNIT-VI: Statistical Quality Control</h1>
+
+    <section class="section">
+        <h2>1. Introduction to Statistical Quality Control</h2>
+        <p>
+            Statistical Quality Control (SQC) uses statistical methods to monitor and control a process to ensure that it operates at its full potential. It focuses on maintaining the quality of both processes and products.
+        </p>
+        <pre class="matrix">
+    Example:
+    Ensuring the production of defect-free components in manufacturing using quality control charts.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Control Limits, Specification Limits, and Tolerance Limits</h2>
+        <ul>
+            <li><strong>Control Limits:</strong> Statistical boundaries within which a process operates under control.</li>
+            <li><strong>Specification Limits:</strong> Defined limits of product performance as per customer requirements.</li>
+            <li><strong>Tolerance Limits:</strong> Acceptable range of variation in a product’s characteristics.</li>
+        </ul>
+        <pre class="matrix">
+    Example:
+    - Control Limits: Derived from process data (e.g., ±3 standard deviations from the mean).
+    - Specification Limits: Set by customer requirements (e.g., 10 ± 0.2 cm).
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Process and Product Control</h2>
+        <p>
+            <strong>Process Control:</strong> Ensures that a process remains stable and consistent over time.<br>
+            <strong>Product Control:</strong> Focuses on inspecting the final product to ensure quality standards are met.
+        </p>
+        <pre class="matrix">
+    Example:
+    - Process Control: Monitoring temperature during production.
+    - Product Control: Inspecting finished items for defects.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Control Charts for X and R</h2>
+        <p>
+            <strong>X-Chart:</strong> Monitors the mean of a process over time.<br>
+            <strong>R-Chart:</strong> Monitors the range (variability) of a process over time.
+        </p>
+        <pre class="matrix">
+    Example:
+    - X-Chart: Tracks average weight of items produced.
+    - R-Chart: Tracks variation in weights of items produced.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Control Charts for Number of Defectives (n-p Chart)</h2>
+        <p>
+            The n-p chart monitors the number of defective items in a sample of constant size. It is used when the output can either be defective or non-defective.
+        </p>
+        <pre class="matrix">
+    Example:
+    - Sample size: 100 items.
+    - Defective items: Tracked over several batches.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Control Charts for Number of Defects (c-Chart)</h2>
+        <p>
+            The c-chart monitors the count of defects in a sample of constant size. It is used when defects can occur multiple times on a single item.
+        </p>
+        <pre class="matrix">
+    Example:
+    - Product: A fabric roll.
+    - Defects: Number of tears, stains, or misprints per roll.
+        </pre>
+    </section>
+</div>
+
+
+
      <!-- Footer  -->
     <div id="footer-placeholder"></div>
 
