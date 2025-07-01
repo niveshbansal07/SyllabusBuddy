@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="../css/topic.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="Images/syllabusBuddy-Logo.png" type="image/icon">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8452146197004922"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8452146197004922"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,9 +19,9 @@
     <div id="navbar-placeholder"></div>
     <div class="sem-unit-header">C Programming </div>
 
- <div class="container">
-      
-    <a href="#unit1" class="unit">UNIT-I: Arrays</a>
+    <div class="container">
+
+        <a href="#unit1" class="unit">UNIT-I: Arrays</a>
         <div class="content">
             Arrays: Definition, declaration and initialization of one-dimensional array; Accessing array elements;
             Displaying array elements; Sorting arrays; Arrays and functions. Two-dimensional array: Declaration and
@@ -61,11 +61,829 @@
         </div>
     </div>
 
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Arrays</h1>
 
+        <section class="section">
+            <h2>1. Definition, Declaration, and Initialization of One-Dimensional Array</h2>
+            <p>An <strong>array</strong> is a collection of elements of the same data type stored in contiguous memory
+                locations. It allows efficient access and manipulation of data using an index.</p>
+            <pre class="matrix">
+    Syntax:
+    data_type array_name[size];
 
-     <!-- Footer  -->
+    Example:
+    int numbers[5] = {1, 2, 3, 4, 5};
+    Here, 'numbers' is a 1D array of integers with 5 elements.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Accessing and Displaying Array Elements</h2>
+            <p>Array elements can be accessed using their index, which starts from 0. To display elements, a loop is
+                commonly used.</p>
+            <pre class="matrix">
+    Example:
+    int numbers[5] = {1, 2, 3, 4, 5};
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", numbers[i]);
+    }
+    Output: 1 2 3 4 5
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Sorting Arrays</h2>
+            <p>Sorting an array involves arranging its elements in a specific order (ascending or descending). Common
+                algorithms include bubble sort, selection sort, and quicksort.</p>
+            <pre class="matrix">
+    Example:
+    Bubble Sort:
+    int numbers[5] = {5, 2, 9, 1, 3};
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5 - i - 1; j++) {
+            if (numbers[j] > numbers[j + 1]) {
+                int temp = numbers[j];
+                numbers[j] = numbers[j + 1];
+                numbers[j + 1] = temp;
+            }
+        }
+    }
+    Sorted Array: 1 2 3 5 9
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Arrays and Functions</h2>
+            <p>Arrays can be passed to functions to perform operations. When passed, only the reference to the first
+                element is given, not the entire array.</p>
+            <pre class="matrix">
+    Example:
+    void printArray(int arr[], int size) {
+        for (int i = 0; i < size; i++) {
+            printf("%d ", arr[i]);
+        }
+    }
+    int main() {
+        int numbers[5] = {10, 20, 30, 40, 50};
+        printArray(numbers, 5);
+        return 0;
+    }
+    Output: 10 20 30 40 50
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Two-Dimensional Arrays</h2>
+            <p>A <strong>two-dimensional array</strong> is an array of arrays, often visualized as a matrix. It requires
+                two indices for accessing elements.</p>
+            <pre class="matrix">
+    Declaration:
+    data_type array_name[rows][columns];
+
+    Example:
+    int matrix[2][3] = { {1, 2, 3}, {4, 5, 6} };
+    Access: matrix[0][1] = 2
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Memory Representation of Arrays</h2>
+            <p>Arrays in C are stored in memory in either <strong>row-major</strong> or <strong>column-major</strong>
+                order:</p>
+            <ul>
+                <li><strong>Row-Major Order:</strong> Elements of a row are stored consecutively in memory.</li>
+                <li><strong>Column-Major Order:</strong> Elements of a column are stored consecutively in memory.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    Array: int matrix[2][2] = { {1, 2}, {3, 4} };
+    Row-Major: Memory Order: 1, 2, 3, 4
+    Column-Major: Memory Order: 1, 3, 2, 4
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Multidimensional Arrays</h2>
+            <p>A <strong>multidimensional array</strong> is an array with more than two dimensions. It is declared and
+                accessed similarly to 2D arrays but requires additional indices.</p>
+            <pre class="matrix">
+    Example:
+    Declaration: int cube[2][2][2];
+    Initialization: int cube[2][2][2] = { {{1, 2}, {3, 4}}, {{5, 6}, {7, 8}} };
+    Access: cube[1][0][1] = 6
+        </pre>
+        </section>
+    </div>
+
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Pointers</h1>
+
+        <section class="section">
+            <h2>1. Definition and Declaration</h2>
+            <p>A <strong>pointer</strong> is a variable that stores the memory address of another variable. It is
+                declared using the <code>*</code> symbol.</p>
+            <pre class="matrix">
+    Syntax:
+    data_type *pointer_name;
+
+    Example:
+    int *ptr;
+    float *fptr;
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Initialization</h2>
+            <p>To initialize a pointer, assign it the address of a variable using the <code>&</code> operator.</p>
+            <pre class="matrix">
+    Example:
+    int num = 10;
+    int *ptr = &num;
+    printf("Address of num: %p\n", ptr);
+    printf("Value of num: %d\n", *ptr);
+    Output:
+    Address of num: 0x7ffeeaa3b8c4 (example)
+    Value of num: 10
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Indirection Operator and Address-of Operator</h2>
+            <p>
+                <strong>Indirection operator (*):</strong> Dereferences a pointer to access the value stored at the
+                memory address.
+                <strong>Address-of operator (&):</strong> Retrieves the memory address of a variable.
+            </p>
+            <pre class="matrix">
+    Example:
+    int x = 5;
+    int *p = &x;
+    printf("Value of x: %d\n", *p);
+    printf("Address of x: %p\n", &x);
+    Output:
+    Value of x: 5
+    Address of x: 0x7ffeeaa3b8c4 (example)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Pointer Arithmetic</h2>
+            <p>Pointers support arithmetic operations such as increment, decrement, and addition/subtraction of
+                integers.</p>
+            <pre class="matrix">
+    Example:
+    int arr[3] = {10, 20, 30};
+    int *ptr = arr;
+    printf("Value at ptr: %d\n", *ptr);
+    ptr++;
+    printf("Value at ptr: %d\n", *ptr);
+    Output:
+    Value at ptr: 10
+    Value at ptr: 20
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Dynamic Memory Allocation</h2>
+            <p>Dynamic memory allocation allows memory to be allocated at runtime using functions like
+                <code>malloc</code>, <code>calloc</code>, <code>realloc</code>, and freed using <code>free</code>.</p>
+            <pre class="matrix">
+    Example:
+    int *ptr = (int *)malloc(5 * sizeof(int));
+    if (ptr == NULL) {
+        printf("Memory allocation failed.\n");
+    } else {
+        for (int i = 0; i < 5; i++) {
+            ptr[i] = i + 1;
+        }
+        for (int i = 0; i < 5; i++) {
+            printf("%d ", ptr[i]);
+        }
+    }
+    free(ptr);
+    Output: 1 2 3 4 5
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Arrays and Pointers</h2>
+            <p>Arrays and pointers are closely related in C. The name of an array acts as a pointer to the first element
+                of the array.</p>
+            <pre class="matrix">
+    Example:
+    int arr[3] = {10, 20, 30};
+    int *ptr = arr;
+    printf("First element: %d\n", *ptr);
+    printf("Second element: %d\n", *(ptr + 1));
+    Output:
+    First element: 10
+    Second element: 20
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Functions and Pointers</h2>
+            <p>Pointers can be used to pass variables by reference to functions, enabling functions to modify the
+                original variables.</p>
+            <pre class="matrix">
+    Example:
+    void updateValue(int *p) {
+        *p = 20;
+    }
+    int main() {
+        int x = 10;
+        updateValue(&x);
+        printf("Updated value of x: %d\n", x);
+        return 0;
+    }
+    Output:
+    Updated value of x: 20
+        </pre>
+        </section>
+    </div>
+
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Strings</h1>
+
+        <section class="section">
+            <h2>1. Definition, Declaration, and Initialization of Strings</h2>
+            <p>A <strong>string</strong> in C is an array of characters terminated by a null character
+                <code>'\0'</code>. Strings can be declared and initialized like arrays.</p>
+            <pre class="matrix">
+    Declaration:
+    char str[size];
+
+    Initialization:
+    char str1[] = "Hello";
+    char str2[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+
+    Access:
+    printf("%c", str1[0]); // Output: H
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Standard Library Functions for Strings</h2>
+            <p>C provides several standard library functions for performing operations on strings. These functions are
+                defined in <code>string.h</code>.</p>
+
+            <h3>a. <code>strlen()</code></h3>
+            <p>Returns the length of a string (excluding the null character).</p>
+            <pre class="matrix">
+    Example:
+    char str[] = "Hello";
+    printf("Length: %lu", strlen(str));
+    Output: Length: 5
+        </pre>
+
+            <h3>b. <code>strcpy()</code></h3>
+            <p>Copies one string into another.</p>
+            <pre class="matrix">
+    Example:
+    char str1[] = "Hello";
+    char str2[10];
+    strcpy(str2, str1);
+    printf("%s", str2);
+    Output: Hello
+        </pre>
+
+            <h3>c. <code>strcat()</code></h3>
+            <p>Concatenates (joins) two strings.</p>
+            <pre class="matrix">
+    Example:
+    char str1[20] = "Hello";
+    char str2[] = " World";
+    strcat(str1, str2);
+    printf("%s", str1);
+    Output: Hello World
+        </pre>
+
+            <h3>d. <code>strcmp()</code></h3>
+            <p>Compares two strings lexicographically. Returns 0 if equal, a negative value if the first string is less,
+                and a positive value if the first string is greater.</p>
+            <pre class="matrix">
+    Example:
+    char str1[] = "Hello";
+    char str2[] = "World";
+    int result = strcmp(str1, str2);
+    printf("%d", result);
+    Output: -15 (depends on the ASCII values of characters)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Implementation Without Using Standard Library Functions</h2>
+            <h3>a. Length of a String</h3>
+            <pre class="matrix">
+    int stringLength(char str[]) {
+        int length = 0;
+        while (str[length] != '\0') {
+            length++;
+        }
+        return length;
+    }
+    Example:
+    char str[] = "Hello";
+    printf("Length: %d", stringLength(str));
+    Output: Length: 5
+        </pre>
+
+            <h3>b. Copying Strings</h3>
+            <pre class="matrix">
+    void stringCopy(char dest[], char src[]) {
+        int i = 0;
+        while (src[i] != '\0') {
+            dest[i] = src[i];
+            i++;
+        }
+        dest[i] = '\0';
+    }
+    Example:
+    char src[] = "Hello";
+    char dest[10];
+    stringCopy(dest, src);
+    printf("%s", dest);
+    Output: Hello
+        </pre>
+
+            <h3>c. Concatenating Strings</h3>
+            <pre class="matrix">
+    void stringConcat(char str1[], char str2[]) {
+        int i = 0, j = 0;
+        while (str1[i] != '\0') i++;
+        while (str2[j] != '\0') {
+            str1[i++] = str2[j++];
+        }
+        str1[i] = '\0';
+    }
+    Example:
+    char str1[20] = "Hello";
+    char str2[] = " World";
+    stringConcat(str1, str2);
+    printf("%s", str1);
+    Output: Hello World
+        </pre>
+
+            <h3>d. Comparing Strings</h3>
+            <pre class="matrix">
+    int stringCompare(char str1[], char str2[]) {
+        int i = 0;
+        while (str1[i] != '\0' && str2[i] != '\0') {
+            if (str1[i] != str2[i]) {
+                return str1[i] - str2[i];
+            }
+            i++;
+        }
+        return str1[i] - str2[i];
+    }
+    Example:
+    char str1[] = "Hello";
+    char str2[] = "World";
+    int result = stringCompare(str1, str2);
+    printf("%d", result);
+    Output: -15
+        </pre>
+        </section>
+    </div>
+
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Structures</h1>
+
+        <section class="section">
+            <h2>1. Definition and Declaration</h2>
+            <p>A <strong>structure</strong> in C is a user-defined data type that groups variables of different data
+                types into a single unit. It is declared using the <code>struct</code> keyword.</p>
+            <pre class="matrix">
+    Syntax:
+    struct StructureName {
+        data_type member1;
+        data_type member2;
+        ...
+    };
+
+    Example:
+    struct Student {
+        int rollNo;
+        char name[50];
+        float marks;
+    };
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Variables Initialization</h2>
+            <p>Structure variables can be initialized during or after declaration.</p>
+            <pre class="matrix">
+    Example:
+    struct Student {
+        int rollNo;
+        char name[50];
+        float marks;
+    };
+    
+    // Initialization during declaration
+    struct Student s1 = {1, "Alice", 95.5};
+
+    // Initialization after declaration
+    struct Student s2;
+    s2.rollNo = 2;
+    strcpy(s2.name, "Bob");
+    s2.marks = 89.0;
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Accessing Fields and Structure Operations</h2>
+            <p>Fields of a structure are accessed using the <code>.</code> operator.</p>
+            <pre class="matrix">
+    Example:
+    struct Student {
+        int rollNo;
+        char name[50];
+        float marks;
+    };
+
+    struct Student s1 = {1, "Alice", 95.5};
+    printf("Roll No: %d\n", s1.rollNo);
+    printf("Name: %s\n", s1.name);
+    printf("Marks: %.2f\n", s1.marks);
+    Output:
+    Roll No: 1
+    Name: Alice
+    Marks: 95.50
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Nested Structures</h2>
+            <p>Structures can contain other structures as members. This is called <strong>nested structures</strong>.
+            </p>
+            <pre class="matrix">
+    Example:
+    struct Address {
+        char city[50];
+        char state[50];
+        int zip;
+    };
+
+    struct Student {
+        int rollNo;
+        char name[50];
+        struct Address addr;
+    };
+
+    struct Student s = {1, "Alice", {"New York", "NY", 10001}};
+    printf("City: %s\n", s.addr.city);
+    printf("State: %s\n", s.addr.state);
+    printf("ZIP: %d\n", s.addr.zip);
+    Output:
+    City: New York
+    State: NY
+    ZIP: 10001
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Unions: Definition and Declaration</h2>
+            <p>A <strong>union</strong> is similar to a structure, but its members share the same memory space. It is
+                declared using the <code>union</code> keyword.</p>
+            <pre class="matrix">
+    Syntax:
+    union UnionName {
+        data_type member1;
+        data_type member2;
+        ...
+    };
+
+    Example:
+    union Data {
+        int i;
+        float f;
+        char str[20];
+    };
+
+    union Data d;
+    d.i = 10; // Only one member can hold a value at a time
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Differences Between Union and Structure</h2>
+            <p>The key differences between structures and unions are:</p>
+            <ul>
+                <li><strong>Memory:</strong> In a structure, each member has its own memory, whereas in a union, all
+                    members share the same memory space.</li>
+                <li><strong>Access:</strong> All members of a structure can store and access values simultaneously, but
+                    only one member of a union can hold a value at a time.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    struct ExampleStruct {
+        int a;
+        float b;
+    };
+
+    union ExampleUnion {
+        int a;
+        float b;
+    };
+
+    struct ExampleStruct s = {5, 3.14};
+    union ExampleUnion u;
+    u.a = 5;  // Assigns value to a
+    u.b = 3.14;  // Overwrites value in a
+
+    Memory Usage:
+    Structure: Memory = sizeof(int) + sizeof(float) = 8 bytes (on 32-bit systems)
+    Union: Memory = max(sizeof(int), sizeof(float)) = 4 bytes (on 32-bit systems)
+        </pre>
+        </section>
+    </div>
+
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Introduction to C Preprocessor and Bitwise Operators</h1>
+
+        <section class="section">
+            <h2>1. Definition of Preprocessor</h2>
+            <p>The <strong>C Preprocessor</strong> is a tool that processes the source code before it is compiled.
+                Preprocessor directives begin with <code>#</code> and are used for macro substitution, file inclusion,
+                and conditional compilation.</p>
+            <pre class="matrix">
+    Example:
+    #include <stdio.h>
+    #define PI 3.14
+
+    int main() {
+        printf("Value of PI: %.2f\n", PI);
+        return 0;
+    }
+    Output:
+    Value of PI: 3.14
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Macro Substitution Directives</h2>
+            <p>Macros are used to define constants or functions that are substituted in the code during preprocessing.
+            </p>
+            <pre class="matrix">
+    Example:
+    #define SQUARE(x) ((x) * (x))
+
+    int main() {
+        printf("Square of 4: %d\n", SQUARE(4));
+        return 0;
+    }
+    Output:
+    Square of 4: 16
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. File Inclusion Directives</h2>
+            <p>File inclusion allows including external files (header files or user-defined files) in a program using
+                <code>#include</code>.</p>
+            <pre class="matrix">
+    Syntax:
+    #include <header_file>   // Standard library file
+    #include "user_file.h"   // User-defined file
+
+    Example:
+    #include <stdio.h>
+    #include "myheader.h"
+
+    int main() {
+        greet();
+        return 0;
+    }
+    // myheader.h
+    void greet() {
+        printf("Hello, World!");
+    }
+    Output:
+    Hello, World!
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Conditional Compilation</h2>
+            <p>Conditional compilation allows compiling parts of code based on specified conditions using directives
+                like <code>#if</code>, <code>#else</code>, <code>#elif</code>, and <code>#endif</code>.</p>
+            <pre class="matrix">
+    Example:
+    #define DEBUG 1
+
+    int main() {
+        #if DEBUG
+            printf("Debug mode is ON.\n");
+        #else
+            printf("Debug mode is OFF.\n");
+        #endif
+        return 0;
+    }
+    Output:
+    Debug mode is ON.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Bitwise Operators</h2>
+            <p>Bitwise operators operate on binary representations of integers. Common operators include:</p>
+            <ul>
+                <li><code>&</code>: Bitwise AND</li>
+                <li><code>|</code>: Bitwise OR</li>
+                <li><code>^</code>: Bitwise XOR</li>
+                <li><code>~</code>: Bitwise NOT</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    int a = 5, b = 3; // Binary: a = 0101, b = 0011
+    printf("a & b: %d\n", a & b); // Output: 1 (0001)
+    printf("a | b: %d\n", a | b); // Output: 7 (0111)
+    printf("a ^ b: %d\n", a ^ b); // Output: 6 (0110)
+    printf("~a: %d\n", ~a);       // Output: -6 (2's complement)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Shift Operators</h2>
+            <p>Shift operators shift bits to the left or right:</p>
+            <ul>
+                <li><code><<</code>: Left shift</li>
+                <li><code>>></code>: Right shift</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    int a = 5; // Binary: 0101
+    printf("a << 1: %d\n", a << 1); // Output: 10 (1010)
+    printf("a >> 1: %d\n", a >> 1); // Output: 2  (0010)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Masks</h2>
+            <p><strong>Masks</strong> are used to manipulate specific bits in a number using bitwise operations.</p>
+            <pre class="matrix">
+    Example:
+    int num = 10; // Binary: 1010
+    int mask = 1; // Binary: 0001
+    int result = num & mask;
+    printf("Result: %d\n", result); // Output: 0 (LSB is not set)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>8. Bit Fields</h2>
+            <p><strong>Bit fields</strong> allow struct members to occupy specific numbers of bits.</p>
+            <pre class="matrix">
+    Example:
+    struct {
+        unsigned int a : 1; // 1 bit
+        unsigned int b : 3; // 3 bits
+        unsigned int c : 4; // 4 bits
+    } bitField;
+
+    bitField.a = 1;
+    bitField.b = 7;
+    bitField.c = 15;
+    printf("a: %d, b: %d, c: %d\n", bitField.a, bitField.b, bitField.c);
+    Output:
+    a: 1, b: 7, c: 15
+        </pre>
+        </section>
+    </div>
+
+    <div class="topic-container" id="unit6">
+        <h1>UNIT-VI: File Handling</h1>
+
+        <section class="section">
+            <h2>1. Definition of Files</h2>
+            <p>A <strong>file</strong> is a storage area in a computer where data is stored for long-term use. Files
+                enable programs to read from and write to external storage.</p>
+            <pre class="matrix">
+    Example:
+    A text file stores characters and can be read using text-based editors.
+    A binary file stores data in binary format and is not human-readable.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Opening Modes of Files</h2>
+            <p>Files can be opened in various modes using the <code>fopen()</code> function. Common modes include:</p>
+            <ul>
+                <li><code>"r"</code>: Opens a file for reading.</li>
+                <li><code>"w"</code>: Opens a file for writing (overwrites if file exists).</li>
+                <li><code>"a"</code>: Opens a file for appending (adds data at the end).</li>
+                <li><code>"r+"</code>: Opens a file for reading and writing.</li>
+                <li><code>"w+"</code>: Opens a file for reading and writing (overwrites if file exists).</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    FILE *fp;
+    fp = fopen("example.txt", "r");
+    if (fp == NULL) {
+        printf("Error opening file.");
+    }
+    fclose(fp);
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Standard File Functions</h2>
+            <h3>a. <code>fopen()</code> and <code>fclose()</code></h3>
+            <p>The <code>fopen()</code> function opens a file, and <code>fclose()</code> closes an opened file.</p>
+            <pre class="matrix">
+    Example:
+    FILE *fp = fopen("data.txt", "w");
+    if (fp) {
+        fclose(fp);
+    }
+        </pre>
+
+            <h3>b. <code>feof()</code></h3>
+            <p>Checks if the end of a file has been reached.</p>
+            <pre class="matrix">
+    Example:
+    FILE *fp = fopen("data.txt", "r");
+    char ch;
+    while (!feof(fp)) {
+        ch = fgetc(fp);
+        printf("%c", ch);
+    }
+    fclose(fp);
+        </pre>
+
+            <h3>c. <code>fseek()</code> and <code>rewind()</code></h3>
+            <p><code>fseek()</code> moves the file pointer to a specific position. <code>rewind()</code> resets the
+                pointer to the beginning of the file.</p>
+            <pre class="matrix">
+    Example:
+    FILE *fp = fopen("data.txt", "r");
+    fseek(fp, 10, SEEK_SET); // Move pointer to 10th byte
+    rewind(fp); // Reset pointer to the start
+    fclose(fp);
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Using Text Files</h2>
+            <h3>a. <code>fgetc()</code> and <code>fputc()</code></h3>
+            <p><code>fgetc()</code> reads a character, and <code>fputc()</code> writes a character to a file.</p>
+            <pre class="matrix">
+    Example:
+    FILE *fp = fopen("data.txt", "w");
+    fputc('A', fp);
+    fclose(fp);
+
+    fp = fopen("data.txt", "r");
+    char ch = fgetc(fp);
+    printf("Read character: %c", ch);
+    fclose(fp);
+    Output:
+    Read character: A
+        </pre>
+
+            <h3>b. <code>fscanf()</code></h3>
+            <p>Reads formatted input from a file, similar to <code>scanf()</code>.</p>
+            <pre class="matrix">
+    Example:
+    FILE *fp = fopen("data.txt", "r");
+    int num;
+    fscanf(fp, "%d", &num);
+    printf("Read number: %d", num);
+    fclose(fp);
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Command Line Arguments</h2>
+            <p>Command line arguments are passed to the <code>main()</code> function in the form of parameters
+                <code>argc</code> (argument count) and <code>argv</code> (argument vector).</p>
+            <pre class="matrix">
+    Example:
+    #include <stdio.h>
+    int main(int argc, char *argv[]) {
+        if (argc == 2) {
+            printf("File name: %s\n", argv[1]);
+        } else {
+            printf("Usage: ./program_name file_name\n");
+        }
+        return 0;
+    }
+    Command:
+    ./program_name data.txt
+    Output:
+    File name: data.txt
+        </pre>
+        </section>
+    </div>
+
+    <!-- Footer  -->
     <div id="footer-placeholder"></div>
 
     <!-- Script -->
     <script src="../script/include.js"></script>
-</body></html>
+</body>
+
+</html>

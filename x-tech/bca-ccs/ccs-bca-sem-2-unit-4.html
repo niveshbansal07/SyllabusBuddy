@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="../css/topic.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="Images/syllabusBuddy-Logo.png" type="image/icon">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8452146197004922"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8452146197004922"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,8 +19,8 @@
     <div id="navbar-placeholder"></div>
     <div class="sem-unit-header">Digital Logic and Memory Systems </div>
 
- <div class="container">
-              <a href="#unit1" class="unit">UNIT-I: Logic Gates and Circuit</a>
+    <div class="container">
+        <a href="#unit1" class="unit">UNIT-I: Logic Gates and Circuit</a>
         <div class="content">
             Logic Gates and Circuit: Gates (OR, AND, NOR, NAND, XOR & XNOR); DeMorgan’s Laws; Boolean Laws; Circuit
             Designing Techniques (SOP, POS, K-Map).
@@ -49,10 +49,534 @@
         </div>
     </div>
 
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Logic Gates and Circuit</h1>
 
-     <!-- Footer  -->
+        <section class="section">
+            <h2>1. Logic Gates</h2>
+            <p>Logic gates are the basic building blocks of digital circuits. They perform logical operations on one or
+                more binary inputs to produce a single binary output. Common logic gates include:</p>
+            <ul>
+                <li><strong>OR Gate:</strong> Outputs 1 if any input is 1.</li>
+                <li><strong>AND Gate:</strong> Outputs 1 if all inputs are 1.</li>
+                <li><strong>NOR Gate:</strong> Outputs 1 if all inputs are 0.</li>
+                <li><strong>NAND Gate:</strong> Outputs 0 only if all inputs are 1.</li>
+                <li><strong>XOR Gate:</strong> Outputs 1 if an odd number of inputs are 1.</li>
+                <li><strong>XNOR Gate:</strong> Outputs 1 if an even number of inputs are 1.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    OR Gate Truth Table:
+    A | B | Output
+    0 | 0 |   0
+    0 | 1 |   1
+    1 | 0 |   1
+    1 | 1 |   1
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. De Morgan’s Laws</h2>
+            <p>De Morgan’s laws are used to simplify Boolean expressions and circuits:</p>
+            <ul>
+                <li><strong>First Law:</strong> \( \overline{A + B} = \overline{A} \cdot \overline{B} \)</li>
+                <li><strong>Second Law:</strong> \( \overline{A \cdot B} = \overline{A} + \overline{B} \)</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    Using De Morgan’s First Law:
+    Original: \( \overline{A + B} \)
+    Simplified: \( \overline{A} \cdot \overline{B} \)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Boolean Laws</h2>
+            <p>Boolean algebra laws are rules for simplifying Boolean expressions. Key laws include:</p>
+            <ul>
+                <li><strong>Commutative Law:</strong> \( A + B = B + A \), \( A \cdot B = B \cdot A \)</li>
+                <li><strong>Associative Law:</strong> \( A + (B + C) = (A + B) + C \), \( A \cdot (B \cdot C) = (A \cdot
+                    B) \cdot C \)</li>
+                <li><strong>Distributive Law:</strong> \( A \cdot (B + C) = (A \cdot B) + (A \cdot C) \)</li>
+                <li><strong>Identity Law:</strong> \( A + 0 = A \), \( A \cdot 1 = A \)</li>
+                <li><strong>Complement Law:</strong> \( A + \overline{A} = 1 \), \( A \cdot \overline{A} = 0 \)</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    Simplify \( A \cdot (A + B) \):
+    Using Distributive Law:
+    Result: \( A \cdot A + A \cdot B = A + A \cdot B = A \)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Circuit Designing Techniques</h2>
+            <h3>a. SOP (Sum of Products)</h3>
+            <p>A Boolean expression in SOP form is a sum of minterms where each minterm is a product of literals.</p>
+            <pre class="matrix">
+    Example:
+    Expression: \( AB + \overline{A}B + A\overline{B} \)
+    Circuit: OR gate combines outputs of three AND gates.
+        </pre>
+
+            <h3>b. POS (Product of Sums)</h3>
+            <p>A Boolean expression in POS form is a product of maxterms where each maxterm is a sum of literals.</p>
+            <pre class="matrix">
+    Example:
+    Expression: \( (A + B)(\overline{A} + B)(A + \overline{B}) \)
+    Circuit: AND gate combines outputs of three OR gates.
+        </pre>
+
+            <h3>c. K-Map (Karnaugh Map)</h3>
+            <p>K-Map is a graphical method for simplifying Boolean expressions by grouping adjacent cells representing
+                minterms or maxterms.</p>
+            <pre class="matrix">
+    Example:
+    Given Truth Table:
+    A | B | Output
+    0 | 0 |   0
+    0 | 1 |   1
+    1 | 0 |   1
+    1 | 1 |   1
+    Simplified Expression: \( A + B \)
+        </pre>
+        </section>
+    </div>
+
+
+
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Combinational Building Blocks</h1>
+
+        <section class="section">
+            <h2>1. Multiplexers</h2>
+            <p>A <strong>multiplexer (MUX)</strong> is a combinational circuit that selects one of many input signals
+                and forwards the selected input to a single output line based on control signals.</p>
+            <ul>
+                <li><strong>Number of Inputs:</strong> \( 2^n \), where \( n \) is the number of control lines.</li>
+                <li><strong>Common Types:</strong> 2:1, 4:1, 8:1, etc.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    A 4:1 MUX has 4 inputs (I0, I1, I2, I3), 2 control lines (S0, S1), and 1 output (Y).
+    Output Equation: \( Y = S1'S0'I0 + S1'S0I1 + S1S0'I2 + S1S0I3 \)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Decoders</h2>
+            <p>A <strong>decoder</strong> is a combinational circuit that converts binary information from \( n \) input
+                lines into a maximum of \( 2^n \) unique output lines. It is used in applications like memory addressing
+                and data routing.</p>
+            <ul>
+                <li><strong>Number of Outputs:</strong> \( 2^n \), where \( n \) is the number of input lines.</li>
+                <li><strong>Common Types:</strong> 2:4, 3:8, 4:16, etc.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    A 3:8 decoder has 3 inputs (A, B, C) and 8 outputs (Y0 to Y7).
+    Output Logic:
+    Y0 = A'B'C', Y1 = A'B'C, ..., Y7 = ABC
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Encoders</h2>
+            <p>An <strong>encoder</strong> is the reverse of a decoder. It takes \( 2^n \) inputs and produces an \( n
+                \)-bit output. Encoders are used for data compression and priority encoding.</p>
+            <ul>
+                <li><strong>Number of Inputs:</strong> \( 2^n \), where \( n \) is the number of output lines.</li>
+                <li><strong>Common Types:</strong> 4:2, 8:3, 16:4, etc.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    An 8:3 encoder has 8 inputs (I0 to I7) and 3 outputs (A, B, C).
+    Output Logic:
+    A = I4 + I5 + I6 + I7,
+    B = I2 + I3 + I6 + I7,
+    C = I1 + I3 + I5 + I7
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Adders</h2>
+            <h3>a. Half Adder</h3>
+            <p>A <strong>half adder</strong> is a combinational circuit that adds two single-bit binary numbers and
+                produces a sum (S) and a carry (C).</p>
+            <pre class="matrix">
+    Truth Table:
+    A | B | Sum (S) | Carry (C)
+    0 | 0 |    0    |    0
+    0 | 1 |    1    |    0
+    1 | 0 |    1    |    0
+    1 | 1 |    0    |    1
+    Sum = A ⊕ B, Carry = A · B
+        </pre>
+
+            <h3>b. Full Adder</h3>
+            <p>A <strong>full adder</strong> is a combinational circuit that adds three single-bit binary numbers (A, B,
+                and Cin) and produces a sum (S) and a carry-out (Cout).</p>
+            <pre class="matrix">
+    Truth Table:
+    A | B | Cin | Sum (S) | Carry (Cout)
+    0 | 0 |  0  |    0    |      0
+    0 | 1 |  0  |    1    |      0
+    1 | 0 |  1  |    0    |      1
+    Sum = A ⊕ B ⊕ Cin, Carry = (A · B) + (Cin · (A ⊕ B))
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Subtractors</h2>
+            <h3>a. Half Subtractor</h3>
+            <p>A <strong>half subtractor</strong> subtracts two single-bit binary numbers (A and B) and produces a
+                difference (D) and a borrow (B).</p>
+            <pre class="matrix">
+    Truth Table:
+    A | B | Difference (D) | Borrow (B)
+    0 | 0 |        0       |     0
+    0 | 1 |        1       |     1
+    1 | 0 |        1       |     0
+    1 | 1 |        0       |     0
+    Difference = A ⊕ B, Borrow = A' · B
+        </pre>
+
+            <h3>b. Full Subtractor</h3>
+            <p>A <strong>full subtractor</strong> subtracts three binary inputs (A, B, and Bin) and produces a
+                difference (D) and a borrow-out (Bout).</p>
+            <pre class="matrix">
+    Truth Table:
+    A | B | Bin | Difference (D) | Borrow (Bout)
+    0 | 0 |  0  |        0        |      0
+    0 | 1 |  1  |        1        |      1
+    Difference = A ⊕ B ⊕ Bin, Borrow = (B · Bin) + (B · A') + (Bin · A')
+        </pre>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Memories</h1>
+
+        <section class="section">
+            <h2>1. ROM (Read-Only Memory)</h2>
+            <p><strong>ROM</strong> is non-volatile memory that stores data permanently. It is used to store firmware or
+                software that rarely changes.</p>
+            <ul>
+                <li><strong>Features:</strong> Non-volatile, read-only, used for booting processes.</li>
+                <li><strong>Applications:</strong> Embedded systems, BIOS firmware.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    A ROM chip stores the bootloader for initializing a computer.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. PROM (Programmable ROM)</h2>
+            <p><strong>PROM</strong> is a type of ROM that can be programmed once after manufacturing using a special
+                device called a PROM programmer.</p>
+            <ul>
+                <li><strong>Features:</strong> Programmable only once, non-volatile.</li>
+                <li><strong>Applications:</strong> Custom hardware configurations.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    A microcontroller’s specific configuration stored on a PROM chip.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. EPROM (Erasable Programmable ROM)</h2>
+            <p><strong>EPROM</strong> can be erased and reprogrammed using ultraviolet light. It is used for development
+                and testing purposes.</p>
+            <ul>
+                <li><strong>Features:</strong> Erasable, reusable, non-volatile.</li>
+                <li><strong>Applications:</strong> Prototyping and firmware updates.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    EPROMs are used in development boards for testing firmware.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. RAM (Random Access Memory)</h2>
+            <p><strong>RAM</strong> is volatile memory used for temporary storage during processing. It allows both read
+                and write operations.</p>
+            <ul>
+                <li><strong>Types:</strong></li>
+                <ul>
+                    <li><strong>Static RAM (SRAM):</strong> Faster and more reliable but expensive.</li>
+                    <li><strong>Dynamic RAM (DRAM):</strong> Cheaper and slower, needs periodic refreshing.</li>
+                </ul>
+                <li><strong>Applications:</strong> Main memory in computers.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    RAM stores data and instructions for active applications.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Hard Disk</h2>
+            <p>The <strong>hard disk</strong> is a non-volatile storage device that uses magnetic storage to store and
+                retrieve data.</p>
+            <ul>
+                <li><strong>Features:</strong> High storage capacity, non-volatile, relatively slower than RAM.</li>
+                <li><strong>Applications:</strong> Long-term data storage in computers and servers.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    A hard disk stores operating systems, applications, and user data.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Floppy Disk</h2>
+            <p>A <strong>floppy disk</strong> is an outdated magnetic storage device used for transferring small amounts
+                of data.</p>
+            <ul>
+                <li><strong>Features:</strong> Portable, limited storage capacity (up to 1.44 MB).</li>
+                <li><strong>Applications:</strong> Legacy data transfer and backup.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    Early computer systems used floppy disks for booting and data storage.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. CD-ROM (Compact Disc Read-Only Memory)</h2>
+            <p><strong>CD-ROM</strong> is an optical storage device that can store data in a read-only format.</p>
+            <ul>
+                <li><strong>Features:</strong> Portable, non-volatile, typically stores up to 700 MB.</li>
+                <li><strong>Applications:</strong> Distribution of software, music, and multimedia content.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    Software installers were distributed on CD-ROMs before the advent of digital downloads.
+        </pre>
+        </section>
+    </div>
+
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Sequential Building Blocks</h1>
+
+        <section class="section">
+            <h2>1. Flip-Flops</h2>
+            <p>A <strong>flip-flop</strong> is a basic sequential circuit element that stores a single bit of data. It
+                has two stable states and can be triggered by a clock signal.</p>
+            <h3>a. RS Flip-Flop</h3>
+            <p>The <strong>RS (Set-Reset)</strong> flip-flop sets or resets its output based on the inputs.</p>
+            <pre class="matrix">
+    Truth Table:
+    S | R | Q (Next State) | Q' (Complement)
+    0 | 0 |    No Change   |       No Change
+    0 | 1 |       0        |          1
+    1 | 0 |       1        |          0
+    1 | 1 |     Invalid    |       Invalid
+        </pre>
+
+            <h3>b. D Flip-Flop</h3>
+            <p>The <strong>D (Data or Delay)</strong> flip-flop ensures a single input to avoid invalid states.</p>
+            <pre class="matrix">
+    Truth Table:
+    D | Q (Next State)
+    0 |        0
+    1 |        1
+        </pre>
+
+            <h3>c. JK Flip-Flop</h3>
+            <p>The <strong>JK flip-flop</strong> resolves the invalid state of RS flip-flops and toggles the output when
+                both inputs are high.</p>
+            <pre class="matrix">
+    Truth Table:
+    J | K | Q (Next State)
+    0 | 0 |     No Change
+    0 | 1 |         0
+    1 | 0 |         1
+    1 | 1 |     Toggle
+        </pre>
+
+            <h3>d. T Flip-Flop</h3>
+            <p>The <strong>T (Toggle)</strong> flip-flop toggles its state with each clock pulse.</p>
+            <pre class="matrix">
+    Truth Table:
+    T | Q (Next State)
+    0 |     No Change
+    1 |       Toggle
+        </pre>
+
+            <h3>e. Master-Slave Flip-Flop</h3>
+            <p>The <strong>Master-Slave flip-flop</strong> consists of two flip-flops connected in series. The master
+                operates on the leading edge of the clock, and the slave operates on the trailing edge, ensuring
+                synchronization.</p>
+        </section>
+
+        <section class="section">
+            <h2>2. Registers</h2>
+            <p>A <strong>register</strong> is a group of flip-flops used to store multiple bits of data. Registers are
+                used in processors for temporary data storage and manipulation.</p>
+            <ul>
+                <li><strong>Types:</strong> Shift registers, parallel registers.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>3. Shift Registers</h2>
+            <p><strong>Shift registers</strong> move data in a serial fashion, either left or right, with each clock
+                pulse.</p>
+            <ul>
+                <li><strong>Serial In Serial Out (SISO):</strong> Data shifts in and out serially.</li>
+                <li><strong>Serial In Parallel Out (SIPO):</strong> Data shifts in serially and is output in parallel.
+                </li>
+                <li><strong>Parallel In Serial Out (PISO):</strong> Data is input in parallel and shifted out serially.
+                </li>
+                <li><strong>Parallel In Parallel Out (PIPO):</strong> Data is input and output in parallel.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    A 4-bit SIPO shift register shifts the binary sequence 1010 into parallel outputs.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Counters</h2>
+            <p>A <strong>counter</strong> is a sequential circuit that counts the number of clock pulses. Counters are
+                classified as synchronous or asynchronous.</p>
+            <h3>a. Synchronous Counter</h3>
+            <p>All flip-flops are triggered by the same clock signal.</p>
+            <pre class="matrix">
+    Example:
+    A 3-bit synchronous counter counts from 0 to 7.
+        </pre>
+
+            <h3>b. Asynchronous Counter</h3>
+            <p>Flip-flops are triggered by the output of the previous flip-flop, creating a ripple effect.</p>
+            <pre class="matrix">
+    Example:
+    A 4-bit ripple counter counts from 0 to 15.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Designing Methods</h2>
+            <p>Sequential circuits can be designed using different methods:</p>
+            <ul>
+                <li><strong>Synchronous Design:</strong> All elements are synchronized with a global clock signal.</li>
+                <li><strong>Asynchronous Design:</strong> Elements operate independently without a global clock.</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Memory Organization</h1>
+
+        <section class="section">
+            <h2>1. Basic Cell of Static and Dynamic RAM</h2>
+            <h3>a. Static RAM (SRAM)</h3>
+            <p><strong>SRAM</strong> stores data using flip-flops. It is faster and more reliable but consumes more
+                power and is expensive.</p>
+            <ul>
+                <li><strong>Characteristics:</strong> No need for refreshing, faster access times, used in cache memory.
+                </li>
+                <li><strong>Structure:</strong> A basic SRAM cell uses six transistors to store a single bit of data.
+                </li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    SRAM is used in processor registers for quick data access.
+        </pre>
+
+            <h3>b. Dynamic RAM (DRAM)</h3>
+            <p><strong>DRAM</strong> stores data using capacitors and requires periodic refreshing to retain
+                information.</p>
+            <ul>
+                <li><strong>Characteristics:</strong> Higher density, lower cost, slower access times, used in main
+                    memory.</li>
+                <li><strong>Structure:</strong> A basic DRAM cell uses a single transistor and capacitor to store a bit.
+                </li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    DRAM is used in the main memory of computers for storing active processes.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Building Large Memories Using Chips</h2>
+            <p>Large memories are constructed by combining smaller memory chips to achieve the desired capacity and
+                configuration. Common techniques include:</p>
+            <ul>
+                <li><strong>Word Expansion:</strong> Connecting chips in parallel to increase word size.</li>
+                <li><strong>Capacity Expansion:</strong> Connecting chips in series to increase storage capacity.</li>
+                <li><strong>Address Decoding:</strong> Using decoders to manage access to specific memory chips.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    To build a 1 KB memory using 256-byte chips, 4 chips are connected with address decoding.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Associative Memory</h2>
+            <p><strong>Associative memory</strong> (or content-addressable memory) allows data retrieval based on
+                content rather than address.</p>
+            <ul>
+                <li><strong>Characteristics:</strong> Parallel search capability, fast data retrieval.</li>
+                <li><strong>Applications:</strong> Caches, network routing tables.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    Associative memory is used in routers for efficient IP address lookup.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Cache Memory Organization</h2>
+            <p><strong>Cache memory</strong> is a small, high-speed memory located close to the CPU to store frequently
+                accessed data.</p>
+            <ul>
+                <li><strong>Levels:</strong> L1 (closest to CPU), L2, and L3 caches.</li>
+                <li><strong>Mapping Techniques:</strong></li>
+                <ul>
+                    <li><strong>Direct Mapping:</strong> Each block of main memory maps to a specific cache line.</li>
+                    <li><strong>Associative Mapping:</strong> Any block can be stored in any cache line.</li>
+                    <li><strong>Set-Associative Mapping:</strong> Combines direct and associative mapping by dividing
+                        the cache into sets.</li>
+                </ul>
+                <li><strong>Write Policies:</strong> Write-through, write-back.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    A 4-way set-associative cache with 64 blocks uses 16 sets, where each set can store 4 blocks.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Virtual Memory Organization</h2>
+            <p><strong>Virtual memory</strong> is a memory management technique that uses secondary storage to extend
+                the apparent memory available to programs.</p>
+            <ul>
+                <li><strong>Paging:</strong> Divides memory into fixed-size pages, managed by a page table.</li>
+                <li><strong>Segmentation:</strong> Divides memory into variable-sized segments based on logical
+                    divisions of a program.</li>
+                <li><strong>Advantages:</strong> Enables multitasking, isolates processes, handles large programs.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    A system with 4 GB of virtual memory can run applications larger than the physical RAM available.
+        </pre>
+        </section>
+    </div>
+
+
+    <!-- Footer  -->
     <div id="footer-placeholder"></div>
 
     <!-- Script -->
     <script src="../script/include.js"></script>
-</body></html>
+</body>
+
+</html>
