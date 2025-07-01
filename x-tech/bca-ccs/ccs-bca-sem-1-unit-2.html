@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="../css/topic.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="Images/syllabusBuddy-Logo.png" type="image/icon">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8452146197004922"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8452146197004922"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,8 +19,8 @@
     <div id="navbar-placeholder"></div>
     <div class="sem-unit-header">Programming Principle Algorithm</div>
 
- <div class="container">
-     
+    <div class="container">
+
         <a href="#unit1" class="unit">UNIT-I: Introduction to ‘C’ Language</a>
         <div class="content">
             Introduction to ‘C’ Language: History, Structures of ‘C’ Programming, Function as building blocks. Language
@@ -66,9 +66,1009 @@
     </div>
 
 
-     <!-- Footer  -->
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Introduction to C Language</h1>
+
+        <section class="section">
+            <h2>1. History of C Language</h2>
+            <p>The <strong>C programming language</strong> was developed by <em>Dennis Ritchie</em> in 1972 at Bell
+                Laboratories. It was designed as a system programming language for developing operating systems,
+                specifically UNIX.</p>
+            <ul>
+                <li><strong>Key Features:</strong> Structured programming, portability, efficiency, and flexibility.
+                </li>
+                <li><strong>Applications:</strong> Operating systems, embedded systems, and general-purpose programming.
+                </li>
+            </ul>
+            <pre class="matrix">
+Example:
+C was used to write the UNIX operating system, making it one of the most widely used programming languages.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Structure of C Programming</h2>
+            <p>A <strong>C program</strong> consists of functions, variables, and statements organized in a specific
+                structure. The general structure of a C program is:</p>
+            <pre class="matrix">
+#include<stdio.h>
+int main() {
+    // Variable declaration
+    // Statements
+    return 0;
+}
+        </pre>
+            <p><strong>Components:</strong></p>
+            <ul>
+                <li><strong>Preprocessor directives:</strong> Instructions for the compiler (e.g., #include).</li>
+                <li><strong>Main function:</strong> The starting point of the program.</li>
+                <li><strong>Statements:</strong> Instructions for the program to execute.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>3. Function as Building Blocks</h2>
+            <p>In C, <strong>functions</strong> are the fundamental building blocks that perform specific tasks.
+                Functions enhance modularity and code reusability.</p>
+            <ul>
+                <li><strong>Syntax:</strong> <em>return_type function_name(parameters) { // code }</em></li>
+                <li><strong>Types:</strong> Built-in functions (e.g., printf, scanf) and user-defined functions.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+#include<stdio.h>
+void greet() {
+    printf("Hello, World!");
+}
+int main() {
+    greet(); // Function call
+    return 0;
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Language Fundamentals</h2>
+            <p>C programming has several fundamental components:</p>
+
+            <h3>4.1 Character Set</h3>
+            <p>The <strong>character set</strong> includes letters, digits, and symbols that can be used in a C program.
+            </p>
+            <pre class="matrix">
+Example:
+Letters: A-Z, a-z
+Digits: 0-9
+Special Characters: +, -, *, /, %, #, etc.
+        </pre>
+
+            <h3>4.2 C Tokens</h3>
+            <p><strong>Tokens</strong> are the smallest building blocks of a C program. Types of tokens include:</p>
+            <ul>
+                <li>Keywords</li>
+                <li>Identifiers</li>
+                <li>Constants</li>
+                <li>Operators</li>
+                <li>Special Symbols</li>
+            </ul>
+            <pre class="matrix">
+Example:
+int a = 5; // Tokens: int, a, =, 5, ;
+        </pre>
+
+            <h3>4.3 Keywords</h3>
+            <p><strong>Keywords</strong> are reserved words with predefined meanings.</p>
+            <pre class="matrix">
+Example:
+int, float, if, else, while, for, return
+        </pre>
+
+            <h3>4.4 Identifiers</h3>
+            <p><strong>Identifiers</strong> are names given to variables, functions, or arrays by the programmer.</p>
+            <pre class="matrix">
+Rules:
+1. Must start with a letter or underscore.
+2. Cannot be a keyword.
+3. Case-sensitive.
+Example:
+int age;
+        </pre>
+
+            <h3>4.5 Variables and Constants</h3>
+            <p><strong>Variables:</strong> Named storage locations for data. <strong>Constants:</strong> Fixed values
+                that do not change during program execution.</p>
+            <pre class="matrix">
+Example:
+Variable: int age = 25;
+Constant: const float PI = 3.14;
+        </pre>
+
+            <h3>4.6 Data Types</h3>
+            <p><strong>Data types</strong> specify the type of data a variable can hold.</p>
+            <ul>
+                <li>Basic: int, float, char</li>
+                <li>Derived: array, pointer</li>
+                <li>User-defined: struct, enum</li>
+            </ul>
+            <pre class="matrix">
+Example:
+int a = 10;   // Integer
+float b = 5.5; // Floating point
+char c = 'A';  // Character
+        </pre>
+
+            <h3>4.7 Comments</h3>
+            <p><strong>Comments</strong> are non-executable statements used to describe the code.</p>
+            <ul>
+                <li><strong>Single-line:</strong> // Comment</li>
+                <li><strong>Multi-line:</strong> /* Comment */</li>
+            </ul>
+            <pre class="matrix">
+Example:
+// This is a single-line comment
+/* This is a
+   multi-line comment */
+        </pre>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Operators</h1>
+
+        <section class="section">
+            <h2>1. Types of Operators</h2>
+            <p>C provides various <strong>operators</strong> to perform operations on data. Types include:</p>
+            <ul>
+                <li><strong>Arithmetic Operators:</strong> +, -, *, /, %</li>
+                <li><strong>Relational Operators:</strong> ==, !=, >, <,>=, <=< /li>
+                <li><strong>Logical Operators:</strong> &&, ||, !</li>
+                <li><strong>Bitwise Operators:</strong> &, |, ^, ~, <<,>></li>
+                <li><strong>Assignment Operators:</strong> =, +=, -=, *=, /=, %=</li>
+                <li><strong>Increment and Decrement Operators:</strong> ++, --</li>
+                <li><strong>Special Operators:</strong> sizeof, &, *, ?: (ternary operator)</li>
+            </ul>
+            <pre class="matrix">
+Example:
+int a = 5, b = 10;
+int sum = a + b;  // Arithmetic Operator
+if (a > b) {      // Relational Operator
+    printf("a is greater than b");
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Precedence and Associativity</h2>
+            <p><strong>Precedence:</strong> Determines the order in which operators are evaluated.</p>
+            <p><strong>Associativity:</strong> Determines the direction of evaluation (left-to-right or right-to-left).
+            </p>
+            <p>Operators with higher precedence are evaluated first. Associativity resolves conflicts between operators
+                with the same precedence.</p>
+            <pre class="matrix">
+Example:
+Expression: 5 + 2 * 3
+Evaluation: 5 + (2 * 3) = 11 (Multiplication has higher precedence than addition)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Expression, Statement, and Types of Statements</h2>
+            <p>An <strong>expression</strong> is a combination of variables, operators, and constants that produce a
+                value.</p>
+            <p>A <strong>statement</strong> is a single instruction executed by the program.</p>
+            <ul>
+                <li><strong>Expression Statement:</strong> Ends with a semicolon (e.g., a = 5;).</li>
+                <li><strong>Compound Statement:</strong> Group of statements enclosed in braces { }.</li>
+                <li><strong>Control Statement:</strong> Includes conditional (if, switch) and looping (for, while,
+                    do-while) statements.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+int a = 10;  // Expression statement
+if (a > 5) { // Control statement
+    printf("a is greater than 5");
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Built-in Operators and Functions</h2>
+            <p>C provides several built-in operators and functions for performing standard tasks.</p>
+            <ul>
+                <li><strong>Arithmetic Operators:</strong> +, -, *, /</li>
+                <li><strong>Console I/O Functions:</strong> printf(), scanf(), getchar(), putchar()</li>
+            </ul>
+            <pre class="matrix">
+Example:
+printf("Enter a number: ");
+scanf("%d", &a);
+putchar('A');
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Console-based I/O and Built-in I/O Functions</h2>
+            <ul>
+                <li><strong>printf():</strong> Prints formatted output to the console.</li>
+                <li><strong>scanf():</strong> Reads formatted input from the user.</li>
+                <li><strong>getch():</strong> Reads a single character without displaying it.</li>
+                <li><strong>getchar():</strong> Reads a single character and displays it.</li>
+                <li><strong>putchar():</strong> Writes a single character to the console.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+char ch;
+printf("Enter a character: ");
+ch = getchar();
+putchar(ch); // Prints the entered character
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Concept of Header Files</h2>
+            <p><strong>Header files</strong> contain declarations of functions and macros used in C programs. Common
+                header files include:</p>
+            <ul>
+                <li><strong>stdio.h:</strong> For standard input/output functions.</li>
+                <li><strong>math.h:</strong> For mathematical functions.</li>
+                <li><strong>string.h:</strong> For string manipulation functions.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+#include<stdio.h> // Includes standard input/output library
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Preprocessor Directives</h2>
+            <p><strong>Preprocessor directives</strong> are instructions processed before compilation. Common directives
+                include:</p>
+            <ul>
+                <li><strong>#include:</strong> Includes a header file in the program.</li>
+                <li><strong>#define:</strong> Defines a constant or macro.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+#include<stdio.h>  // Includes stdio.h
+#define PI 3.14     // Defines a constant
+        </pre>
+        </section>
+    </div>
+
+
+
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Control Structures</h1>
+
+        <section class="section">
+            <h2>1. Decision-Making Structures</h2>
+            <p><strong>Decision-making structures</strong> allow a program to execute certain sections of code based on
+                conditions.</p>
+
+            <h3>1.1 If Statement</h3>
+            <p>The <strong>if statement</strong> executes a block of code if the condition is true.</p>
+            <pre class="matrix">
+Syntax:
+if (condition) {
+    // Code to execute if condition is true
+}
+Example:
+int a = 5;
+if (a > 0) {
+    printf("a is positive");
+}
+        </pre>
+
+            <h3>1.2 If-Else Statement</h3>
+            <p>The <strong>if-else statement</strong> executes one block of code if the condition is true, and another
+                block if it is false.</p>
+            <pre class="matrix">
+Syntax:
+if (condition) {
+    // Code if condition is true
+} else {
+    // Code if condition is false
+}
+Example:
+int a = -5;
+if (a > 0) {
+    printf("a is positive");
+} else {
+    printf("a is negative");
+}
+        </pre>
+
+            <h3>1.3 Nested If-Else</h3>
+            <p><strong>Nested if-else</strong> allows decision-making within another if-else structure.</p>
+            <pre class="matrix">
+Example:
+int a = 10;
+if (a > 0) {
+    if (a % 2 == 0) {
+        printf("a is positive and even");
+    } else {
+        printf("a is positive and odd");
+    }
+}
+        </pre>
+
+            <h3>1.4 Switch Statement</h3>
+            <p>The <strong>switch statement</strong> selects one block of code to execute from multiple choices.</p>
+            <pre class="matrix">
+Syntax:
+switch (expression) {
+    case value1:
+        // Code for value1
+        break;
+    case value2:
+        // Code for value2
+        break;
+    default:
+        // Code if no cases match
+}
+Example:
+int day = 3;
+switch (day) {
+    case 1: printf("Monday"); break;
+    case 2: printf("Tuesday"); break;
+    case 3: printf("Wednesday"); break;
+    default: printf("Invalid day");
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Loop Control Structures</h2>
+            <p><strong>Loop control structures</strong> are used to repeat a block of code while a condition is true.
+            </p>
+
+            <h3>2.1 While Loop</h3>
+            <p>The <strong>while loop</strong> executes a block of code as long as the condition is true.</p>
+            <pre class="matrix">
+Syntax:
+while (condition) {
+    // Code to execute
+}
+Example:
+int i = 1;
+while (i <= 5) {
+    printf("%d ", i);
+    i++;
+}
+        </pre>
+
+            <h3>2.2 Do-While Loop</h3>
+            <p>The <strong>do-while loop</strong> executes a block of code at least once before checking the condition.
+            </p>
+            <pre class="matrix">
+Syntax:
+do {
+    // Code to execute
+} while (condition);
+Example:
+int i = 1;
+do {
+    printf("%d ", i);
+    i++;
+} while (i <= 5);
+        </pre>
+
+            <h3>2.3 For Loop</h3>
+            <p>The <strong>for loop</strong> is used to execute a block of code a specific number of times.</p>
+            <pre class="matrix">
+Syntax:
+for (initialization; condition; increment/decrement) {
+    // Code to execute
+}
+Example:
+for (int i = 1; i <= 5; i++) {
+    printf("%d ", i);
+}
+        </pre>
+
+            <h3>2.4 Nested For Loop</h3>
+            <p><strong>Nested for loops</strong> allow one loop inside another to handle multi-dimensional data or
+                patterns.</p>
+            <pre class="matrix">
+Example:
+for (int i = 1; i <= 3; i++) {
+    for (int j = 1; j <= 2; j++) {
+        printf("i = %d, j = %d\n", i, j);
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Other Statements</h2>
+            <p>C includes other control statements for specific purposes:</p>
+            <ul>
+                <li><strong>break:</strong> Exits the current loop or switch statement.</li>
+                <li><strong>continue:</strong> Skips the remaining code in the current iteration and moves to the next
+                    iteration.</li>
+                <li><strong>goto:</strong> Transfers control to a labeled statement.</li>
+                <li><strong>exit:</strong> Terminates the program.</li>
+            </ul>
+            <pre class="matrix">
+Examples:
+break:
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) break;
+    printf("%d ", i); // Outputs: 1 2
+}
+
+continue:
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) continue;
+    printf("%d ", i); // Outputs: 1 2 4 5
+}
+
+goto:
+label:
+printf("This is a label.");
+goto label; // Infinite loop
+
+exit:
+if (condition) {
+    printf("Exiting program");
+    exit(0);
+}
+        </pre>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Introduction to Problem Solving</h1>
+
+        <section class="section">
+            <h2>1. Concept of Problem Solving</h2>
+            <p><strong>Problem solving</strong> is the process of identifying solutions to a given problem by
+                understanding and analyzing it systematically.</p>
+            <h3>1.1 Problem Solving Techniques</h3>
+            <ul>
+                <li><strong>Trial and Error:</strong> Experimenting with various solutions until the correct one is
+                    found.</li>
+                <li><strong>Brainstorming:</strong> Generating multiple ideas or solutions through team discussions or
+                    individual thinking.</li>
+                <li><strong>Divide and Conquer:</strong> Breaking down a complex problem into smaller, more manageable
+                    parts and solving them individually.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+Finding a lost key:
+1. Trial and Error: Search one place at a time randomly.
+2. Brainstorming: List all possible places and prioritize.
+3. Divide and Conquer: Divide the area into sections and search systematically.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Steps in Problem Solving</h2>
+            <ul>
+                <li><strong>Define the Problem:</strong> Clearly state the issue to be addressed.</li>
+                <li><strong>Analyze the Problem:</strong> Break it into smaller components to understand its nature.
+                </li>
+                <li><strong>Explore Solutions:</strong> Identify all possible solutions and evaluate their feasibility.
+                </li>
+            </ul>
+            <pre class="matrix">
+Example:
+Problem: Calculate the area of a rectangle.
+1. Define: Input length and breadth.
+2. Analyze: Area = length × breadth.
+3. Explore: Use a formula or program to compute.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Algorithms and Flowcharts</h2>
+            <h3>3.1 Definitions</h3>
+            <p><strong>Algorithm:</strong> A step-by-step procedure to solve a problem.</p>
+            <p><strong>Flowchart:</strong> A graphical representation of an algorithm using symbols.</p>
+            <h3>3.2 Symbols in Flowcharts</h3>
+            <ul>
+                <li><strong>Oval:</strong> Start/End</li>
+                <li><strong>Rectangle:</strong> Process</li>
+                <li><strong>Diamond:</strong> Decision</li>
+                <li><strong>Arrow:</strong> Flow of control</li>
+            </ul>
+            <pre class="matrix">
+Example:
+Algorithm:
+1. Start
+2. Input length and breadth
+3. Calculate area = length × breadth
+4. Print area
+5. Stop
+
+Flowchart:
+(Start) → [Input length, breadth] → [Calculate area] → [Print area] → (End)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Characteristics of an Algorithm</h2>
+            <ul>
+                <li><strong>Finiteness:</strong> Must terminate after a finite number of steps.</li>
+                <li><strong>Definiteness:</strong> Steps must be clear and unambiguous.</li>
+                <li><strong>Input:</strong> Should accept inputs.</li>
+                <li><strong>Output:</strong> Should produce at least one output.</li>
+                <li><strong>Effectiveness:</strong> Steps should be basic and feasible.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>5. Pseudo-code</h2>
+            <h3>5.1 Conditionals in Pseudo-code</h3>
+            <p>Conditionals use <strong>if-else</strong> or <strong>switch-case</strong> logic to execute specific code
+                based on conditions.</p>
+            <pre class="matrix">
+Example:
+Pseudo-code:
+IF age >= 18 THEN
+    PRINT "Eligible to vote"
+ELSE
+    PRINT "Not eligible"
+END IF
+        </pre>
+
+            <h3>5.2 Loops in Pseudo-code</h3>
+            <p>Loops are used to repeat code while a condition is true.</p>
+            <pre class="matrix">
+Example:
+Pseudo-code:
+FOR i = 1 TO 5 DO
+    PRINT i
+END FOR
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Time Complexity: Big-O Notation</h2>
+            <p><strong>Big-O notation</strong> describes the efficiency of an algorithm in terms of its execution time
+                relative to the input size.</p>
+            <ul>
+                <li><strong>O(1):</strong> Constant time.</li>
+                <li><strong>O(n):</strong> Linear time.</li>
+                <li><strong>O(n²):</strong> Quadratic time.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+O(1): Accessing an array element
+O(n): Traversing an array
+O(n²): Nested loops
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Simple Examples</h2>
+            <h3>7.1 Real-life Example of Algorithm</h3>
+            <pre class="matrix">
+Task: Make tea
+Algorithm:
+1. Boil water
+2. Add tea leaves
+3. Add sugar and milk
+4. Stir and boil
+5. Strain into cup
+        </pre>
+
+            <h3>7.2 Real-life Example of Flowchart</h3>
+            <pre class="matrix">
+Flowchart:
+(Start) → [Boil water] → [Add ingredients] → [Stir and boil] → [Strain] → (End)
+        </pre>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Simple Arithmetic Problems</h1>
+
+        <section class="section">
+            <h2>1. Basic Arithmetic Operations</h2>
+            <h3>1.1 Addition and Multiplication of Integers</h3>
+            <p>Addition and multiplication are fundamental arithmetic operations.</p>
+            <pre class="matrix">
+Example:
+Input: a = 5, b = 3
+Addition: sum = a + b = 8
+Multiplication: product = a * b = 15
+        </pre>
+
+            <h3>1.2 Determining if a Number is Positive/Negative/Even/Odd</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input the number.
+2. If number > 0, print "Positive".
+3. If number < 0, print "Negative".
+4. If number % 2 == 0, print "Even"; else print "Odd".
+
+Flowchart:
+(Start) → [Input number] → [Check sign] → [Check even/odd] → (End)
+Example:
+Input: -4
+Output: Negative, Even
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Maximum of Numbers</h2>
+            <h3>2.1 Maximum of Two Numbers</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input two numbers a and b.
+2. If a > b, max = a; else max = b.
+
+Example:
+Input: a = 5, b = 3
+Output: Maximum = 5
+        </pre>
+
+            <h3>2.2 Maximum of Three Numbers</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input three numbers a, b, c.
+2. Compare a, b, c to find the largest.
+
+Example:
+Input: a = 3, b = 7, c = 5
+Output: Maximum = 7
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Summation Problems</h2>
+            <h3>3.1 Sum of First n Numbers</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input n.
+2. Sum = n * (n + 1) / 2.
+
+Example:
+Input: n = 5
+Output: Sum = 15
+        </pre>
+
+            <h3>3.2 Sum of Given n Numbers</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input numbers in an array.
+2. Sum all elements in the array.
+
+Example:
+Input: [1, 2, 3, 4, 5]
+Output: Sum = 15
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Other Arithmetic Problems</h2>
+            <h3>4.1 Integer Division</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input dividend and divisor.
+2. Compute quotient = dividend / divisor.
+
+Example:
+Input: dividend = 10, divisor = 3
+Output: Quotient = 3
+        </pre>
+
+            <h3>4.2 Digit Reversing</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input number n.
+2. Reverse the digits using a loop.
+
+Example:
+Input: n = 1234
+Output: Reversed = 4321
+        </pre>
+
+            <h3>4.3 Table Generation for n</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input n.
+2. Loop from 1 to 10, calculate n * i.
+
+Example:
+Input: n = 5
+Output: 5, 10, 15, 20, ..., 50
+        </pre>
+
+            <h3>4.4 Power Calculation (a^b)</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input a, b.
+2. Compute power using loop or pow(a, b).
+
+Example:
+Input: a = 2, b = 3
+Output: 8
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Advanced Problems</h2>
+            <h3>5.1 Factorial</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input n.
+2. Multiply numbers from 1 to n.
+
+Example:
+Input: n = 5
+Output: Factorial = 120
+        </pre>
+
+            <h3>5.2 Sine and Cosine Series</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input angle x.
+2. Calculate sine and cosine using series expansion.
+
+Example:
+Input: x = 30° (in radians)
+Output: sin(x), cos(x)
+        </pre>
+
+            <h3>5.3 Combination (nCr)</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input n and r.
+2. Compute nCr = n! / (r! * (n-r)!).
+
+Example:
+Input: n = 5, r = 2
+Output: nCr = 10
+        </pre>
+
+            <h3>5.4 Pascal Triangle</h3>
+            <pre class="matrix">
+Algorithm:
+1. Generate rows using combination formula.
+
+Example:
+1
+1 1
+1 2 1
+1 3 3 1
+1 4 6 4 1
+        </pre>
+
+            <h3>5.5 Prime Numbers</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input n.
+2. Check if n is divisible only by 1 and itself.
+
+Example:
+Input: n = 7
+Output: Prime
+        </pre>
+
+            <h3>5.6 Factors of a Number</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input n.
+2. Find all numbers that divide n without a remainder.
+
+Example:
+Input: n = 12
+Output: 1, 2, 3, 4, 6, 12
+        </pre>
+
+            <h3>5.7 Perfect Numbers</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input n.
+2. Check if the sum of its divisors equals n.
+
+Example:
+Input: n = 6
+Output: Perfect Number
+        </pre>
+
+            <h3>5.8 GCD of Numbers</h3>
+            <pre class="matrix">
+Algorithm:
+1. Input two numbers.
+2. Use Euclid's algorithm to find GCD.
+
+Example:
+Input: a = 54, b = 24
+Output: GCD = 6
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Swapping</h2>
+            <pre class="matrix">
+Algorithm:
+1. Input a and b.
+2. Swap using a third variable or arithmetic operations.
+
+Example:
+Input: a = 3, b = 5
+Output: a = 5, b = 3
+        </pre>
+        </section>
+    </div>
+
+    <div class="topic-container" id="unit6">
+        <h1>UNIT-VI: Functions</h1>
+
+        <section class="section">
+            <h2>1. Basic Types of Functions</h2>
+            <p><strong>Functions</strong> are blocks of code designed to perform specific tasks and enhance reusability.
+            </p>
+            <ul>
+                <li><strong>Library Functions:</strong> Predefined functions like <code>printf()</code>,
+                    <code>scanf()</code>, <code>sqrt()</code>.</li>
+                <li><strong>User-defined Functions:</strong> Functions created by the programmer to perform custom
+                    tasks.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+Library function: printf("Hello, World!");
+User-defined function:
+void greet() {
+    printf("Hello, User!");
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Declaration and Definition</h2>
+            <p><strong>Declaration:</strong> Specifies the function name, return type, and parameters without providing
+                the body.</p>
+            <p><strong>Definition:</strong> Specifies the body of the function and its implementation.</p>
+            <pre class="matrix">
+Syntax:
+Declaration: return_type function_name(parameters);
+Definition: return_type function_name(parameters) {
+    // Body of the function
+}
+
+Example:
+Declaration: int add(int, int);
+Definition: int add(int a, int b) {
+    return a + b;
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Function Call</h2>
+            <p>A <strong>function call</strong> executes the code defined in a function. It can be:</p>
+            <ul>
+                <li><strong>Call by Value:</strong> Passes a copy of the argument's value.</li>
+                <li><strong>Call by Reference:</strong> Passes the argument's address, allowing modifications to the
+                    original value.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+int add(int a, int b);
+int main() {
+    int sum = add(5, 3); // Function call
+    printf("Sum: %d", sum);
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Types of Functions</h2>
+            <p>Functions can be classified based on return type and parameters:</p>
+            <ul>
+                <li><strong>Without Return Type & Parameters:</strong> <code>void greet() { }</code></li>
+                <li><strong>With Return Type & Without Parameters:</strong> <code>int getNumber() { }</code></li>
+                <li><strong>Without Return Type & With Parameters:</strong> <code>void printSum(int, int) { }</code>
+                </li>
+                <li><strong>With Return Type & Parameters:</strong> <code>int add(int, int) { }</code></li>
+            </ul>
+            <pre class="matrix">
+Example:
+void greet() {
+    printf("Hello!");
+}
+int add(int a, int b) {
+    return a + b;
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Parameter Passing</h2>
+            <h3>5.1 Call by Value</h3>
+            <p>In <strong>Call by Value</strong>, the function receives a copy of the variable's value.</p>
+            <pre class="matrix">
+Example:
+void change(int x) {
+    x = 10; // Changes only the local copy
+}
+int main() {
+    int a = 5;
+    change(a);
+    printf("%d", a); // Output: 5
+}
+        </pre>
+
+            <h3>5.2 Call by Reference</h3>
+            <p>In <strong>Call by Reference</strong>, the function receives the variable's address, allowing
+                modifications to the original value.</p>
+            <pre class="matrix">
+Example:
+void change(int *x) {
+    *x = 10; // Changes the actual value
+}
+int main() {
+    int a = 5;
+    change(&a);
+    printf("%d", a); // Output: 10
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Scope of Variables</h2>
+            <ul>
+                <li><strong>Global Scope:</strong> Variables accessible throughout the program.</li>
+                <li><strong>Local Scope:</strong> Variables accessible only within the function where declared.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+int globalVar = 10; // Global scope
+int main() {
+    int localVar = 5; // Local scope
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Storage Classes</h2>
+            <p>Storage classes define the scope, lifetime, and visibility of variables.</p>
+            <ul>
+                <li><strong>auto:</strong> Default storage class for local variables.</li>
+                <li><strong>static:</strong> Retains the value between function calls.</li>
+                <li><strong>extern:</strong> Declares a global variable accessible across files.</li>
+                <li><strong>register:</strong> Suggests storing the variable in a CPU register.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+void demo() {
+    static int count = 0; // Retains value between calls
+    count++;
+    printf("%d", count);
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>8. Recursion</h2>
+            <p><strong>Recursion</strong> occurs when a function calls itself to solve smaller instances of the problem.
+            </p>
+            <pre class="matrix">
+Example:
+Factorial using recursion:
+int factorial(int n) {
+    if (n == 0) return 1;
+    return n * factorial(n - 1);
+}
+int main() {
+    printf("Factorial: %d", factorial(5)); // Output: 120
+}
+        </pre>
+        </section>
+    </div>
+
+
+    <!-- Footer  -->
     <div id="footer-placeholder"></div>
 
     <!-- Script -->
     <script src="../script/include.js"></script>
-</body></html>
+</body>
+
+</html>

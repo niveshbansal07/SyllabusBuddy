@@ -61,8 +61,564 @@
         </div>
     </div>
 
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Determinants and Matrices</h1>
 
-     <!-- Footer  -->
+        <section class="section">
+            <h2>1. Determinants</h2>
+            <p>A <strong>determinant</strong> is a scalar value that can be computed from the elements of a square
+                matrix and encapsulates certain properties of the matrix.</p>
+            <ul>
+                <li><strong>Definition:</strong> Determinants are associated with square matrices and are denoted as |A|
+                    for a matrix A.</li>
+                <li><strong>Minors:</strong> The determinant of a smaller matrix formed by deleting one row and one
+                    column of a matrix.</li>
+                <li><strong>Cofactors:</strong> Signed minors used in determinant expansions.</li>
+                <li><strong>Properties of Determinants:</strong>
+                    <ul>
+                        <li>Determinant of a triangular matrix is the product of its diagonal elements.</li>
+                        <li>Swapping two rows or columns changes the sign of the determinant.</li>
+                        <li>A determinant is zero if any two rows or columns are identical.</li>
+                    </ul>
+                </li>
+            </ul>
+            <pre class="matrix">
+Example:
+A = | 3  2 |
+    | 5  4 |
+Determinant, |A| = (3*4) - (2*5) = 2
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Matrices</h2>
+            <p>A <strong>matrix</strong> is a rectangular arrangement of numbers in rows and columns. It is a
+                fundamental concept in linear algebra.</p>
+            <ul>
+                <li><strong>Types of Matrices:</strong> Square Matrix, Diagonal Matrix, Identity Matrix, Zero Matrix.
+                </li>
+                <li><strong>Operations:</strong>
+                    <ul>
+                        <li><strong>Addition:</strong> Add corresponding elements of two matrices of the same dimension.
+                        </li>
+                        <li><strong>Subtraction:</strong> Subtract corresponding elements of two matrices of the same
+                            dimension.</li>
+                        <li><strong>Scalar Multiplication:</strong> Multiply each element of a matrix by a scalar value.
+                        </li>
+                        <li><strong>Matrix Multiplication:</strong> Multiply rows of the first matrix with columns of
+                            the second matrix.</li>
+                    </ul>
+                </li>
+            </ul>
+            <pre class="matrix">
+Example:
+A = [ [1, 2], [3, 4] ]
+B = [ [5, 6], [7, 8] ]
+Addition, A + B = [ [6, 8], [10, 12] ]
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Adjoint and Inverse</h2>
+            <p>The <strong>adjoint</strong> of a matrix is the transpose of its cofactor matrix, and the
+                <strong>inverse</strong> is calculated using the formula:
+            </p>
+            <p><strong>A<sup>-1</sup> = adj(A)/|A|</strong>, where |A| ≠ 0.</p>
+            <pre class="matrix">
+Example:
+A = [ [4, 7], [2, 6] ]
+Adj(A) = [ [6, -7], [-2, 4] ]
+|A| = (4*6) - (7*2) = 10
+A<sup>-1</sup> = 1/10 * [ [6, -7], [-2, 4] ]
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Rank of a Matrix and Dependence of Vectors</h2>
+            <p>The <strong>rank</strong> of a matrix is the maximum number of linearly independent rows or columns. The
+                <strong>dependence of vectors</strong> occurs when a vector in a set can be expressed as a combination
+                of other vectors.
+            </p>
+            <pre class="matrix">
+Example:
+A = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ]
+After row reduction: Rank = 2
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Eigenvalues and Eigenvectors</h2>
+            <p>An <strong>eigenvector</strong> of a matrix A satisfies the equation A*v = λ*v, where λ is the
+                eigenvalue.</p>
+            <pre class="matrix">
+Example:
+A = [ [2, 1], [1, 2] ]
+Eigenvalue λ = 3
+Eigenvector v = [ [1], [1] ]
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Cayley-Hamilton Theorem</h2>
+            <p>The <strong>Cayley-Hamilton theorem</strong> states that every square matrix satisfies its own
+                characteristic equation.</p>
+            <pre class="matrix">
+Example:
+A = [ [1, 2], [3, 4] ]
+Characteristic Equation: λ<sup>2</sup> - 5λ + 2 = 0
+A satisfies this equation.
+        </pre>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Limits & Continuity</h1>
+
+        <section class="section">
+            <h2>1. Limit at a Point</h2>
+            <p>The <strong>limit at a point</strong> describes the value that a function approaches as the input
+                approaches a specific point.</p>
+            <ul>
+                <li>Mathematically, <em>lim<sub>x→c</sub> f(x) = L</em>, means as x approaches c, the function f(x)
+                    approaches the value L.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+f(x) = (x² - 1) / (x - 1)
+lim<sub>x→1</sub> f(x) = lim<sub>x→1</sub> (x + 1) = 2
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Properties of Limits</h2>
+            <p>The following properties simplify the computation of limits:</p>
+            <ul>
+                <li><strong>Sum Rule:</strong> lim<sub>x→c</sub> [f(x) + g(x)] = lim<sub>x→c</sub> f(x) +
+                    lim<sub>x→c</sub> g(x)</li>
+                <li><strong>Product Rule:</strong> lim<sub>x→c</sub> [f(x)·g(x)] = lim<sub>x→c</sub> f(x) ·
+                    lim<sub>x→c</sub> g(x)</li>
+                <li><strong>Quotient Rule:</strong> lim<sub>x→c</sub> [f(x)/g(x)] = lim<sub>x→c</sub> f(x) /
+                    lim<sub>x→c</sub> g(x), provided lim<sub>x→c</sub> g(x) ≠ 0</li>
+                <li><strong>Constant Multiplication:</strong> lim<sub>x→c</sub> [k·f(x)] = k · lim<sub>x→c</sub> f(x)
+                </li>
+            </ul>
+            <pre class="matrix">
+Example:
+f(x) = 2x, g(x) = x²
+lim<sub>x→2</sub> [f(x) + g(x)] = lim<sub>x→2</sub> 2x + lim<sub>x→2</sub> x² = 4 + 4 = 8
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Computation of Limits of Various Types of Functions</h2>
+            <p>Limits can be computed for different types of functions using direct substitution, factoring,
+                rationalization, or L'Hôpital's Rule.</p>
+            <pre class="matrix">
+Example:
+f(x) = (x² - 9) / (x - 3)
+Factorize: (x - 3)(x + 3) / (x - 3)
+lim<sub>x→3</sub> f(x) = 3 + 3 = 6
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Continuity at a Point</h2>
+            <p>A function is <strong>continuous at a point</strong> x = c if the following three conditions are
+                satisfied:</p>
+            <ul>
+                <li>f(c) is defined.</li>
+                <li>lim<sub>x→c</sub> f(x) exists.</li>
+                <li>lim<sub>x→c</sub> f(x) = f(c).</li>
+            </ul>
+            <pre class="matrix">
+Example:
+f(x) = x²
+At x = 2, f(2) = 4, lim<sub>x→2</sub> f(x) = 4. Hence, f(x) is continuous at x = 2.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Continuity Over an Interval</h2>
+            <p>A function is <strong>continuous over an interval</strong> if it is continuous at every point in that
+                interval.</p>
+            <pre class="matrix">
+Example:
+f(x) = x² is continuous for all real numbers (-∞, ∞).
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Intermediate Value Theorem</h2>
+            <p>The <strong>Intermediate Value Theorem</strong> states that if a function is continuous on a closed
+                interval [a, b], then for any value K between f(a) and f(b), there exists a value c in [a, b] such that
+                f(c) = K.</p>
+            <pre class="matrix">
+Example:
+f(x) = x³ - x
+On [0, 2], f(0) = 0 and f(2) = 6. There exists a c ∈ (0, 2) such that f(c) = 3.
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Types of Discontinuities</h2>
+            <p>Discontinuities occur when a function is not continuous at a point. Types include:</p>
+            <ul>
+                <li><strong>Removable Discontinuity:</strong> A "hole" in the graph where the limit exists but does not
+                    equal the function's value.</li>
+                <li><strong>Jump Discontinuity:</strong> The function "jumps" between two values at a point.</li>
+                <li><strong>Infinite Discontinuity:</strong> The function approaches infinity at a point.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+f(x) = 1/(x - 1)
+At x = 1, there is an infinite discontinuity.
+        </pre>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Differentiation</h1>
+
+        <section class="section">
+            <h2>1. Derivative</h2>
+            <p>The <strong>derivative</strong> of a function represents the rate at which the function changes with
+                respect to its variable.</p>
+            <pre class="matrix">
+Example:
+f(x) = x²
+f'(x) = 2x
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Derivatives of Sum, Differences, Product & Quotients</h2>
+            <ul>
+                <li><strong>Sum Rule:</strong> (f + g)' = f' + g'</li>
+                <li><strong>Difference Rule:</strong> (f - g)' = f' - g'</li>
+                <li><strong>Product Rule:</strong> (fg)' = f'g + fg'</li>
+                <li><strong>Quotient Rule:</strong> (f/g)' = (f'g - fg')/g²</li>
+            </ul>
+            <pre class="matrix">
+Example:
+f(x) = x², g(x) = x + 1
+(fg)' = (2x)(x + 1) + (x²)(1) = 3x² + 2x
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Chain Rule</h2>
+            <p>The <strong>chain rule</strong> is used to differentiate composite functions: (f(g(x)))' = f'(g(x)) ·
+                g'(x).</p>
+            <pre class="matrix">
+Example:
+f(x) = (2x + 3)²
+f'(x) = 2(2x + 3) · 2 = 4(2x + 3)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Derivatives of Composite Functions</h2>
+            <p>Composite functions are differentiated using the chain rule.</p>
+            <pre class="matrix">
+Example:
+f(x) = sin(2x)
+f'(x) = cos(2x) · 2 = 2cos(2x)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Logarithmic Differentiation</h2>
+            <p><strong>Logarithmic differentiation</strong> simplifies differentiation of functions by taking the
+                natural log of both sides.</p>
+            <pre class="matrix">
+Example:
+f(x) = x^x
+ln(f(x)) = xln(x)
+f'(x) = x^x (1 + ln(x))
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Rolle’s Theorem</h2>
+            <p><strong>Rolle's Theorem:</strong> If f(a) = f(b) and f(x) is continuous and differentiable on [a, b],
+                then there exists a point c in (a, b) such that f'(c) = 0.</p>
+            <pre class="matrix">
+Example:
+f(x) = x² - 4x + 4, on [0, 4]
+f'(x) = 2x - 4
+At x = 2, f'(x) = 0
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Mean Value Theorem</h2>
+            <p><strong>Mean Value Theorem:</strong> If f(x) is continuous and differentiable on [a, b], then there
+                exists c in (a, b) such that:</p>
+            <p><em>f'(c) = [f(b) - f(a)] / (b - a)</em></p>
+            <pre class="matrix">
+Example:
+f(x) = x² on [1, 3]
+f'(c) = (f(3) - f(1)) / (3 - 1) = 4
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>8. Expansion of Functions (Maclaurin's & Taylor's)</h2>
+            <p><strong>Maclaurin's Series:</strong> Expansion at x = 0.</p>
+            <pre class="matrix">
+Example:
+f(x) = e^x
+Maclaurin: 1 + x + x²/2! + x³/3! + ...
+        </pre>
+            <p><strong>Taylor's Series:</strong> Expansion around x = a.</p>
+            <pre class="matrix">
+Example:
+f(x) = ln(1 + x)
+Taylor: x - x²/2 + x³/3 - ...
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>9. Indeterminate Forms & L’Hôpital’s Rule</h2>
+            <p><strong>L'Hôpital's Rule:</strong> For indeterminate forms (0/0 or ∞/∞), <em>lim<sub>x→c</sub>
+                    [f(x)/g(x)] = lim<sub>x→c</sub> [f'(x)/g'(x)]</em>.</p>
+            <pre class="matrix">
+Example:
+lim<sub>x→0</sub> (sin(x)/x) = lim<sub>x→0</sub> (cos(x)/1) = 1
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>10. Maxima & Minima</h2>
+            <p><strong>Maxima:</strong> Highest point of a function. <strong>Minima:</strong> Lowest point of a
+                function.</p>
+            <pre class="matrix">
+Example:
+f(x) = x² - 4x + 3
+f'(x) = 2x - 4 = 0 at x = 2
+Maxima/Minima: f''(2) > 0, so Minima at x = 2
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>11. Curve Tracing</h2>
+            <p><strong>Curve tracing</strong> involves studying a curve's behavior by analyzing derivatives and plotting
+                its graph.</p>
+            <pre class="matrix">
+Example:
+f(x) = x³ - 3x² + 2x
+Critical points: x = 0, x = 1, x = 2
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>12. Successive Differentiation & Leibniz Theorem</h2>
+            <p><strong>Successive Differentiation:</strong> Repeatedly finding derivatives of a function.</p>
+            <p><strong>Leibniz Theorem:</strong> Formula for nth derivative of a product of two functions.</p>
+            <pre class="matrix">
+Example:
+f(x) = e^x sin(x)
+f<sup>n</sup>(x) = e^x [sin(x + nπ/2)]
+        </pre>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Integration</h1>
+
+        <section class="section">
+            <h2>1. Integral as Limit of Sum</h2>
+            <p>The <strong>integral as a limit of a sum</strong> defines the definite integral as the limit of Riemann
+                sums, where a function is approximated by summing the areas of rectangles under its curve.</p>
+            <pre class="matrix">
+Example:
+∫ f(x) dx from a to b = lim<sub>n→∞</sub> Σ [f(x<sub>i</sub>) Δx]
+where Δx = (b - a)/n
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Fundamental Theorem of Calculus (Without Proof)</h2>
+            <p>The <strong>Fundamental Theorem of Calculus</strong> links differentiation and integration. It states:
+            </p>
+            <ul>
+                <li>If f(x) is continuous on [a, b], and F(x) is its antiderivative, then:</li>
+                <p><em>∫ f(x) dx from a to b = F(b) - F(a)</em></p>
+            </ul>
+            <pre class="matrix">
+Example:
+f(x) = x²
+∫ f(x) dx from 0 to 2 = F(2) - F(0) = (2³/3) - (0³/3) = 8/3
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Indefinite Integrals</h2>
+            <p><strong>Indefinite integrals</strong> represent the family of all antiderivatives of a function.</p>
+            <p>Notation: ∫ f(x) dx = F(x) + C, where C is the constant of integration.</p>
+            <pre class="matrix">
+Example:
+f(x) = 2x
+∫ f(x) dx = x² + C
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Methods of Integration</h2>
+            <ul>
+                <li><strong>Substitution Method:</strong> Replace a part of the integral with a substitution.</li>
+                <pre class="matrix">
+Example:
+∫ sin(2x) dx
+Let u = 2x, then du = 2 dx
+∫ sin(u) du/2 = -cos(u)/2 + C = -cos(2x)/2 + C
+            </pre>
+
+                <li><strong>By Parts:</strong> ∫ u dv = uv - ∫ v du</li>
+                <pre class="matrix">
+Example:
+∫ x e^x dx
+Let u = x, dv = e^x dx
+Then, ∫ x e^x dx = x e^x - ∫ e^x dx = x e^x - e^x + C
+            </pre>
+
+                <li><strong>Partial Fractions:</strong> Decompose a rational function into simpler fractions.</li>
+                <pre class="matrix">
+Example:
+∫ (1 / (x² - 1)) dx
+Decompose: 1 / (x² - 1) = 1/2(1/(x-1) - 1/(x+1))
+Integrate: ∫ (1/2)(1/(x-1) - 1/(x+1)) dx = (1/2) ln|x-1| - (1/2) ln|x+1| + C
+            </pre>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>5. Reduction Formulae for Trigonometric Functions</h2>
+            <p>Reduction formulae simplify the integration of higher powers of trigonometric functions.</p>
+            <pre class="matrix">
+Example:
+∫ sinⁿ(x) dx = -(1/n) cos(x) sinⁿ⁻¹(x) + (n-1)/n ∫ sinⁿ⁻²(x) dx
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Gamma and Beta Functions (Definition)</h2>
+            <ul>
+                <li><strong>Gamma Function:</strong> Defined as Γ(n) = ∫ xⁿ⁻¹ e⁻ˣ dx from 0 to ∞.</li>
+                <pre class="matrix">
+Example:
+Γ(3) = ∫ x² e⁻ˣ dx from 0 to ∞ = 2
+            </pre>
+
+                <li><strong>Beta Function:</strong> Defined as B(x, y) = ∫ t^(x-1) (1-t)^(y-1) dt from 0 to 1.</li>
+                <pre class="matrix">
+Example:
+B(1, 1) = ∫ t⁰ (1-t)⁰ dt from 0 to 1 = 1
+            </pre>
+            </ul>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Vector Algebra</h1>
+
+        <section class="section">
+            <h2>1. Definition of a Vector in 2 and 3 Dimensions</h2>
+            <p>A <strong>vector</strong> is a quantity that has both magnitude and direction. It is represented
+                geometrically by an arrow pointing from one point to another.</p>
+            <ul>
+                <li><strong>2D Vector:</strong> Represented in the form <em>v = (x, y)</em>, where x and y are
+                    components along the x-axis and y-axis.</li>
+                <li><strong>3D Vector:</strong> Represented in the form <em>v = (x, y, z)</em>, where x, y, and z are
+                    components along the x, y, and z axes respectively.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+In 2D: v = (3, 4)
+In 3D: v = (1, 2, 3)
+Magnitude: |v| = √(x² + y²) in 2D, |v| = √(x² + y² + z²) in 3D
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Double Scalar Product</h2>
+            <p>The <strong>double scalar product</strong> of two vectors, also known as the dot product, is given by:
+            </p>
+            <p><em>v · w = |v||w|cos(θ)</em>, where θ is the angle between the vectors.</p>
+            <p><strong>Properties:</strong></p>
+            <ul>
+                <li>v · w = w · v (Commutative)</li>
+                <li>v · v = |v|²</li>
+                <li>If v · w = 0, then v and w are perpendicular.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+v = (3, 4), w = (1, 2)
+v · w = (3)(1) + (4)(2) = 11
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Triple Scalar Product</h2>
+            <p>The <strong>triple scalar product</strong> of three vectors v, w, and u is given by:</p>
+            <p><em>v · (w × u)</em>, where w × u is the vector cross product.</p>
+            <p>This represents the volume of the parallelepiped formed by the three vectors.</p>
+            <pre class="matrix">
+Example:
+v = (1, 0, 0), w = (0, 1, 0), u = (0, 0, 1)
+w × u = (1, 0, 0)
+v · (w × u) = 1 (Volume = 1 unit³)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Double Vector Product</h2>
+            <p>The <strong>double vector product</strong> is given by:</p>
+            <p><em>(v × w) × u = (v · u)w - (w · u)v</em></p>
+            <p>This results in a vector that lies in the plane of w and u.</p>
+            <pre class="matrix">
+Example:
+v = (1, 0, 0), w = (0, 1, 0), u = (0, 0, 1)
+(v × w) × u = (0, 0, 1) × (0, 0, 1) = (0, 0, 0)
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Physical Interpretation of Area and Volume</h2>
+            <ul>
+                <li><strong>Area:</strong> The magnitude of the cross product of two vectors represents the area of the
+                    parallelogram formed by the vectors.</li>
+                <p><em>Area = |v × w|</em></p>
+                <pre class="matrix">
+Example:
+v = (1, 0, 0), w = (0, 1, 0)
+v × w = (0, 0, 1)
+Area = |(0, 0, 1)| = 1
+            </pre>
+
+                <li><strong>Volume:</strong> The magnitude of the triple scalar product represents the volume of the
+                    parallelepiped formed by three vectors.</li>
+                <p><em>Volume = |v · (w × u)|</em></p>
+                <pre class="matrix">
+Example:
+v = (1, 0, 0), w = (0, 1, 0), u = (0, 0, 1)
+Volume = |1| = 1
+            </pre>
+            </ul>
+        </section>
+    </div>
+
+
+
+
+
+
+
+    <!-- Footer  -->
     <div id="footer-placeholder"></div>
 
     <!-- Script -->
