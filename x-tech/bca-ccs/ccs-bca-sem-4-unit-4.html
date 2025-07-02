@@ -56,6 +56,288 @@
     </div>
 
 
+    <div class="topic-container" id="unit1">
+    <h1>UNIT-I: Linear Programming</h1>
+
+    <section class="section">
+        <h2>1. Central Problem of Linear Programming</h2>
+        <p>Linear Programming (LP) deals with the optimization (maximization or minimization) of a linear objective function, subject to a set of linear equality and inequality constraints.</p>
+        <pre class="matrix">
+Example:
+Maximize Z = 3x + 5y
+Subject to:
+  x + 2y ≤ 200
+  3x + 2y ≤ 300
+  x ≥ 0, y ≥ 0
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Statements of Basic Theorems and Properties</h2>
+        <p>Important theorems include the Existence Theorem, Feasibility, and Boundedness. These theorems guarantee the existence of an optimal solution under certain conditions.</p>
+        <pre class="matrix">
+Example:
+If a feasible region is non-empty and bounded, then the linear programming problem has at least one optimal solution.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Simplex Method</h2>
+        <p>The simplex method is an iterative procedure to solve LP problems by moving along the edges of the feasible region to find the optimal value.</p>
+        <pre class="matrix">
+Example:
+Initial tableau formed → Pivot operations applied → Optimal solution obtained
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Primal and Dual Simplex Methods</h2>
+        <p>While the primal simplex method starts from a basic feasible solution, the dual simplex method starts from a dual feasible solution and iterates toward optimality.</p>
+        <pre class="matrix">
+Example:
+Primal LP: Max Z = 2x + 3y
+Dual LP: Min W = 200a + 300b
+Subject to constraints derived from the primal problem
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Transportation and Assignment Problems</h2>
+        <p>Transportation problems deal with finding the least cost route for transporting goods. Assignment problems involve assigning resources to tasks at minimal cost or maximal profit.</p>
+        <pre class="matrix">
+Example (Transportation):
+Warehouses W1, W2 to Stores S1, S2 with cost matrix
+Example (Assignment):
+Tasks A, B, C assigned to Workers 1, 2, 3 using Hungarian Method
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Tic-Tac Problem</h2>
+        <p>A variant or small-scale version of transportation or assignment problem often used to illustrate basic principles.</p>
+        <pre class="matrix">
+Example:
+3x3 cost matrix minimized using least-cost allocation technique
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Graphical Method Formulation</h2>
+        <p>The graphical method is used for LP problems with two decision variables. The feasible region is plotted, and the optimal point is identified visually.</p>
+        <pre class="matrix">
+Example:
+Plot constraints:
+  x + y ≤ 5
+  x ≥ 0, y ≥ 0
+Identify feasible region and objective function line
+        </pre>
+    </section>
+</div>
+
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Queuing Theory</h1>
+
+    <section class="section">
+        <h2>1. Characteristics of Queuing System</h2>
+        <p>A queuing system is a model used to describe the behavior of lines (queues). It includes the process of arriving, waiting in the queue, and getting served.</p>
+        <ul>
+            <li>Arrival process (how customers arrive)</li>
+            <li>Service mechanism (how services are provided)</li>
+            <li>Queue discipline (order of service - FIFO, LIFO, etc.)</li>
+            <li>System capacity</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Bank queue system where customers arrive randomly and are served on a first-come, first-served basis.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Classification of Queuing Model</h2>
+        <p>Queuing models are classified based on the number of servers, arrival and service time distributions. The standard notation is A/S/c, where:</p>
+        <ul>
+            <li>A: Arrival time distribution (e.g., M for Markovian/exponential)</li>
+            <li>S: Service time distribution</li>
+            <li>c: Number of servers</li>
+        </ul>
+        <pre class="matrix">
+Example:
+M/M/1 - A single server queue with exponential interarrival and service times.
+M/M/c - Multi-server system with c servers.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Single Channel Queuing Theory</h2>
+        <p>This refers to systems with one server and one waiting line. Customers are served one at a time.</p>
+        <pre class="matrix">
+Example:
+Doctor's clinic with one doctor and patients waiting in a line.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Generalization of Steady State M/M/1 Queuing Models</h2>
+        <p>Steady state refers to the condition where the arrival rate (λ) and service rate (μ) remain constant over time. The system reaches equilibrium where the probabilities do not change.</p>
+        <pre class="matrix">
+Model I: Infinite queue capacity, exponential arrival/service
+  Performance metrics: Average number of customers in system (L), average wait time (W), etc.
+Model II: Finite queue capacity
+        </pre>
+    </section>
+</div>
+
+
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Replacement Theory</h1>
+
+    <section class="section">
+        <h2>1. Replacement of Items that Deteriorate</h2>
+        <p>This refers to items that gradually wear out over time, such as machinery or vehicles. The replacement policy is based on the cost of maintenance versus the cost of replacement.</p>
+        <pre class="matrix">
+Example:
+A machine costs ₹20,000 and its maintenance cost increases every year.
+When the cumulative cost becomes higher than buying a new machine, replacement is recommended.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Replacement of Items that Fail</h2>
+        <p>This category deals with items that suddenly fail without warning (e.g., light bulbs, electronic components). Probabilistic models are used to estimate their failure rates and replacement schedules.</p>
+        <pre class="matrix">
+Example:
+If a bulb has a failure rate of 10% per month, we can plan bulk replacement to reduce costs and failure disruptions.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Individual Replacement</h2>
+        <p>In individual replacement, items are replaced one by one upon failure. This method is simple but can be costly if failures are frequent.</p>
+        <pre class="matrix">
+Example:
+Replacing each streetlight bulb only when it fails.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Group Replacement</h2>
+        <p>In group replacement, all items are replaced at fixed intervals, regardless of individual failures. This approach is more economical when failure rates increase with time.</p>
+        <pre class="matrix">
+Example:
+All bulbs in a facility are replaced every 6 months, even if some still work, to reduce overall downtime and cost.
+        </pre>
+    </section>
+</div>
+
+
+
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Inventory Theory</h1>
+
+    <section class="section">
+        <h2>1. Cost Involved in Inventory Problem</h2>
+        <p>Inventory problems involve managing the stock of goods to minimize total costs. The main costs include:</p>
+        <ul>
+            <li><strong>Ordering Cost:</strong> Cost of placing and receiving an order</li>
+            <li><strong>Holding Cost:</strong> Cost of storing unsold items</li>
+            <li><strong>Shortage Cost:</strong> Cost when demand exceeds supply</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Ordering cost = ₹50/order
+Holding cost = ₹2/unit/month
+Shortage cost = ₹10/unit lost sale
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Single Item Deterministic Model</h2>
+        <p>This model assumes known, constant demand. The goal is to determine the optimal order quantity that minimizes total inventory cost.</p>
+        <pre class="matrix">
+Example:
+Annual demand = 1200 units
+Ordering cost = ₹100
+Holding cost = ₹5/unit/year
+Economic Order Quantity (EOQ) = sqrt((2 × 1200 × 100)/5) = 219 units
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Economic Lot Size Model Without Shortage</h2>
+        <p>This model determines the order quantity when shortages are not allowed. It uses EOQ to calculate the most economical batch size.</p>
+        <pre class="matrix">
+Formula:
+EOQ = √(2DS/H)
+Where D = demand, S = setup cost, H = holding cost
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Economic Lot Size Model With Shortage</h2>
+        <p>Here, shortages are allowed with a penalty. The model balances the costs of holding and shortages to determine optimal order size.</p>
+        <pre class="matrix">
+Example:
+Use EOQ with penalty cost included to compute revised order quantity.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Finite and Infinite Production Rate</h2>
+        <p>When items are produced rather than ordered, production rate influences the inventory model:</p>
+        <ul>
+            <li><strong>Infinite Rate:</strong> Entire lot available instantly (like EOQ)</li>
+            <li><strong>Finite Rate:</strong> Items produced over time, inventory builds gradually</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Production rate = 100 units/day
+Demand rate = 50 units/day
+Inventory builds at 100 - 50 = 50 units/day
+        </pre>
+    </section>
+</div>
+
+
+
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Job Sequencing</h1>
+
+    <section class="section">
+        <h2>1. Introduction to Job Sequencing</h2>
+        <p>Job sequencing problems aim to determine the optimal order of processing a set of jobs on one or more machines to minimize total elapsed time, idle time, or cost.</p>
+        <pre class="matrix">
+Example:
+Given 4 jobs to be processed on 2 machines, find the sequence that minimizes the total processing time.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Johnson’s Algorithm for n Jobs Through 2 Machines</h2>
+        <p>Johnson’s Rule is a method to find the optimal sequence of n jobs processed through two machines (Machine A and Machine B). The rule minimizes total elapsed time.</p>
+        <ul>
+            <li>Step 1: List jobs and their processing times on both machines.</li>
+            <li>Step 2: Choose the job with the smallest processing time.</li>
+            <li>Step 3: If it’s on Machine A, place it first. If it’s on Machine B, place it last.</li>
+            <li>Step 4: Repeat until all jobs are scheduled.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Job | M1 | M2
+ A  | 3  | 8
+ B  | 12 | 5
+ C  | 4  | 7
+ D  | 6  | 6
+
+Apply Johnson’s Rule:
+- Smallest time is A on M1 → A goes first
+- Next smallest is B on M2 → B goes last
+Continue until all are placed
+Optimal sequence: A → C → D → B
+        </pre>
+    </section>
+</div>
+
      <!-- Footer  -->
     <div id="footer-placeholder"></div>
 

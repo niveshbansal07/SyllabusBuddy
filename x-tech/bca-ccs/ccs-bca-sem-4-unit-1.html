@@ -67,6 +67,408 @@
         </div>
     </div>
 
+    <div class="topic-container" id="unit1">
+    <h1>UNIT-I: Introduction to Computer Graphics & Multimedia Application</h1>
+
+    <section class="section">
+        <h2>1. The Advantages of Interactive Graphics</h2>
+        <p><strong>Interactive graphics</strong> enable users to manipulate visual content in real-time. This leads to better decision-making, enhanced learning, and more intuitive user experiences. They are crucial in simulations, CAD systems, games, and data visualization.</p>
+        <ul>
+            <li>Improved user control and feedback</li>
+            <li>Facilitates understanding of complex data</li>
+            <li>Enhances creativity in design processes</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Representative Uses of Computer Graphics</h2>
+        <p>Computer graphics are used in a variety of fields:</p>
+        <ul>
+            <li><strong>Engineering Design:</strong> CAD/CAM systems</li>
+            <li><strong>Education:</strong> Visual simulations and tutorials</li>
+            <li><strong>Entertainment:</strong> Video games, movies, animations</li>
+            <li><strong>Medicine:</strong> Imaging and visualization tools</li>
+            <li><strong>Scientific Visualization:</strong> Graphical display of simulation results</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Classification of Applications</h2>
+        <p>Applications of computer graphics can be classified based on their function:</p>
+        <ul>
+            <li><strong>Interactive vs. Non-interactive:</strong> Real-time manipulation vs. static image generation</li>
+            <li><strong>2D vs. 3D Graphics:</strong> Flat representations vs. spatial visuals</li>
+            <li><strong>Raster vs. Vector:</strong> Pixel-based images vs. geometrically defined visuals</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. Development of Hardware and Software</h2>
+        <p>Modern computer graphics rely on advanced hardware and software:</p>
+        <ul>
+            <li><strong>Hardware:</strong> GPUs, graphic monitors, graphic tablets, VR devices</li>
+            <li><strong>Software:</strong> Graphics APIs (OpenGL, DirectX), design tools (Adobe Illustrator, Blender)</li>
+        </ul>
+        <p>The synergy between hardware and software determines the efficiency and quality of graphical applications.</p>
+    </section>
+
+    <section class="section">
+        <h2>5. Conceptual Framework for Interactive Graphics</h2>
+        <p>The framework includes components such as:</p>
+        <ul>
+            <li><strong>Input Devices:</strong> Keyboard, mouse, touchscreen</li>
+            <li><strong>Processing Unit:</strong> Interprets inputs and updates graphics</li>
+            <li><strong>Display Device:</strong> Shows the output (monitor, projector)</li>
+            <li><strong>Software:</strong> Manages graphics logic and rendering</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Scan Conversion Techniques</h2>
+        <p>Scan conversion refers to the process of converting geometric data into pixel data for raster displays.</p>
+
+        <h3>6.1 Scan Converting Lines</h3>
+        <p>The <strong>Bresenham's Line Algorithm</strong> is commonly used to draw straight lines efficiently on raster displays.</p>
+        <pre class="matrix">
+Example:
+Draw line from (0,0) to (5,3) using Bresenham’s Algorithm.
+Initial point: (0,0)
+Next points: (1,1), (2,1), (3,2), (4,2), (5,3)
+        </pre>
+
+        <h3>6.2 Scan Converting Circles</h3>
+        <p>The <strong>Midpoint Circle Algorithm</strong> determines the points needed to draw a circle by calculating pixel positions along the circle’s circumference.</p>
+        <pre class="matrix">
+Example:
+Center = (0,0), Radius = 5
+Calculated pixels in one octant:
+(0,5), (1,5), (2,4), (3,4), (4,3), (5,2)
+        </pre>
+
+        <h3>6.3 Scan Converting Ellipses</h3>
+        <p>The <strong>Midpoint Ellipse Algorithm</strong> is used for drawing ellipses, involving separate calculations for regions where x or y grows faster.</p>
+        <pre class="matrix">
+Example:
+Center = (0,0), Rx = 6, Ry = 4
+Points calculated in region 1 and 2 are plotted using symmetry.
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Graphics Hardware, Tools & Clipping Algorithms</h1>
+
+    <section class="section">
+        <h2>1. Hardcopy Technologies</h2>
+        <p>Hardcopy devices produce permanent output of graphics. Common types include:</p>
+        <ul>
+            <li><strong>Printers:</strong> Inkjet, Laser, Dot Matrix</li>
+            <li><strong>Plotters:</strong> Pen plotters for high-precision engineering drawings</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Display Technologies</h2>
+        <p>Display technologies form the visual interface of computer graphics. These include:</p>
+        <ul>
+            <li><strong>CRT:</strong> Cathode Ray Tubes</li>
+            <li><strong>LCD:</strong> Liquid Crystal Display</li>
+            <li><strong>LED and OLED:</strong> Modern thin, energy-efficient displays</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Raster-Scan Display System</h2>
+        <p>In raster-scan systems, the screen is refreshed line by line from top to bottom, storing the image in a frame buffer.</p>
+        <pre class="matrix">
+Example:
+Each pixel is stored in memory and refreshed 60 times per second.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Video Controller</h2>
+        <p>The video controller handles conversion of image data from memory to signals for the monitor. It synchronizes pixel refresh and coordinates the display timing.</p>
+    </section>
+
+    <section class="section">
+        <h2>5. Random-Scan Display Processor</h2>
+        <p>Unlike raster systems, random-scan (vector display) directly draws lines and shapes using an electron beam, offering higher resolution for line drawings.</p>
+    </section>
+
+    <section class="section">
+        <h2>6. Input Devices for Operator Interaction</h2>
+        <p>Input devices are essential for interacting with graphics systems:</p>
+        <ul>
+            <li>Mouse, Keyboard</li>
+            <li>Light pen, Touch screen</li>
+            <li>Graphics tablet, Joystick</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>7. Image Scanners</h2>
+        <p>Image scanners convert physical documents or images into digital form using light sensors. They are used in digitization and graphic input.</p>
+    </section>
+
+    <section class="section">
+        <h2>8. Graphics Tools Exposure</h2>
+        <p>Practical tools used in multimedia and web graphics development:</p>
+        <ul>
+            <li><strong>Dreamweaver:</strong> Web design and development</li>
+            <li><strong>Photoshop:</strong> Image editing</li>
+            <li><strong>Blender:</strong> 3D modeling and rendering</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>9. Clipping Algorithms</h2>
+        <p>Clipping restricts drawing to a specified region (viewport). Major algorithms include:</p>
+
+        <h3>9.1 Southland-Cohen Algorithm</h3>
+        <p>This algorithm checks if a line is completely inside, outside, or partially inside the clipping area and performs region codes to clip.</p>
+        <pre class="matrix">
+Example:
+Line with endpoints (x1,y1) and (x2,y2) are tested with region codes and clipped accordingly.
+        </pre>
+
+        <h3>9.2 Cyrus-Beck Algorithm</h3>
+        <p>Used for line clipping against convex polygonal window. It is a parametric algorithm based on dot product tests.</p>
+        <pre class="matrix">
+Example:
+For convex window with normals and parametric t values, calculate entry and exit points of the line segment.
+        </pre>
+
+        <h3>9.3 Midpoint Subdivision Algorithm</h3>
+        <p>This is a recursive algorithm that divides the line at its midpoint until a trivially accepted or rejected segment is obtained.</p>
+        <pre class="matrix">
+Example:
+Check midpoint of (x1,y1)-(x2,y2). If undecided, split and repeat for each half.
+        </pre>
+    </section>
+</div>
+
+
+
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Geometrical Transformation</h1>
+
+    <section class="section">
+        <h2>1. 2D Transformation</h2>
+        <p>2D transformations change the position, size, and orientation of objects in a two-dimensional space. Basic types include:</p>
+        <ul>
+            <li><strong>Translation:</strong> Moving an object from one place to another</li>
+            <li><strong>Scaling:</strong> Changing the size of an object</li>
+            <li><strong>Rotation:</strong> Rotating an object around an origin</li>
+            <li><strong>Shearing:</strong> Slanting the shape of an object</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Homogeneous Coordinates and Matrix Representation</h2>
+        <p>To perform transformations using matrix multiplication, coordinates are represented in <strong>homogeneous form</strong> (x, y, 1).</p>
+        <pre class="matrix">
+Example:
+Translation Matrix for Tx and Ty:
+[ [1, 0, Tx],
+  [0, 1, Ty],
+  [0, 0, 1 ] ]
+
+Scaling Matrix:
+[ [Sx, 0, 0],
+  [0, Sy, 0],
+  [0,  0, 1] ]
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Composition of 2D Transformations</h2>
+        <p>Multiple transformations can be combined into a single transformation matrix by matrix multiplication.</p>
+        <pre class="matrix">
+Example:
+First rotate, then translate:
+Resultant Matrix = Translation × Rotation
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Window-to-Viewport Transformation</h2>
+        <p>This maps objects from a logical coordinate system (window) to the physical device coordinates (viewport).</p>
+        <p>The transformation involves scaling and translation:</p>
+        <pre class="matrix">
+Example:
+Xv = Xvmin + (Xw - Xwmin) × (Xvmax - Xvmin)/(Xwmax - Xwmin)
+Yv = Yvmin + (Yw - Ywmin) × (Yvmax - Yvmin)/(Ywmax - Ywmin)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Introduction to 3D Transformation Matrix</h2>
+        <p>In 3D, transformations involve x, y, and z axes. The homogeneous coordinate system is extended to (x, y, z, 1).</p>
+        <ul>
+            <li><strong>Translation:</strong> Uses a 4×4 matrix</li>
+            <li><strong>Scaling and Rotation:</strong> Performed along all three axes</li>
+        </ul>
+        <pre class="matrix">
+Example:
+3D Translation Matrix:
+[ [1, 0, 0, Tx],
+  [0, 1, 0, Ty],
+  [0, 0, 1, Tz],
+  [0, 0, 0, 1 ] ]
+        </pre>
+    </section>
+</div>
+
+
+
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Representing Curves, Surfaces & Solids</h1>
+
+    <section class="section">
+        <h2>1. Representing Curves & Surfaces</h2>
+
+        <h3>1.1 Polygon Meshes</h3>
+        <p>A <strong>polygon mesh</strong> is a collection of polygons, typically triangles or quadrilaterals, that form the surface of a 3D object. They are widely used in 3D modeling due to their simplicity and flexibility.</p>
+
+        <h3>1.2 Parametric Curves</h3>
+        <p>These curves are defined using mathematical functions based on a parameter, usually denoted as <em>t</em>. Common parametric curves include:</p>
+        <ul>
+            <li>Bezier Curves</li>
+            <li>B-Spline Curves</li>
+            <li>NURBS</li>
+        </ul>
+
+        <h3>1.3 Cubic Curves</h3>
+        <p><strong>Cubic curves</strong> are polynomial curves of degree three and are commonly used in CAD systems. Bezier and Hermite curves are typical examples.</p>
+        <pre class="matrix">
+Example:
+Cubic Bezier Curve Equation:
+B(t) = (1−t)^3P0 + 3t(1−t)^2P1 + 3t^2(1−t)P2 + t^3P3
+        </pre>
+
+        <h3>1.4 Quadric Surfaces</h3>
+        <p>Quadric surfaces are second-degree algebraic surfaces such as spheres, cones, ellipsoids, and paraboloids, defined by equations like:</p>
+        <pre class="matrix">
+Example:
+Sphere: x² + y² + z² = r²
+Ellipsoid: x²/a² + y²/b² + z²/c² = 1
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Solid Modeling</h2>
+
+        <h3>2.1 Representing Solids</h3>
+        <p>Solid modeling provides complete information about the volume and shape of 3D objects. Key methods include:</p>
+
+        <h3>2.2 Regularized Boolean Set Operations</h3>
+        <p>Boolean operations (union, intersection, difference) are applied to solids using regularized set theory to maintain validity of resulting shapes.</p>
+        <pre class="matrix">
+Example:
+Union: A ∪ B
+Intersection: A ∩ B
+Difference: A − B
+        </pre>
+
+        <h3>2.3 Primitive Instancing</h3>
+        <p>Uses predefined 3D shapes (cube, cylinder, sphere) called primitives, which can be scaled, rotated, and translated to form complex models.</p>
+
+        <h3>2.4 Sweep Representations</h3>
+        <p>Involves sweeping a 2D shape along a path (translation or rotation) to generate a 3D object, e.g., extrusion or revolution techniques.</p>
+
+        <h3>2.5 Boundary Representations (B-Rep)</h3>
+        <p>Represents a solid by its enclosing surfaces, edges, and vertices. B-Rep is useful for high-resolution models in CAD.</p>
+
+        <h3>2.6 Spatial Partitioning Representations</h3>
+        <p>Divides 3D space into non-overlapping regions (e.g., octrees, BSP trees) for efficient rendering and collision detection.</p>
+
+        <h3>2.7 Constructive Solid Geometry (CSG)</h3>
+        <p>Builds complex objects by combining primitives using Boolean operations in a tree structure.</p>
+
+        <h3>2.8 Comparison of Representations</h3>
+        <p>
+            <strong>Boundary Representation:</strong> Good for visual rendering, harder for Boolean operations<br>
+            <strong>CSG:</strong> Better for modeling and editing, less intuitive for display<br>
+            <strong>Spatial Partitioning:</strong> Efficient for computation and rendering in complex environments
+        </p>
+    </section>
+</div>
+
+
+
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Multimedia Basics & Applications</h1>
+
+    <section class="section">
+        <h2>1. Multimedia Definition</h2>
+        <p><strong>Multimedia</strong> refers to content that uses a combination of different forms such as text, audio, images, animations, video, and interactive content. It enhances communication and user engagement.</p>
+    </section>
+
+    <section class="section">
+        <h2>2. CD-ROM and the Multimedia Highway</h2>
+        <p><strong>CD-ROM</strong> (Compact Disc Read-Only Memory) was one of the earliest storage devices for multimedia content. The <strong>multimedia highway</strong> refers to broadband networks and infrastructure that deliver multimedia services and applications over the internet.</p>
+    </section>
+
+    <section class="section">
+        <h2>3. Computer Animation</h2>
+        <p><strong>Computer Animation</strong> involves creating moving images using computer graphics. It includes:</p>
+        <ul>
+            <li><strong>Design:</strong> Storyboarding, scene design, character modeling</li>
+            <li><strong>Types:</strong> 2D animation, 3D animation, stop-motion, keyframe animation</li>
+            <li><strong>Functions:</strong> Timeline manipulation, tweening, motion paths, rendering</li>
+        </ul>
+        <pre class="matrix">
+Example:
+In 2D animation, a bouncing ball is created using keyframes and motion interpolation.
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit6">
+    <h1>UNIT-VI: Multimedia Development & Usage</h1>
+
+    <section class="section">
+        <h2>1. Uses of Multimedia</h2>
+        <p>Multimedia is used extensively in:</p>
+        <ul>
+            <li>Education (e-learning, smart classrooms)</li>
+            <li>Entertainment (movies, video games)</li>
+            <li>Marketing (interactive ads, digital banners)</li>
+            <li>Healthcare (virtual surgery, imaging)</li>
+            <li>Simulation and training</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Introduction to Making Multimedia</h2>
+        <p>The development process typically includes:</p>
+        <ul>
+            <li><strong>Idea & Script:</strong> Define objectives, write script</li>
+            <li><strong>Design:</strong> Storyboarding, graphics and UI layout</li>
+            <li><strong>Development:</strong> Assembling components, programming</li>
+            <li><strong>Testing & Publishing:</strong> Testing on multiple devices, distribution</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Hardware & Software Requirements</h2>
+        <ul>
+            <li><strong>Hardware:</strong> High-resolution display, sound card, microphone, graphics tablet, high-speed processor</li>
+            <li><strong>Software:</strong> Adobe Creative Suite, Flash, Audacity, multimedia authoring tools</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. Training Opportunities in Multimedia</h2>
+        <p>Various courses and certifications are available in animation, video editing, web design, game development, and digital storytelling from institutions and online platforms.</p>
+    </section>
+
+    <section class="section">
+        <h2>5. Motivation for Multimedia Usage</h2>
+        <p>Multimedia engages multiple senses, increases retention, and facilitates interactive learning and communication, making it an essential tool in modern applications.</p>
+    </section>
+</div>
 
      <!-- Footer  -->
     <div id="footer-placeholder"></div>

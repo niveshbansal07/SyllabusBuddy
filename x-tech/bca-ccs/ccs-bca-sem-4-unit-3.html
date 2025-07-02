@@ -62,6 +62,416 @@
     </div>
 
 
+<div class="topic-container" id="unit1">
+    <h1>UNIT-I: Introduction to Software Engineering</h1>
+
+    <section class="section">
+        <h2>1. Software Engineering: Definition</h2>
+        <p>Software Engineering is the application of engineering principles to software development in a systematic method. It aims to produce high-quality, maintainable, and efficient software systems.</p>
+        <pre class="matrix">
+Example Code:
+// Pseudo-code for a simple login module
+function login(user, password) {
+    if (userExists(user) && isPasswordCorrect(user, password)) {
+        return "Login successful";
+    } else {
+        return "Invalid credentials";
+    }
+}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Software Engineering Paradigms</h2>
+        <p>Paradigms are models or approaches used for software development. Common paradigms include:</p>
+        <ul>
+            <li><strong>Waterfall Model:</strong> Linear sequential phases like Requirements → Design → Implementation → Testing</li>
+            <li><strong>Incremental Model:</strong> Software is built and delivered in increments</li>
+            <li><strong>Spiral Model:</strong> Combines iterative development with risk analysis</li>
+            <li><strong>Agile Methodology:</strong> Focuses on incremental delivery, customer feedback, and adaptability</li>
+        </ul>
+        <pre class="matrix">
+Example Code:
+// Agile sprint backlog in JSON format
+const sprintBacklog = [
+    { task: "Login Page UI", status: "in progress" },
+    { task: "API Integration", status: "pending" },
+    { task: "Unit Testing", status: "pending" }
+];
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. A Generic View of Software Engineering</h2>
+        <p>Software engineering includes various stages of a software development lifecycle (SDLC):</p>
+        <ul>
+            <li><strong>Communication:</strong> Gathering requirements from stakeholders</li>
+            <li><strong>Planning:</strong> Estimating resources, time, and cost</li>
+            <li><strong>Modeling:</strong> Creating designs, architectures, and data models</li>
+            <li><strong>Construction:</strong> Code development and testing</li>
+            <li><strong>Deployment:</strong> Delivering and maintaining software in the real environment</li>
+        </ul>
+        <pre class="matrix">
+Example Code:
+// Sample SDLC steps for an attendance system
+const sdlcSteps = [
+    "Requirement Gathering",
+    "Database Design",
+    "User Interface Implementation",
+    "System Testing",
+    "Deployment"
+];
+console.log(sdlcSteps);
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Requirements Analysis</h1>
+
+    <section class="section">
+        <h2>1. Statement of System Scope</h2>
+        <p>The system scope defines the boundaries and functionalities of the system. It specifies what the system will do and what it will not do.</p>
+        <pre class="matrix">
+Example Code:
+// Sample project scope definition in JSON
+const scope = {
+    system: "Library Management System",
+    includes: ["Book Issue", "Return", "Search"],
+    excludes: ["Online Payment"]
+};
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Isolation of Top-Level Processes and Entities</h2>
+        <p>This involves identifying major processes and entities (objects or actors) in the system and allocating them to physical elements.</p>
+        <pre class="matrix">
+Example Code:
+// Top-level entities for a Hospital Management System
+const entities = ["Patient", "Doctor", "Appointment", "Billing"];
+const processes = ["Register Patient", "Assign Doctor", "Generate Bill"];
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Refinement and Review</h2>
+        <p>This step focuses on refining the identified requirements and processes and reviewing them for accuracy, completeness, and clarity.</p>
+        <pre class="matrix">
+Example Code:
+// Checklist for review
+const reviewChecklist = [
+    "Are all user needs covered?",
+    "Is each requirement testable?",
+    "Are there any contradictions?"
+];
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Creating a Software Specification Document</h2>
+        <p>The Software Requirements Specification (SRS) document is a detailed description of the system’s functionality, constraints, and interfaces.</p>
+        <pre class="matrix">
+Example Code:
+// Sample SRS outline
+const srsTemplate = {
+    introduction: "Overview of system and objectives",
+    functionalRequirements: ["User login", "Profile management"],
+    nonFunctionalRequirements: ["Performance", "Security"]
+};
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Review for Correctness, Consistency, and Completeness</h2>
+        <p>Requirements must be accurate, logically consistent, and cover all necessary functionality. This step ensures high-quality documentation.</p>
+        <pre class="matrix">
+Example Code:
+// Validation checklist function
+function validateRequirements(reqs) {
+    return reqs.every(r => r !== "" && typeof r === "string");
+}
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Designing Software Solutions</h1>
+
+    <section class="section">
+        <h2>1. Refining the Software Specification</h2>
+        <p>After gathering initial requirements, refining the specification involves converting them into detailed and structured design elements.</p>
+        <pre class="matrix">
+Example Code:
+// Refining user requirement to detailed specification
+const refinedSpec = {
+    feature: "Login System",
+    inputs: ["username", "password"],
+    validations: ["non-empty", "min length 6"],
+    actions: ["check credentials", "redirect to dashboard"]
+};
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Application of Fundamental Design Concepts</h2>
+        <p>This includes the use of modularity, abstraction, hierarchy, and control/data structures in software design.</p>
+        <pre class="matrix">
+Example Code:
+// Applying modularity in code
+function registerUser(userData) {
+    validate(userData);
+    saveToDatabase(userData);
+    sendConfirmationEmail(userData.email);
+}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Software Blueprint Methodology</h2>
+        <p>This method creates a detailed model or blueprint of the software system before implementation. It includes UI mockups, architecture diagrams, and flowcharts.</p>
+        <pre class="matrix">
+Example Code:
+// Blueprint of a mobile app screen (JSON)
+const loginScreen = {
+    header: "Login",
+    fields: ["Email", "Password"],
+    buttons: ["Submit", "Reset"]
+};
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Object-Oriented Design Paradigm</h2>
+        <p>OOP uses objects and classes to model real-world entities. It emphasizes encapsulation, inheritance, and polymorphism.</p>
+        <pre class="matrix">
+Example Code:
+// Simple class design in OOP
+class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+    display() {
+        console.log(`${this.name} - ${this.email}`);
+    }
+}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Creating Design Document</h2>
+        <p>A design document outlines the system architecture, data design, interface design, and procedural design. It ensures conformance to requirements and quality standards.</p>
+        <pre class="matrix">
+Example Code:
+// Design document structure in outline
+const designDoc = {
+    architecture: "MVC",
+    dataDesign: "Relational DB Schema",
+    interface: "Responsive Web UI",
+    qualityChecks: ["Peer Review", "Automated Linting"]
+};
+        </pre>
+    </section>
+</div>
+
+
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Software Implementation</h1>
+
+    <section class="section">
+        <h2>1. Relationship between Design and Implementation</h2>
+        <p>Implementation is the translation of design into executable code. A good design simplifies the coding process and ensures maintainability and scalability.</p>
+        <pre class="matrix">
+Example Code:
+// Design → Implementation
+// Design: function authenticate(username, password)
+function authenticate(username, password) {
+    return username === "admin" && password === "1234";
+}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Implementation Issues and Programming Support Environment</h2>
+        <p>Implementation may face challenges like platform compatibility, library dependencies, performance optimization, and debugging. Programming support environments include IDEs, compilers, debuggers, and version control systems.</p>
+        <pre class="matrix">
+Example Code:
+// Using a support environment
+// Visual Studio Code + Git + Node.js setup for a project
+const environment = {
+    IDE: "VS Code",
+    language: "JavaScript",
+    versionControl: "Git",
+    runtime: "Node.js"
+};
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Coding the Procedural Design</h2>
+        <p>This involves translating a step-by-step design into structured code using functions and control structures.</p>
+        <pre class="matrix">
+Example Code:
+// Code for factorial using procedural approach
+function factorial(n) {
+    let result = 1;
+    for (let i = 1; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Good Coding Style</h2>
+        <p>Good coding style ensures readability, maintainability, and reduces errors. Key practices include meaningful variable names, consistent indentation, modular functions, and comments.</p>
+        <pre class="matrix">
+Example Code:
+// Good coding style
+function calculateArea(radius) {
+    const pi = 3.14159;
+    return pi * radius * radius; // Area of circle
+}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Review of Correctness and Readability</h2>
+        <p>Code should be reviewed for logical correctness (does it do what it should?) and readability (is it easy to understand?). Techniques include code walkthroughs, peer reviews, and static analysis tools.</p>
+        <pre class="matrix">
+Example Code:
+// Simple review checklist
+const reviewChecklist = [
+    "Does the code meet the design?",
+    "Is it logically correct?",
+    "Is it easy to read and understand?"
+];
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Software Maintenance</h1>
+
+    <section class="section">
+        <h2>1. Maintenance as Part of Software Evaluation</h2>
+        <p>Software maintenance is an essential activity during the software life cycle. It is evaluated regularly to ensure performance, reliability, and user satisfaction post-deployment.</p>
+        <pre class="matrix">
+Example Code:
+// Tracking software version changes
+const softwareLog = [
+    { version: "1.0", change: "Initial release" },
+    { version: "1.1", change: "Bug fixes in login module" },
+    { version: "1.2", change: "Improved UI" }
+];
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Reasons for Maintenance</h2>
+        <p>Common reasons include fixing bugs, improving performance, adapting to new hardware/software environments, or enhancing features based on user feedback.</p>
+        <pre class="matrix">
+Example Code:
+// Bug report example
+const bugReport = {
+    issue: "Page crash on logout",
+    reason: "Null pointer exception",
+    resolution: "Check for null before accessing user session"
+};
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Types of Maintenance</h2>
+        <ul>
+            <li><strong>Corrective:</strong> Fixing bugs and errors</li>
+            <li><strong>Adaptive:</strong> Updating software to work in new environments</li>
+            <li><strong>Perfective:</strong> Enhancing performance and maintainability</li>
+        </ul>
+        <pre class="matrix">
+Example Code:
+// Adaptive maintenance scenario
+const osUpgrade = {
+    previousOS: "Windows 10",
+    newOS: "Windows 11",
+    action: "Update drivers and recompile app"
+};
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Designing for Maintainability</h2>
+        <p>Writing clean, modular, and well-documented code helps reduce future maintenance effort. Using version control and proper design patterns also contributes to maintainability.</p>
+        <pre class="matrix">
+Example Code:
+// Modular function with comments
+function calculateTax(income) {
+    const taxRate = 0.1; // 10% tax
+    return income * taxRate;
+}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Techniques for Maintenance</h2>
+        <p>Common techniques include regular code reviews, refactoring, automated testing, bug tracking systems, and user feedback collection.</p>
+        <pre class="matrix">
+Example Code:
+// Bug tracking entry
+const bugTracker = [
+    { id: 1, description: "Login error", status: "Resolved" },
+    { id: 2, description: "Broken link on FAQ page", status: "Open" }
+];
+        </pre>
+    </section>
+</div>
+
+
+<div class="topic-container" id="unit6">
+    <h1>UNIT-VI: Tools and Configuration Management</h1>
+
+    <section class="section">
+        <h2>1. Comprehensive Examples Using Available Software Platforms / Case Tools</h2>
+        <p>CASE (Computer-Aided Software Engineering) tools support software development activities like modeling, designing, code generation, and testing.</p>
+        <ul>
+            <li><strong>Enterprise Architect:</strong> For UML diagrams and system modeling</li>
+            <li><strong>Visual Paradigm:</strong> Comprehensive diagramming and requirement tracing</li>
+            <li><strong>StarUML:</strong> Lightweight tool for modeling with UML</li>
+        </ul>
+        <pre class="matrix">
+Example Code:
+// Sample class structure represented as JSON (UML-style)
+const userClass = {
+    className: "User",
+    attributes: ["username", "email"],
+    methods: ["register()", "login()"]
+};
+        </pre>
+        <p>These tools help generate documentation, maintain model consistency, and validate design against requirements.</p>
+    </section>
+
+    <section class="section">
+        <h2>2. Configuration Management</h2>
+        <p>Configuration Management (CM) ensures consistency of a system's performance and functionality through systematic control of changes.</p>
+        <ul>
+            <li><strong>Version Control Systems (VCS):</strong> Git, SVN, Mercurial</li>
+            <li><strong>Build Management Tools:</strong> Maven, Gradle</li>
+            <li><strong>CI/CD Tools:</strong> Jenkins, GitHub Actions</li>
+        </ul>
+        <pre class="matrix">
+Example Code:
+// Example Git commands for version control
+$ git init
+$ git add .
+$ git commit -m "Initial commit"
+$ git push origin main
+        </pre>
+        <p>CM ensures that changes are traceable and approved, and that teams work with the latest version of code and documentation.</p>
+    </section>
+</div>
+
 
      <!-- Footer  -->
     <div id="footer-placeholder"></div>

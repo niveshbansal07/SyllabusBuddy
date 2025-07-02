@@ -65,6 +65,503 @@
         </div>
     </div>
 
+    <div class="topic-container" id="unit1">
+    <h1>UNIT-I: Introduction to Operating Systems & Memory Management</h1>
+
+    <section class="section">
+        <h2>1. Introduction to Operating Systems</h2>
+        <p>An <strong>Operating System (OS)</strong> is system software that manages computer hardware, software resources, and provides common services for computer programs. It acts as an intermediary between users and the hardware.</p>
+        <pre class="matrix">
+Example:
+When you open a browser, the OS allocates memory, schedules CPU time, and manages disk and network access.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Types of Operating Systems</h2>
+        <ul>
+            <li><strong>Simple Batch Systems:</strong> Execute jobs in batches without user interaction.
+                <pre class="matrix">Example: Early IBM mainframes processed one job after another using punch cards.</pre>
+            </li>
+            <li><strong>Multi-programmed Batch Systems:</strong> Allow multiple jobs to reside in memory.
+                <pre class="matrix">Example: While Job A is waiting for I/O, CPU can execute Job B.</pre>
+            </li>
+            <li><strong>Time-Sharing Systems:</strong> Allow multiple users to interact simultaneously.
+                <pre class="matrix">Example: University computer labs with shared access terminals.</pre>
+            </li>
+            <li><strong>Personal Computer Systems:</strong>
+                <pre class="matrix">Example: Windows, macOS, Linux used on laptops/desktops.</pre>
+            </li>
+            <li><strong>Parallel Systems:</strong> Use multiple processors.
+                <pre class="matrix">Example: Supercomputers performing scientific simulations.</pre>
+            </li>
+            <li><strong>Distributed Systems:</strong> Multiple computers connected over a network.
+                <pre class="matrix">Example: Google Search infrastructure or cloud computing.</pre>
+            </li>
+            <li><strong>Real-Time Systems:</strong> Provide instant output.
+                <pre class="matrix">Example: Airbag control system in cars or medical devices.</pre>
+            </li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Memory Management</h2>
+        <p>Memory Management is a core function of the OS that handles how memory is allocated and accessed.</p>
+        <ul>
+            <li><strong>Logical vs Physical Address Space:</strong>
+                <pre class="matrix">Example:
+Logical Address = 1000
+Base = 4000 → Physical Address = 5000
+                </pre>
+            </li>
+            <li><strong>Swapping:</strong>
+                <pre class="matrix">Example:
+Process A → RAM
+Process B needs memory → Swap A to disk, load B into RAM.</pre>
+            </li>
+            <li><strong>Contiguous Allocation:</strong>
+                <pre class="matrix">Example:
+Memory = [|---P1---|---P2---|     |]
+Each process occupies one block of continuous space.</pre>
+            </li>
+            <li><strong>Paging:</strong>
+                <pre class="matrix">Example:
+Logical Pages: 0, 1, 2
+Mapped to Frames: 5, 3, 7 (non-contiguously)</pre>
+            </li>
+            <li><strong>Segmentation:</strong>
+                <pre class="matrix">Example:
+Code Segment: 0-999
+Data Segment: 1000-1999
+Stack Segment: 2000-2999</pre>
+            </li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. Virtual Memory</h2>
+        <p>Virtual memory allows programs to use more memory than physically available by using disk as an extension.</p>
+
+        <h3>4.1 Demand Paging</h3>
+        <p>Pages are brought into memory only when needed (on-demand).</p>
+        <pre class="matrix">
+Example:
+Page 4 not in memory → Page fault → OS loads Page 4 from disk.
+        </pre>
+
+        <h3>4.2 Page Replacement</h3>
+        <p>Replaces existing pages when memory is full.</p>
+        <pre class="matrix">
+Example:
+Pages in RAM = [2, 3, 1]
+Request = Page 4 → Replace LRU (Page 2) → RAM = [4, 3, 1]
+        </pre>
+
+        <h3>4.3 Performance of Demand Paging</h3>
+        <p>Depends on how often page faults occur. Fewer page faults = better performance.</p>
+
+        <h3>4.4 Allocation of Frames</h3>
+        <p>Frames are given to processes using strategies like equal, proportional, global/local allocation.</p>
+
+        <h3>4.5 Thrashing</h3>
+        <p>Occurs when the system spends more time swapping pages than executing actual processes.</p>
+        <pre class="matrix">
+Example:
+Too many processes → Constant swapping → CPU idle.
+        </pre>
+
+        <h3>4.6 Other Considerations</h3>
+        <p>Includes optimizations like prepaging and TLBs for faster address translation.</p>
+    </section>
+</div>
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Processes, Scheduling & Synchronization</h1>
+
+    <section class="section">
+        <h2>1. Process Concept</h2>
+        <p>A <strong>process</strong> is a program in execution. It includes the program code, current activity, and process resources like registers, memory, and open files.</p>
+        <pre class="matrix">
+Example:
+Opening MS Word creates a process with its own memory, CPU registers, and files.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Process Scheduling</h2>
+        <p>Determines the order in which processes access the CPU.</p>
+        <ul>
+            <li><strong>Operations on Processes:</strong>
+                <pre class="matrix">Create → Ready → Running → Waiting → Terminated</pre>
+            </li>
+            <li><strong>Scheduling Criteria:</strong> Includes CPU usage, turnaround time, waiting time, and response time.</li>
+            <li><strong>Scheduling Algorithms:</strong>
+                <ul>
+                    <li><strong>FCFS:</strong> First-come-first-serve.
+                        <pre class="matrix">P1(5), P2(3), P3(1) → Order: P1 → P2 → P3</pre>
+                    </li>
+                    <li><strong>SJF:</strong> Shortest job runs first.
+                        <pre class="matrix">P3(1), P2(3), P1(5) → Order: P3 → P2 → P1</pre>
+                    </li>
+                    <li><strong>Round Robin:</strong> Each process gets a time quantum.
+                        <pre class="matrix">Quantum = 2ms → P1(4), P2(3), P3(2) → RR Cycle</pre>
+                    </li>
+                    <li><strong>Priority Scheduling:</strong> Higher priority = executes first.
+                        <pre class="matrix">P1(priority 1), P2(priority 2) → P1 runs first</pre>
+                    </li>
+                    <li><strong>Multilevel Queue Scheduling:</strong> Different queues for foreground/background processes.</li>
+                </ul>
+            </li>
+            <li><strong>Multiple-Processor Scheduling:</strong> Applies scheduling across multiple CPUs or cores.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Process Synchronization</h2>
+        <p>Ensures processes don’t interfere with each other while accessing shared data.</p>
+        <ul>
+            <li><strong>Critical Section Problem:</strong> Prevents simultaneous access to shared resources.
+                <pre class="matrix">
+Example:
+Two processes updating the same variable should not do it at the same time.
+                </pre>
+            </li>
+            <li><strong>Synchronization Hardware:</strong> CPU instructions like Test-and-Set help enforce exclusive access.</li>
+            <li><strong>Semaphores:</strong> Used to manage access to shared resources.
+                <pre class="matrix">
+wait(S): while S <= 0 wait; S--;
+signal(S): S++;
+                </pre>
+            </li>
+            <li><strong>Classical Problems of Synchronization:</strong>
+                <ul>
+                    <li><strong>Bounded Buffer Problem:</strong> Producer and consumer share a fixed-size buffer.</li>
+                    <li><strong>Readers-Writers Problem:</strong> Multiple readers allowed but only one writer.</li>
+                    <li><strong>Dining Philosophers Problem:</strong> Philosophers must share forks without deadlock.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</div>
+
+
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Deadlocks</h1>
+
+    <section class="section">
+        <h2>1. System Model</h2>
+        <p>A system consists of a finite number of resources to be distributed among competing processes. Resources may be preemptible or non-preemptible.</p>
+        <pre class="matrix">
+Example:
+Resources: R1 (Printer), R2 (Scanner)
+Processes: P1 and P2 both need R1 and R2 to finish.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Deadlock Characterization</h2>
+        <p>Deadlock occurs when a group of processes are each waiting for resources held by others in the group, leading to a cycle of dependency.</p>
+        <ul>
+            <li><strong>Mutual Exclusion:</strong> At least one resource is held in a non-shareable mode.</li>
+            <li><strong>Hold and Wait:</strong> A process is holding at least one resource and waiting to acquire others.</li>
+            <li><strong>No Preemption:</strong> Resources cannot be forcibly taken from processes.</li>
+            <li><strong>Circular Wait:</strong> A closed chain of processes exists where each process holds a resource needed by the next.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+P1 holds R1 and waits for R2.
+P2 holds R2 and waits for R1 → Deadlock.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Methods for Handling Deadlocks</h2>
+        <p>There are three general approaches:</p>
+        <ul>
+            <li><strong>Deadlock Prevention</strong></li>
+            <li><strong>Deadlock Avoidance</strong></li>
+            <li><strong>Deadlock Detection and Recovery</strong></li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. Deadlock Prevention</h2>
+        <p>Ensure that at least one of the necessary conditions for deadlock does not hold.</p>
+        <ul>
+            <li>Eliminate Hold and Wait: Require processes to request all resources at once.</li>
+            <li>Eliminate Circular Wait: Impose a strict ordering of resource requests.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Request all resources together: request(R1, R2) instead of R1 first, then R2.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Deadlock Avoidance</h2>
+        <p>Use information about future resource requests to ensure the system never enters a deadlock state.</p>
+        <p><strong>Banker's Algorithm:</strong> Allocates resources only if it leaves the system in a safe state.</p>
+        <pre class="matrix">
+Example:
+If P1 needs 2 more units, but only 1 is available → Delay allocation to P1.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Deadlock Detection</h2>
+        <p>Allow deadlock to occur and then detect it using a resource allocation graph or wait-for graph.</p>
+        <pre class="matrix">
+Example:
+Cycle in wait-for graph → Deadlock is present.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Recovery from Deadlock</h2>
+        <p>Once detected, system must recover using one of the following methods:</p>
+        <ul>
+            <li><strong>Process Termination:</strong> Abort one or more processes involved in the deadlock.</li>
+            <li><strong>Resource Preemption:</strong> Take a resource away from a process and allocate it to another.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Terminate P2 to release R2 → Allow P1 to continue.
+        </pre>
+    </section>
+</div>
+
+
+
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Device Management & Secondary Storage Structure</h1>
+
+    <section class="section">
+        <h2>1. Techniques for Device Management</h2>
+        <p>Device Management controls all hardware devices and manages their input/output operations. The OS communicates with devices via device drivers.</p>
+        <pre class="matrix">
+Example:
+The printer driver converts data from applications into a format that the printer understands.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Types of Devices</h2>
+        <ul>
+            <li><strong>Dedicated Devices:</strong> Assigned to only one job at a time.
+                <pre class="matrix">Example: Printer used exclusively by one process until printing is done.</pre>
+            </li>
+            <li><strong>Shared Devices:</strong> Can be used concurrently by multiple processes.
+                <pre class="matrix">Example: Hard disk accessed by multiple applications.</pre>
+            </li>
+            <li><strong>Virtual Devices:</strong> Appears as a dedicated device but actually shared.
+                <pre class="matrix">Example: Each user gets a virtual terminal session on the same physical terminal.</pre>
+            </li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Input and Output Devices</h2>
+        <p>Input devices send data to the computer (e.g., keyboard, mouse), while output devices receive data from the computer (e.g., monitor, printer).</p>
+        <pre class="matrix">
+Example:
+Mouse → Input Device
+Display Monitor → Output Device
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Storage Devices</h2>
+        <p>Devices used to store data, including primary (RAM), secondary (Hard Drive), and tertiary (optical discs, backup tapes).</p>
+        <pre class="matrix">
+Example:
+HDD, SSD, USB drives, DVDs
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Buffering</h2>
+        <p>Buffering is the process of storing data temporarily in memory while transferring between devices and applications.</p>
+        <pre class="matrix">
+Example:
+While streaming a video, the buffer holds a few seconds of video to ensure smooth playback.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Secondary Storage Structure</h2>
+
+        <h3>6.1 Disk Structure</h3>
+        <p>Disk drives are organized into platters, tracks, and sectors. Data is stored in sectors along tracks on rotating platters.</p>
+        <pre class="matrix">
+Example:
+Track 0, Sector 1 might store part of a file.
+        </pre>
+
+        <h3>6.2 Disk Scheduling</h3>
+        <p>Disk scheduling optimizes the order of read/write requests to reduce seek time.</p>
+        <ul>
+            <li><strong>FCFS (First Come First Serve)</strong></li>
+            <li><strong>SSTF (Shortest Seek Time First)</strong></li>
+            <li><strong>SCAN and LOOK algorithms</strong></li>
+        </ul>
+        <pre class="matrix">
+Example:
+Requests: 10, 22, 20, 2, 40
+SSTF: 20 → 22 → 10 → 2 → 40 (shortest distance first)
+        </pre>
+
+        <h3>6.3 Disk Management</h3>
+        <p>Includes partitioning, formatting, and mounting file systems on the disk.</p>
+        <pre class="matrix">
+Example:
+Formatting a drive prepares it to store files by creating a file system.
+        </pre>
+
+        <h3>6.4 Swap-Space Management</h3>
+        <p>Swap space is used to extend RAM by moving inactive pages from RAM to disk.</p>
+        <pre class="matrix">
+Example:
+If RAM is full, OS swaps out Process A’s memory to disk to load Process B.
+        </pre>
+
+        <h3>6.5 Disk Reliability</h3>
+        <p>Techniques to ensure data is not lost or corrupted.</p>
+        <ul>
+            <li><strong>RAID:</strong> Redundant Array of Independent Disks</li>
+            <li><strong>Error Correction Codes (ECC):</strong> Used to detect and fix errors in storage</li>
+        </ul>
+        <pre class="matrix">
+Example:
+RAID 1 mirrors data to two disks to protect against failure.
+        </pre>
+    </section>
+</div>
+
+
+
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Information Management & File System</h1>
+
+    <section class="section">
+        <h2>1. Introduction</h2>
+        <p>Information Management in operating systems involves organizing and controlling access to data stored in files on storage devices.</p>
+    </section>
+
+    <section class="section">
+        <h2>2. A Simple File System</h2>
+        <p>A simple file system provides basic functions like file creation, deletion, reading, writing, and naming.</p>
+        <pre class="matrix">
+Example:
+Creating a text file with .txt extension using a text editor and saving it to disk.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. General Model of a File System</h2>
+        <p>A file system has several layers: application, logical file system, file-organization module, and basic file system.</p>
+        <pre class="matrix">
+Example:
+User → Application → LFS → File Organization → Disk Operations
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Symbolic & Basic File Systems</h2>
+        <p>The symbolic file system translates file names to file identifiers. The basic file system handles actual read/write requests to blocks.</p>
+        <pre class="matrix">
+Example:
+Symbolic: "report.doc" → inode 123
+Basic: inode 123 → block 15 → fetch data
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Access Control Verification</h2>
+        <p>This ensures only authorized users can access or modify specific files using permissions like read, write, and execute.</p>
+        <pre class="matrix">
+Example:
+chmod 755 file.txt → Owner: rwx, Group: r-x, Others: r-x
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Logical & Physical File Systems</h2>
+        <ul>
+            <li><strong>Logical File System:</strong> Provides file name and security interface.</li>
+            <li><strong>Physical File System:</strong> Performs actual disk I/O operations.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+User requests file.txt → Logical FS locates it → Physical FS reads it from disk
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. File System Interface</h2>
+
+        <h3>7.1 File Concept</h3>
+        <p>Files are logical storage units that store related information, such as documents, images, or programs.</p>
+
+        <h3>7.2 Access Methods</h3>
+        <ul>
+            <li><strong>Sequential:</strong> Data is read in order.</li>
+            <li><strong>Direct:</strong> Access specific block directly.</li>
+            <li><strong>Indexed:</strong> Use index blocks to access data.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+MP3 player reading songs sequentially → Sequential access
+        </pre>
+
+        <h3>7.3 Directory Structure</h3>
+        <p>Organizes files in a hierarchical tree-like structure for easy access and management.</p>
+        <pre class="matrix">
+Example:
+C:/Users/Student/Documents/Notes.txt
+        </pre>
+
+        <h3>7.4 Protection</h3>
+        <p>Prevents unauthorized access or modifications to files.</p>
+        <pre class="matrix">
+Example:
+Read-only files can't be edited without permission.
+        </pre>
+
+        <h3>7.5 Consistency Semantics</h3>
+        <p>Defines how changes to files are visible to users, especially in multi-user environments.</p>
+        <pre class="matrix">
+Example:
+UNIX semantics: updates are immediately visible to other users.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>8. File System Implementation</h2>
+
+        <h3>8.1 File System Structure</h3>
+        <p>Includes boot control block, volume control block, directory structure, and file control blocks (FCB).</p>
+
+        <h3>8.2 Allocation Methods</h3>
+        <ul>
+            <li><strong>Contiguous:</strong> Files stored in continuous blocks</li>
+            <li><strong>Linked:</strong> Each file block links to the next</li>
+            <li><strong>Indexed:</strong> All block addresses stored in an index block</li>
+        </ul>
+        <pre class="matrix">
+Example:
+File = 3 blocks → Contiguous: 5,6,7 | Linked: 5→6→7 | Indexed: [5,6,7]
+        </pre>
+
+        <h3>8.3 Free-Space Management</h3>
+        <p>Tracks unallocated disk space using bitmaps, free lists, or grouping.</p>
+        <pre class="matrix">
+Example:
+Bitmap: 0010110 → 0 = Free, 1 = Used
+        </pre>
+    </section>
+</div>
+
+
      <!-- Footer  -->
     <div id="footer-placeholder"></div>
 

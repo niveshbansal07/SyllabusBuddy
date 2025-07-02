@@ -66,6 +66,420 @@
         </div>
     </div>
 
+    <div class="topic-container" id="unit1">
+    <h1>UNIT-I: Complex Variables</h1>
+
+    <section class="section">
+        <h2>1. Complex Number System</h2>
+        <p>A complex number is expressed as <strong>z = a + bi</strong>, where <strong>a</strong> is the real part, <strong>b</strong> is the imaginary part, and <strong>i</strong> is the imaginary unit with the property i² = -1.</p>
+        <pre class="matrix">
+Example:
+z = 3 + 4i → Re(z) = 3, Im(z) = 4
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Algebra of Complex Numbers</h2>
+        <p>Operations include addition, subtraction, multiplication, and division, treating <strong>i² = -1</strong>.</p>
+        <pre class="matrix">
+Example:
+(2 + 3i) + (1 - 2i) = 3 + i
+(2 + 3i) × (1 - 2i) = 8 - i
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Polar Form of Complex Numbers</h2>
+        <p>The polar form of a complex number is <strong>z = r(cosθ + i sinθ)</strong>, where <strong>r = |z|</strong> and <strong>θ = arg(z)</strong>.</p>
+        <pre class="matrix">
+Example:
+z = 1 + i → r = √2, θ = π/4
+z = √2 (cos π/4 + i sin π/4)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Powers and Roots using De Moivre's Theorem</h2>
+        <p>De Moivre’s Theorem: <strong>(cosθ + i sinθ)^n = cos(nθ) + i sin(nθ)</strong></p>
+        <pre class="matrix">
+Example:
+z = 1 + i = √2(cos π/4 + i sin π/4)
+z² = 2i (using De Moivre’s Theorem)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Functions of Complex Variables</h2>
+        <p>Functions like <strong>f(z) = z²</strong> take complex inputs and return complex outputs.</p>
+        <pre class="matrix">
+Example:
+f(1 + i) = (1 + i)² = 2i
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Elementary Functions</h2>
+        <p>Elementary functions include exponential, trigonometric, and logarithmic functions extended to complex domain.</p>
+        <pre class="matrix">
+Example:
+e^{iθ} = cos θ + i sin θ (Euler’s Formula)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Inverse Trigonometric Functions</h2>
+        <p>Inverse trigonometric functions in complex form involve logarithmic expressions.</p>
+        <pre class="matrix">
+Example:
+cos⁻¹(z) = -i ln(z + √(z² - 1))
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Sequence, Series and Convergence</h1>
+
+    <section class="section">
+        <h2>1. Sequence</h2>
+        <p>A sequence is an ordered list of numbers, which can be finite or infinite.</p>
+        <pre class="matrix">
+Example:
+Finite: 1, 3, 5, 7
+Infinite: 1, 1/2, 1/3, 1/4, ...
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Monotonic and Bounded Sequence</h2>
+        <p>A sequence is monotonic if it is either non-increasing or non-decreasing. A sequence is bounded if it has an upper and/or lower limit.</p>
+        <pre class="matrix">
+Example:
+Monotonic Increasing: 1, 2, 3, 4, ...
+Bounded: aₙ = (-1)ⁿ, which lies between -1 and 1
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Limit and Convergence of a Sequence</h2>
+        <p>If a sequence approaches a specific value as n → ∞, it is said to converge to that value.</p>
+        <pre class="matrix">
+Example:
+lim (1/n) = 0 as n → ∞ → Convergent sequence
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Series and Partial Sums</h2>
+        <p>A series is the sum of terms of a sequence. The nth partial sum is the sum of the first n terms.</p>
+        <pre class="matrix">
+Example:
+Series: 1 + 1/2 + 1/4 + 1/8 + ...
+Partial sum S₄ = 1 + 1/2 + 1/4 + 1/8 = 1.875
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Convergent Series and Theorems</h2>
+        <p>A series is convergent if its sequence of partial sums approaches a limit. Theorems help determine convergence.</p>
+        <pre class="matrix">
+Example:
+Harmonic series: ∑1/n diverges
+Geometric series: ∑(1/2)ⁿ converges
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Alternating and Conditionally Convergent Series</h2>
+        <p>An alternating series changes signs and may converge even if the absolute series diverges.</p>
+        <pre class="matrix">
+Example:
+Alternating harmonic series: 1 - 1/2 + 1/3 - 1/4 + ... → convergent (conditionally)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Convergence Tests</h2>
+        <p>Several tests determine whether a series converges or diverges:</p>
+        <ul>
+            <li><strong>Leibnitz Test</strong> - for alternating series</li>
+            <li><strong>Limit Comparison Test</strong> - compare with known series</li>
+            <li><strong>Ratio Test</strong> - limit of aₙ₊₁/aₙ</li>
+            <li><strong>Cauchy's Root Test</strong> - nth root of |aₙ|</li>
+            <li><strong>Raabe's Test</strong></li>
+            <li><strong>Logarithmic Test</strong></li>
+            <li><strong>Cauchy’s Integral Test</strong> (statement only)</li>
+        </ul>
+        <pre class="matrix">
+Example (Ratio Test):
+aₙ = 1/n!
+aₙ₊₁/aₙ = 1/(n+1)! × n! = 1/(n+1) → 0 as n → ∞ ⇒ Converges
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Vector Calculus</h1>
+
+    <section class="section">
+        <h2>1. Differentiation of Vectors</h2>
+        <p>Vector differentiation involves differentiating each component of a vector function with respect to a variable.</p>
+        <pre class="matrix">
+Example:
+If ⇡(t) = t i + t² j + e^t k,
+then d⇡/dt = i + 2t j + e^t k
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Scalar and Vector Fields</h2>
+        <p>A scalar field assigns a scalar value to every point in space, while a vector field assigns a vector.</p>
+        <pre class="matrix">
+Example:
+Scalar field: φ(x, y, z) = x² + y² + z²
+Vector field: F(x, y, z) = x i + y j + z k
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Gradient</h2>
+        <p>The gradient of a scalar field is a vector that points in the direction of the greatest rate of increase of the function.</p>
+        <pre class="matrix">
+Example:
+∇φ = ∇(x² + y² + z²) = 2x i + 2y j + 2z k
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Directional Derivatives</h2>
+        <p>The directional derivative of a scalar field φ in the direction of a unit vector u gives the rate of change of φ in that direction.</p>
+        <pre class="matrix">
+Formula:
+D_u φ = ∇φ · u
+Example:
+If φ = x² + y² and u = (1/√2)(i + j), then D_u φ = 2x/√2 + 2y/√2 = √2(x + y)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Divergence</h2>
+        <p>Divergence measures the net rate of flow out of a point in a vector field. It is a scalar.</p>
+        <pre class="matrix">
+Example:
+F = xi + yj + zk ⇒ div F = ∂x/∂x + ∂y/∂y + ∂z/∂z = 3
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Curl</h2>
+        <p>The curl of a vector field measures its tendency to rotate about a point. It is a vector.</p>
+        <pre class="matrix">
+Example:
+F = -y i + x j ⇒ curl F = ∇ × F = 0 i + 0 j + 2 k
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Physical Meaning</h2>
+        <p>
+            <strong>Gradient:</strong> Direction of steepest ascent.<br>
+            <strong>Divergence:</strong> Net outflow per unit volume (e.g., fluid spreading from a point).<br>
+            <strong>Curl:</strong> Rotational tendency (e.g., swirling fluid).
+        </p>
+    </section>
+</div>
+
+
+
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Fourier Series</h1>
+
+    <section class="section">
+        <h2>1. Periodic Functions</h2>
+        <p>A function f(x) is periodic if there exists a constant T such that f(x + T) = f(x) for all x. The smallest such T is called the period.</p>
+        <pre class="matrix">
+Example:
+f(x) = sin(x), cos(x) are periodic with period 2π
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Fourier Series</h2>
+        <p>The Fourier series of a periodic function f(x) with period 2π is given by:</p>
+        <pre class="matrix">
+f(x) = a₀/2 + Σ (aₙ cos(nx) + bₙ sin(nx)), n = 1 to ∞
+where:
+aₙ = (1/π) ∫_{-π}^{π} f(x) cos(nx) dx
+bₙ = (1/π) ∫_{-π}^{π} f(x) sin(nx) dx
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Fourier Series of Even and Odd Functions</h2>
+        <p>
+            - For even functions: bₙ = 0 → Only cosine terms remain.<br>
+            - For odd functions: aₙ = 0 → Only sine terms remain.
+        </p>
+        <pre class="matrix">
+Example:
+f(x) = x on [-π, π] is odd → Fourier sine series only
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Half Range Fourier Series</h2>
+        <p>Defined for functions on [0, L] extended as even or odd functions to use sine or cosine series.</p>
+        <pre class="matrix">
+Example:
+For f(x) = x on [0, π], use sine series:
+f(x) = Σ bₙ sin(nπx/π)
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Ordinary Differential Equations of First Order</h1>
+
+    <section class="section">
+        <h2>1. Variable Separable Method</h2>
+        <p>In this method, the equation can be written in the form f(y) dy = g(x) dx and then integrated on both sides.</p>
+        <pre class="matrix">
+Example:
+(dy/dx) = xy → dy/y = x dx
+Integrate: ln|y| = x²/2 + C
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Homogeneous Differential Equations</h2>
+        <p>A first-order differential equation is called homogeneous if it can be expressed as dy/dx = F(y/x). Use substitution y = vx (or x = vy).</p>
+        <pre class="matrix">
+Example:
+(dy/dx) = (x + y)/(x - y)
+Let y = vx ⇒ dy/dx = v + x dv/dx
+Substitute and solve in terms of v and x.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Exact Differential Equations</h2>
+        <p>An equation M(x, y) dx + N(x, y) dy = 0 is exact if ∂M/∂y = ∂N/∂x. Solution exists as a function φ(x, y) = C.</p>
+        <pre class="matrix">
+Example:
+(2xy + y²) dx + (x² + 2xy) dy = 0
+Check exactness: ∂M/∂y = ∂N/∂x = 2x + 2y
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Linear Differential Equations</h2>
+        <p>The general form is dy/dx + P(x)y = Q(x). It is solved using an integrating factor IF = e^(∫P(x) dx).</p>
+        <pre class="matrix">
+Example:
+dy/dx + y = e^x
+IF = e^x → Multiply through and integrate:
+e^x y = ∫e^x × e^x dx = ∫e^(2x) dx
+⇒ y = (1/2)e^x + C/e^x
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Bernoulli’s Differential Equation</h2>
+        <p>The form is dy/dx + P(x)y = Q(x)yⁿ. Divide by yⁿ and substitute z = y^(1-n) to reduce it to linear form.</p>
+        <pre class="matrix">
+Example:
+dy/dx + y = y² → Divide by y²:
+y⁻² dy/dx + y⁻¹ = 1
+Let z = y⁻¹ ⇒ dz/dx = -y⁻² dy/dx
+Use substitution and solve.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. First Order and First Degree Using Integrating Factor</h2>
+        <p>This method is applied to linear equations of first order and degree using the IF = e^(∫P(x) dx).</p>
+        <pre class="matrix">
+Example:
+dy/dx + 2y = 3x
+IF = e^(2x), Multiply:
+e^(2x) dy/dx + 2e^(2x)y = 3x e^(2x)
+Integrate both sides and solve for y.
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit6">
+    <h1>UNIT-VI: Ordinary Differential Equations of Second Order</h1>
+
+    <section class="section">
+        <h2>1. Homogeneous Differential Equations with Constant Coefficients</h2>
+        <p>These are of the form: a d²y/dx² + b dy/dx + cy = 0. The auxiliary equation helps find the general solution.</p>
+        <pre class="matrix">
+Example:
+d²y/dx² - 5 dy/dx + 6y = 0
+Auxiliary Eq: m² - 5m + 6 = 0 → m = 2, 3
+Solution: y = C₁e^{2x} + C₂e^{3x}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Complex Roots and Repeated Roots</h2>
+        <p>If auxiliary equation has complex or repeated roots, the solution is adjusted accordingly:</p>
+        <pre class="matrix">
+Case 1 (Complex Roots):
+m = α ± iβ ⇒ y = e^{αx}(C₁ cos βx + C₂ sin βx)
+
+Case 2 (Repeated Roots):
+m = r (double root) ⇒ y = (C₁ + C₂x)e^{rx}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Differential Operator Method</h2>
+        <p>Uses operator D where D = d/dx. The equation is written using D for simplification.</p>
+        <pre class="matrix">
+Example:
+(D² - 4D + 4)y = 0 → (D - 2)² y = 0
+Solution: y = (C₁ + C₂x)e^{2x}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Particular Integral (PI) Using Direct Formula</h2>
+        <p>If f(x) is of standard form (e^ax, sin(ax), cos(ax), xⁿ), PI can be found directly.</p>
+        <pre class="matrix">
+Example:
+(D - 2)y = e^{2x} → PI = e^{2x}/(D - 2) = x e^{2x}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Method of Undetermined Coefficients</h2>
+        <p>Used for non-homogeneous equations with standard right-hand terms. Assume a form of solution and determine constants.</p>
+        <pre class="matrix">
+Example:
+d²y/dx² - y = x
+Try y_p = Ax + B, plug into equation, solve for A, B
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Cauchy Differential Equations</h2>
+        <p>Equations of the form: x² d²y/dx² + a x dy/dx + b y = 0. Change variable x = e^t to convert to constant coefficient equation.</p>
+        <pre class="matrix">
+Example:
+x² d²y/dx² - x dy/dx + y = 0 → Change x = e^t
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Operator Method for PI (Direct Formula)</h2>
+        <p>Apply inverse operator to RHS function using known identities or shortcuts for exponential, trigonometric, and polynomial forms.</p>
+        <pre class="matrix">
+Example:
+(D² - 4)y = sin(2x) → PI = sin(2x)/(D² + 4)
+        </pre>
+    </section>
+</div>
 
      <!-- Footer  -->
     <div id="footer-placeholder"></div>
