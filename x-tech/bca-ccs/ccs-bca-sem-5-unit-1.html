@@ -59,6 +59,575 @@
         </div>
     </div>
 
+<div class="topic-container" id="unit1">
+    <h1>UNIT-I: Introduction to DBMS</h1>
+
+    <section class="section">
+        <h2>1. Characteristics of Database Approach</h2>
+        <p>The <strong>Database Approach</strong> introduces a more structured and efficient method of data storage and retrieval compared to traditional file systems. Key characteristics include:</p>
+        <ul>
+            <li><strong>Data Abstraction:</strong> Hides complex storage details from users.</li>
+            <li><strong>Controlled Redundancy:</strong> Avoids duplication by integrating data.</li>
+            <li><strong>Data Integrity:</strong> Enforces accuracy and consistency via constraints.</li>
+            <li><strong>Concurrent Access:</strong> Multiple users can access data without conflict.</li>
+            <li><strong>Security:</strong> Defines access permissions and roles.</li>
+            <li><strong>Backup and Recovery:</strong> Ensures data safety during failures.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+A university database contains all student records in one centralized system,
+allowing multiple departments to access the same up-to-date data.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Data Models</h2>
+        <p><strong>Data models</strong> define how data is organized, related, and manipulated. Major models include:</p>
+        <ul>
+            <li><strong>Hierarchical Model:</strong> Data is structured in a tree format with parent-child relationships.</li>
+            <li><strong>Network Model:</strong> More flexible than hierarchical; supports complex relationships using graph structures.</li>
+            <li><strong>Relational Model:</strong> Represents data as tables; widely used due to simplicity and ease of use.</li>
+            <li><strong>Object-Oriented Model:</strong> Combines object-oriented programming concepts with database capabilities.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Relational Model Table:
+Employee(EmpID, Name, Department)
+(101, 'Ankit', 'HR')
+(102, 'Sneha', 'IT')
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. DBMS Architecture</h2>
+        <p><strong>DBMS Architecture</strong> defines the structure and components of a database system. Common types:</p>
+        <ul>
+            <li><strong>Single-Tier Architecture:</strong> The user interacts directly with the database system.</li>
+            <li><strong>Two-Tier Architecture:</strong> Applications connect to the DBMS via APIs such as ODBC/JDBC.</li>
+            <li><strong>Three-Tier Architecture:</strong> Separates the presentation layer, application logic, and database layer.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Client ↔ Application Server ↔ DBMS
+Used in web-based applications for better scalability and security.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Data Independence</h2>
+        <p><strong>Data Independence</strong> is the ability to modify a schema definition in one level without affecting the next higher level. Types include:</p>
+        <ul>
+            <li><strong>Physical Data Independence:</strong> Modifying physical storage without affecting logical schema.</li>
+            <li><strong>Logical Data Independence:</strong> Modifying logical schema without changing application programs.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Physical change: Moving data from magnetic disk to SSD does not impact the logical design.
+Logical change: Adding a new column to a table without affecting existing queries.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Summary</h2>
+        <p>This unit provides an essential understanding of Database Management Systems (DBMS):</p>
+        <ul>
+            <li>Explains why database systems are more efficient than file-based systems.</li>
+            <li>Introduces various data models used for structuring databases.</li>
+            <li>Describes architectural designs for implementing DBMS.</li>
+            <li>Clarifies the importance and types of data independence in evolving systems.</li>
+        </ul>
+        <pre class="matrix">
+Quick Recap:
+✔ DBMS improves data consistency and access.
+✔ Relational model is the most popular.
+✔ 3-tier architecture supports large applications.
+✔ Logical and physical independence ensure flexibility.
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: E-R Modeling</h1>
+
+    <section class="section">
+        <h2>1. Entity Types and Entity Sets</h2>
+        <p>An <strong>Entity</strong> is a real-world object that is distinguishable from others. An <strong>Entity Type</strong> defines a collection of similar entities. An <strong>Entity Set</strong> is a set of entities of the same type stored in a database.</p>
+        <pre class="matrix">
+Example:
+Entity Type: Student
+Entity Set: {Student1, Student2, Student3}
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Attributes and Keys</h2>
+        <p><strong>Attributes</strong> describe properties of an entity. A <strong>Key</strong> is an attribute (or set of attributes) that uniquely identifies an entity within an entity set.</p>
+        <pre class="matrix">
+Example:
+Student(ID, Name, Age)
+Key: ID uniquely identifies each student.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Relationships and Relationship Types</h2>
+        <p><strong>Relationship</strong> is an association among two or more entities. <strong>Relationship Types</strong> define the set of associations among entity sets.</p>
+        <pre class="matrix">
+Example:
+Student - Enrolls - Course
+Relationship Type: Enrolls
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Roles and Structural Constraints</h2>
+        <p><strong>Roles</strong> define the function of an entity in a relationship. <strong>Structural Constraints</strong> include:</p>
+        <ul>
+            <li><strong>Cardinality:</strong> Defines how many instances of an entity can be associated with instances of another entity.</li>
+            <li><strong>Participation:</strong> Total or partial involvement of an entity in a relationship.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+A student can enroll in many courses (1:N cardinality).
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Weak Entities</h2>
+        <p><strong>Weak Entities</strong> are entities that cannot be uniquely identified by their own attributes alone and depend on a related strong entity.</p>
+        <pre class="matrix">
+Example:
+Dependent(Name, Age) depends on Employee(ID) → weak entity.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Enhanced E-R and Object Modeling</h2>
+        <p>The <strong>Enhanced E-R (EER) Model</strong> adds advanced features to basic E-R models like:</p>
+        <ul>
+            <li><strong>Generalization:</strong> Combining multiple entity types into a single higher-level entity.</li>
+            <li><strong>Specialization:</strong> Creating sub-entities from a higher-level entity.</li>
+            <li><strong>Inheritance:</strong> Sub-classes inherit attributes and relationships of super-classes.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Employee → sub-classes: Manager, Engineer
+Attributes like Name, ID are inherited.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Summary</h2>
+        <p>This unit builds foundational understanding of how real-world data is abstracted using E-R and EER models. Key concepts:</p>
+        <ul>
+            <li>Entities, attributes, and keys define structure.</li>
+            <li>Relationships establish connections between entities.</li>
+            <li>Enhanced E-R concepts provide rich data modeling capabilities.</li>
+        </ul>
+        <pre class="matrix">
+Quick Recap:
+✔ Entity = real-world object
+✔ Key = unique identifier
+✔ EER = advanced modeling with inheritance and generalization
+        </pre>
+    </section>
+</div>
+
+
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: File Organization</h1>
+
+    <section class="section">
+        <h2>1. Indexed Sequential Access Files (ISAM)</h2>
+        <p><strong>Indexed Sequential Access Method (ISAM)</strong> combines sequential and direct access using indexing. Records are stored in sequence, and an index allows fast searching.</p>
+        <pre class="matrix">
+Example:
+Index Table → [101 → Block 1, 102 → Block 2]
+Data File   → [101, 102, 103, ...]
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Implementation Using B and B++ Trees</h2>
+        <p><strong>B-Trees</strong> and <strong>B+ Trees</strong> are self-balancing tree structures used for indexing large databases.</p>
+        <ul>
+            <li><strong>B-Tree:</strong> Stores keys and data pointers at internal and leaf nodes.</li>
+            <li><strong>B+ Tree:</strong> Only leaf nodes store data; internal nodes store keys for navigation.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+B+ Tree:
+       [30 | 60]
+      /    |    \
+ [10 20] [40 50] [70 80]
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Hashing and Hashing Functions</h2>
+        <p><strong>Hashing</strong> is a technique for direct access of records using a hash function. A <strong>Hash Function</strong> converts a key into an address.</p>
+        <pre class="matrix">
+Example:
+Hash(key) = key % 10
+Key = 103 → Hash = 3 → store in Bucket 3
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Collision Resolution</h2>
+        <p><strong>Collision</strong> occurs when two keys hash to the same index. Common resolution techniques:</p>
+        <ul>
+            <li><strong>Linear Probing:</strong> Search for the next available slot sequentially.</li>
+            <li><strong>Chaining:</strong> Maintain a linked list at each index for multiple records.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Keys 105 and 115 → both hash to index 5 → use chain at index 5.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Extendible Hashing</h2>
+        <p><strong>Extendible Hashing</strong> dynamically adjusts the hash table size based on directory depth, avoiding overflows.</p>
+        <pre class="matrix">
+Example:
+Binary hash → directory depth grows: 00, 01, 10, 11
+Split bucket when overflow occurs.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Dynamic Hashing Approach</h2>
+        <p><strong>Dynamic Hashing</strong> resizes the hash table dynamically as the data grows. It ensures constant access time and avoids performance degradation.</p>
+        <pre class="matrix">
+Example:
+Hash table doubles in size when threshold is reached,
+rehashes existing keys to new buckets.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Summary</h2>
+        <p>This unit explains different file organization techniques for efficient data storage and access. Key takeaways:</p>
+        <ul>
+            <li>Indexed files balance sequential and direct access.</li>
+            <li>B/B+ trees maintain sorted data and quick lookups.</li>
+            <li>Hashing provides constant-time access using keys.</li>
+            <li>Extendible and dynamic hashing adjust structure as data grows.</li>
+        </ul>
+        <pre class="matrix">
+Quick Recap:
+✔ Indexed files = fast + ordered access
+✔ B+ trees = efficient for range queries
+✔ Hashing = fast lookup; use chaining to resolve collisions
+✔ Extendible hashing = scalable directory
+        </pre>
+    </section>
+</div>
+
+
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Relational Data Model & SQL</h1>
+
+    <section class="section">
+        <h2>1. Relational Model Concepts</h2>
+        <p>The <strong>Relational Data Model</strong> organizes data into <strong>relations</strong> (tables), where each relation consists of rows (tuples) and columns (attributes).</p>
+        <ul>
+            <li><strong>Relation:</strong> A table with rows and columns.</li>
+            <li><strong>Tuple:</strong> A row in the relation.</li>
+            <li><strong>Attribute:</strong> A column in the relation.</li>
+            <li><strong>Domain:</strong> Set of permissible values for an attribute.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Student(ID, Name, Age)
+(101, 'Raj', 20)
+(102, 'Kriti', 21)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Relational Constraints</h2>
+        <p><strong>Relational Constraints</strong> ensure the accuracy and integrity of data in a relation. Types include:</p>
+        <ul>
+            <li><strong>Domain Constraint:</strong> Ensures attribute values fall within a defined domain.</li>
+            <li><strong>Key Constraint:</strong> Uniquely identifies tuples using <strong>Primary Key</strong>.</li>
+            <li><strong>Entity Integrity:</strong> Primary key cannot be NULL.</li>
+            <li><strong>Referential Integrity:</strong> Foreign key must match a primary key in the referenced table.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Student(CourseID) references Course(CourseID)
+→ Referential Integrity enforced.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Relational Algebra</h2>
+        <p><strong>Relational Algebra</strong> is a procedural query language used to query relational databases. Key operations include:</p>
+        <ul>
+            <li><strong>Select (σ):</strong> Filters rows based on a condition.</li>
+            <li><strong>Project (π):</strong> Selects specific columns.</li>
+            <li><strong>Union (∪):</strong> Combines tuples from two relations.</li>
+            <li><strong>Set Difference (−):</strong> Returns tuples in one relation but not in another.</li>
+            <li><strong>Cartesian Product (×):</strong> Combines all tuples of two relations.</li>
+            <li><strong>Join (⨝):</strong> Combines tuples with matching attributes.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+σ Age > 20 (Student)
+π Name (Student)
+Student ⨝ Course (Student.CourseID = Course.CourseID)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. SQL Queries</h2>
+        <p><strong>SQL (Structured Query Language)</strong> is used to manage and manipulate relational databases. It includes commands for:</p>
+        <ul>
+            <li><strong>DDL (Data Definition Language):</strong> CREATE, ALTER, DROP</li>
+            <li><strong>DML (Data Manipulation Language):</strong> SELECT, INSERT, UPDATE, DELETE</li>
+            <li><strong>DCL (Data Control Language):</strong> GRANT, REVOKE</li>
+        </ul>
+        <pre class="matrix">
+Example:
+CREATE TABLE Student(ID INT, Name VARCHAR(50), Age INT);
+INSERT INTO Student VALUES(101, 'Ravi', 22);
+SELECT * FROM Student WHERE Age > 20;
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Programming Using SQL</h2>
+        <p><strong>Programming with SQL</strong> involves using SQL within host languages (e.g., C, Java) or procedural extensions like PL/SQL. It allows for:</p>
+        <ul>
+            <li>Control flow (IF, LOOP)</li>
+            <li>Exception handling</li>
+            <li>Stored procedures and triggers</li>
+        </ul>
+        <pre class="matrix">
+Example (PL/SQL):
+BEGIN
+    UPDATE Student SET Age = Age + 1 WHERE ID = 101;
+END;
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Summary</h2>
+        <p>This unit introduces fundamental aspects of the relational model and SQL:</p>
+        <ul>
+            <li>Relational structure and integrity constraints</li>
+            <li>Relational algebra as a theoretical foundation</li>
+            <li>Practical data manipulation using SQL commands</li>
+            <li>Extending SQL with programming capabilities</li>
+        </ul>
+        <pre class="matrix">
+Quick Recap:
+✔ Tables = Relations
+✔ Constraints = Ensure accuracy
+✔ Algebra = Query logic
+✔ SQL = Real-world implementation
+        </pre>
+    </section>
+</div>
+
+
+
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: EER and ER to Relational Mapping</h1>
+
+    <section class="section">
+        <h2>1. Introduction to Mapping</h2>
+        <p><strong>EER (Enhanced Entity-Relationship) and ER</strong> diagrams represent the high-level design of a database. Mapping them to a relational model allows implementation in relational DBMS.</p>
+        <pre class="matrix">
+Example:
+EER Diagram → Tables (Relations) in SQL
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Mapping Entity Types</h2>
+        <p>Each <strong>regular entity type</strong> is mapped to a relation. Attributes become columns and the primary key is defined.</p>
+        <pre class="matrix">
+EER:
+Entity: Student(ID, Name, Age)
+→ Relation: Student(ID PRIMARY KEY, Name, Age)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Mapping Relationship Types</h2>
+        <p>Binary relationships are mapped by creating a new relation or adding foreign keys, based on cardinality:</p>
+        <ul>
+            <li><strong>1:1</strong> – Add a foreign key in either entity's table</li>
+            <li><strong>1:N</strong> – Add a foreign key in the 'many' side</li>
+            <li><strong>M:N</strong> – Create a new table with foreign keys</li>
+        </ul>
+        <pre class="matrix">
+EER:
+Student --Enrolls--> Course
+→ Enrolls(StudentID, CourseID)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Mapping Weak Entities</h2>
+        <p><strong>Weak entities</strong> depend on a strong entity and do not have a primary key of their own. They are mapped with a composite key that includes the primary key of the owning entity.</p>
+        <pre class="matrix">
+EER:
+Dependent(Name, Age) depends on Employee(EmpID)
+→ Relation: Dependent(EmpID, Name, Age), PRIMARY KEY(EmpID, Name)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Mapping Specialization and Generalization</h2>
+        <p>There are three strategies to map <strong>inheritance (ISA relationships)</strong> from EER to relational schema:</p>
+        <ul>
+            <li><strong>Option 1:</strong> One table for each subclass</li>
+            <li><strong>Option 2:</strong> One table for the superclass and subclasses</li>
+            <li><strong>Option 3:</strong> One table for each entire hierarchy</li>
+        </ul>
+        <pre class="matrix">
+EER:
+Superclass: Person(ID, Name)
+Subclass: Student(Major)
+→ Option 1: Person(ID, Name), Student(ID, Major)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Summary</h2>
+        <p>This unit bridges conceptual EER models with practical relational databases. Key mapping techniques:</p>
+        <ul>
+            <li>Entities → Tables</li>
+            <li>Relationships → Foreign Keys or new relations</li>
+            <li>Inheritance → Mapped using various strategies</li>
+        </ul>
+        <pre class="matrix">
+Quick Recap:
+✔ Entities → Tables
+✔ Weak Entities → Composite Keys
+✔ ISA → Option-based relational mapping
+        </pre>
+    </section>
+</div>
+
+
+
+<div class="topic-container" id="unit6">
+    <h1>UNIT-VI: Data Normalization & Concurrency Control</h1>
+
+    <section class="section">
+        <h2>1. Functional Dependencies</h2>
+        <p>A <strong>Functional Dependency (FD)</strong> occurs when one attribute uniquely determines another attribute. It is the foundation of normalization.</p>
+        <pre class="matrix">
+Example:
+RollNo → Name
+Means: If we know RollNo, we can uniquely identify Name.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Normal Forms up to 3NF</h2>
+        <p><strong>Normalization</strong> is a process of organizing data to reduce redundancy and improve integrity. The main normal forms are:</p>
+        <ul>
+            <li><strong>1NF:</strong> Atomic values; no repeating groups.</li>
+            <li><strong>2NF:</strong> No partial dependency (for composite keys).</li>
+            <li><strong>3NF:</strong> No transitive dependency.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Unnormalized: Student(RollNo, Name, Subject1, Subject2)
+1NF: Student(RollNo, Name, Subject)
+2NF: Remove partial dependency
+3NF: Ensure non-transitive dependencies only
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Transaction Processing</h2>
+        <p>A <strong>Transaction</strong> is a sequence of operations performed as a single logical unit of work. It should follow ACID properties:</p>
+        <ul>
+            <li><strong>Atomicity</strong> – All or none operations execute</li>
+            <li><strong>Consistency</strong> – Maintain database integrity</li>
+            <li><strong>Isolation</strong> – Transactions are independent</li>
+            <li><strong>Durability</strong> – Changes persist after completion</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Transfer money from Account A to B involves 2 steps:
+1. Deduct from A  2. Add to B — must be atomic.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Locking Techniques and Concurrency</h2>
+        <p><strong>Concurrency Control</strong> manages simultaneous transaction execution to avoid conflicts. Locking ensures data consistency:</p>
+        <ul>
+            <li><strong>Shared Lock (S):</strong> For read-only access</li>
+            <li><strong>Exclusive Lock (X):</strong> For write access</li>
+        </ul>
+        <p>Common techniques include:</p>
+        <ul>
+            <li>Two-phase locking protocol</li>
+            <li>Timestamp ordering</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Transaction T1 reads → Shared Lock
+T2 wants to write → waits for T1 to release
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Database Recovery Techniques</h2>
+        <p><strong>Recovery</strong> ensures the database returns to a consistent state after a failure. Common techniques:</p>
+        <ul>
+            <li><strong>Log-based Recovery:</strong> Use of logs to redo/undo operations</li>
+            <li><strong>Checkpointing:</strong> Periodic saving of database state</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Use logs to undo uncommitted transactions after a crash.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Database Security and Authorization</h2>
+        <p><strong>Database Security</strong> protects data from unauthorized access. <strong>Authorization</strong> controls access levels for different users.</p>
+        <ul>
+            <li><strong>User Authentication:</strong> Verifying identity</li>
+            <li><strong>Access Control:</strong> Granting/restricting rights</li>
+            <li><strong>Encryption:</strong> Protects data in transit and storage</li>
+        </ul>
+        <pre class="matrix">
+Example:
+GRANT SELECT ON Student TO user1;
+REVOKE UPDATE ON Student FROM user2;
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Summary</h2>
+        <p>This unit covers essential database maintenance concepts:</p>
+        <ul>
+            <li>Normalization ensures data structure and efficiency</li>
+            <li>Concurrency control prevents anomalies</li>
+            <li>Recovery and security maintain system reliability</li>
+        </ul>
+        <pre class="matrix">
+Quick Recap:
+✔ FD → key to normalization
+✔ 3NF → no transitive dependency
+✔ Transactions → ACID rules
+✔ Locking + Recovery = Reliable DBMS
+✔ Authorization = Safe access
+        </pre>
+    </section>
+</div>
+
 
      <!-- Footer  -->
     <div id="footer-placeholder"></div>

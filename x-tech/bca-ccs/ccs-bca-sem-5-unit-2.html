@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="../css/topic.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="../Images/syllabusBuddy-Logo.png" type="image/icon">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8452146197004922"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8452146197004922"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,8 +20,8 @@
     <div class="sem-unit-header"> Java Programming and Dynamic Webpage Design</div>
 
 
-  <div class="container">
-      
+    <div class="container">
+
 
         <a href="#unit1" class="unit">UNIT-I: Java Programming</a>
         <div class="content">
@@ -61,9 +61,505 @@
         </div>
     </div>
 
-     <!-- Footer  -->
+
+
+
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Java Programming</h1>
+
+        <section class="section">
+            <h2>1. Data Types</h2>
+            <p>Java supports various data types to handle different kinds of data. These are categorized into primitive
+                and non-primitive types.</p>
+            <ul>
+                <li><strong>Primitive:</strong> int, float, double, char, boolean, byte, short, long</li>
+                <li><strong>Non-Primitive:</strong> String, Arrays, Classes</li>
+            </ul>
+            <pre class="matrix">
+Example:
+int age = 25;
+double price = 99.99;
+char grade = 'A';
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Control Structures</h2>
+            <p>Control structures determine the flow of program execution. Java offers conditional and looping
+                constructs:</p>
+            <ul>
+                <li><strong>if, if-else, switch</strong> for decision-making</li>
+                <li><strong>for, while, do-while</strong> for loops</li>
+            </ul>
+            <pre class="matrix">
+Example:
+if(score > 50) {
+    System.out.println("Passed");
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Arrays, Strings, and Vectors</h2>
+            <p><strong>Arrays</strong> store multiple values of the same type.</p>
+            <p><strong>Strings</strong> are immutable sequences of characters.</p>
+            <p><strong>Vectors</strong> are dynamic arrays in Java.</p>
+            <pre class="matrix">
+Example:
+int[] marks = {90, 85, 78};
+String name = "Java";
+Vector<Integer> v = new Vector<>();
+v.add(10);
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Classes and Inheritance</h2>
+            <p><strong>Classes</strong> are blueprints for objects. <strong>Inheritance</strong> allows a class to
+                inherit properties from another class using <code>extends</code>.</p>
+            <pre class="matrix">
+Example:
+class Animal {
+    void sound() { System.out.println("Sound"); }
+}
+class Dog extends Animal {
+    void bark() { System.out.println("Bark"); }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Packages</h2>
+            <p><strong>Packages</strong> group related classes. Java provides built-in packages like
+                <code>java.util</code>, and we can also create user-defined packages.
+            </p>
+            <pre class="matrix">
+Example:
+package mypack;
+public class MyClass { ... }
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Exception Handling</h2>
+            <p><strong>Exception Handling</strong> manages runtime errors using try-catch blocks to prevent program
+                crashes.</p>
+            <pre class="matrix">
+Example:
+try {
+    int a = 5 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero");
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Multithreaded Programming</h2>
+            <p>Java allows <strong>multithreading</strong>, enabling multiple threads to run concurrently using the
+                <code>Thread</code> class or <code>Runnable</code> interface.
+            </p>
+            <pre class="matrix">
+Example:
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread running");
+    }
+}
+MyThread t = new MyThread();
+t.start();
+        </pre>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Applets, AWT Controls & String Handling</h1>
+
+        <section class="section">
+            <h2>1. Java Applets</h2>
+            <p><strong>Applets</strong> are small Java programs that run in a web browser. They extend the
+                <code>Applet</code> class and override methods like <code>init()</code>, <code>start()</code>,
+                <code>stop()</code>, and <code>paint()</code>.
+            </p>
+            <pre class="matrix">
+Example:
+public class MyApplet extends Applet {
+    public void paint(Graphics g) {
+        g.drawString("Hello Applet", 20, 20);
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. AWT Controls</h2>
+            <p><strong>AWT (Abstract Window Toolkit)</strong> provides GUI components such as:</p>
+            <ul>
+                <li><strong>Button</strong> – For clickable buttons</li>
+                <li><strong>Label</strong> – For displaying text</li>
+                <li><strong>ComboBox</strong> – For dropdown list</li>
+                <li><strong>List</strong> – For displaying multiple items</li>
+                <li><strong>MenuBar</strong> – For creating menus</li>
+            </ul>
+            <pre class="matrix">
+Example:
+Button b = new Button("Click Me");
+Label l = new Label("Welcome");
+Choice cb = new Choice();
+cb.add("Option 1");
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Event Listeners</h2>
+            <p><strong>Listeners</strong> are interfaces used to handle user interactions:</p>
+            <ul>
+                <li><strong>ActionListener</strong> – Handles button clicks</li>
+                <li><strong>ItemListener</strong> – Handles item selection</li>
+                <li><strong>WindowListener</strong> – Handles window events</li>
+            </ul>
+            <pre class="matrix">
+Example:
+b.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+        System.out.println("Clicked");
+    }
+});
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Layout Managers</h2>
+            <p><strong>Layout Managers</strong> control the positioning of components. Common types:</p>
+            <ul>
+                <li><strong>FlowLayout</strong> – Left to right in a row</li>
+                <li><strong>BorderLayout</strong> – Five regions: N, S, E, W, Center</li>
+                <li><strong>GridLayout</strong> – Grid of equal-sized cells</li>
+            </ul>
+            <pre class="matrix">
+Example:
+setLayout(new FlowLayout());
+add(new Button("OK"));
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. String Handling (Main Functions)</h2>
+            <p><strong>String</strong> handling in Java includes built-in methods for processing text:</p>
+            <ul>
+                <li><code>length()</code> – returns length</li>
+                <li><code>charAt()</code> – returns character at index</li>
+                <li><code>substring()</code> – extracts substring</li>
+                <li><code>indexOf()</code> – finds index of a character</li>
+                <li><code>equals()</code> – compares strings</li>
+            </ul>
+            <pre class="matrix">
+Example:
+String s = "Java";
+System.out.println(s.length());
+System.out.println(s.charAt(1));
+System.out.println(s.substring(1,3));
+        </pre>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Networking and JDBC</h1>
+
+        <section class="section">
+            <h2>1. Networking in Java</h2>
+            <p>Java provides powerful networking capabilities through classes in the <code>java.net</code> package. Two
+                key approaches include:</p>
+            <ul>
+                <li><strong>Datagram Socket:</strong> Used for connectionless UDP communication.</li>
+                <li><strong>TCP/IP Server Socket:</strong> Used for reliable connection-based communication.</li>
+            </ul>
+            <pre class="matrix">
+Example (Datagram):
+DatagramSocket ds = new DatagramSocket();
+
+Example (TCP/IP):
+ServerSocket server = new ServerSocket(5000);
+Socket client = server.accept();
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Event Handling</h2>
+            <p>Event handling allows Java programs to respond to user interactions such as clicks, keypresses, etc. It
+                involves event sources, listeners, and event objects.</p>
+            <pre class="matrix">
+Example:
+button.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+        System.out.println("Button clicked");
+    }
+});
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. JDBC: Java Database Connectivity</h2>
+            <p><strong>JDBC</strong> is an API that allows Java applications to interact with databases. Major
+                components include:</p>
+            <ul>
+                <li><strong>Drivers:</strong> JDBC Drivers enable communication with specific databases.</li>
+                <li><strong>Establishing Connection:</strong> Using <code>DriverManager.getConnection()</code></li>
+                <li><strong>Connection Pooling:</strong> Reusing database connections to optimize performance.</li>
+            </ul>
+            <pre class="matrix">
+Example:
+Connection con = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/mydb", "user", "pass");
+Statement stmt = con.createStatement();
+ResultSet rs = stmt.executeQuery("SELECT * FROM users");
+        </pre>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: HTML and Web Elements</h1>
+
+        <section class="section">
+            <h2>1. HTML Basics and Commenting</h2>
+            <p><strong>HTML</strong> is used to structure web pages. Comments are ignored by browsers and help explain
+                code.</p>
+            <pre class="matrix">
+Example:
+&lt;!-- This is a comment --&gt;
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Headers and Text Styling</h2>
+            <p>Headers use <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. Text styling uses <code>&lt;b&gt;</code>,
+                <code>&lt;i&gt;</code>, and <code>&lt;u&gt;</code>.
+            </p>
+            <pre class="matrix">
+Example:
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;b&gt;Bold&lt;/b&gt; &lt;i&gt;Italic&lt;/i&gt; &lt;u&gt;Underline&lt;/u&gt;
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Images, Line Breaks, and Horizontal Rules</h2>
+            <p><code>&lt;img&gt;</code> adds images, <code>&lt;br&gt;</code> creates line breaks,
+                <code>&lt;hr&gt;</code> adds horizontal lines.
+            </p>
+            <pre class="matrix">
+Example:
+&lt;img src="logo.png" alt="Logo"&gt;
+&lt;hr&gt;&lt;br&gt;
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Font Tag and Special Characters</h2>
+            <p><code>&lt;font&gt;</code> was used to style fonts (deprecated in HTML5). Use entities for special
+                characters.</p>
+            <pre class="matrix">
+Example:
+&lt;font color="blue"&gt;Blue Text&lt;/font&gt;
+Copyright symbol: &amp;copy;
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Tables and Forms</h2>
+            <p><code>&lt;table&gt;</code> displays tabular data. <code>&lt;form&gt;</code> collects user input.</p>
+            <pre class="matrix">
+Example:
+&lt;table border="1"&gt;
+  &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Alice&lt;/td&gt;&lt;td&gt;22&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;form&gt;
+  Name: &lt;input type="text" name="name"&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Image Maps</h2>
+            <p>Image maps allow linking specific areas of an image.</p>
+            <pre class="matrix">
+Example:
+&lt;img src="map.jpg" usemap="#planetmap"&gt;
+&lt;map name="planetmap"&gt;
+  &lt;area shape="rect" coords="34,44,270,350" href="sun.html"&gt;
+&lt;/map&gt;
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. META and FRAMESET Tags</h2>
+            <p><code>&lt;meta&gt;</code> provides metadata. <code>&lt;frameset&gt;</code> divides browser window into
+                frames (deprecated in HTML5).</p>
+            <pre class="matrix">
+Example:
+&lt;meta charset="UTF-8"&gt;
+&lt;frameset cols="50%,50%"&gt;
+  &lt;frame src="left.html"&gt;
+  &lt;frame src="right.html"&gt;
+&lt;/frameset&gt;
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>8. File Formats</h2>
+            <p>Common file types:</p>
+            <ul>
+                <li><strong>HTML:</strong> .html, .htm</li>
+                <li><strong>Images:</strong> .jpg, .png, .gif, .svg</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Java Servlets</h1>
+
+        <section class="section">
+            <h2>1. Introduction to Java Servlets</h2>
+            <p>A <strong>Java Servlet</strong> is a server-side Java program that handles requests and responses in a
+                web application. Servlets run on a web server and provide dynamic web content.</p>
+        </section>
+
+        <section class="section">
+            <h2>2. HTTP Servlet Basics</h2>
+            <p>HTTP Servlets extend <code>HttpServlet</code> class and handle HTTP requests via <code>doGet()</code> and
+                <code>doPost()</code> methods.</p>
+            <pre class="matrix">
+Example:
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    response.getWriter().println("Hello from Servlet");
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Servlet Lifecycle</h2>
+            <p>The lifecycle of a servlet consists of:</p>
+            <ul>
+                <li><code>init()</code> - called once when servlet is first loaded.</li>
+                <li><code>service()</code> - called for each request.</li>
+                <li><code>destroy()</code> - called before servlet is removed.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>4. Retrieving Information</h2>
+            <p>Request parameters can be retrieved using <code>request.getParameter("name")</code>.</p>
+            <pre class="matrix">
+Example:
+String user = request.getParameter("username");
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Sending HTML Information</h2>
+            <p>Servlets can send HTML responses by writing to <code>response.getWriter()</code>.</p>
+            <pre class="matrix">
+Example:
+response.setContentType("text/html");
+PrintWriter out = response.getWriter();
+out.println("&lt;h1&gt;Welcome User&lt;/h1&gt;");
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Session Tracking</h2>
+            <p>Session tracking allows storing user data across multiple pages using:</p>
+            <ul>
+                <li>Cookies</li>
+                <li>URL rewriting</li>
+                <li>Hidden form fields</li>
+                <li>HttpSession API</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>7. Database Connectivity</h2>
+            <p>Servlets can connect to databases using JDBC to perform CRUD operations.</p>
+            <pre class="matrix">
+Example:
+Connection con = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/mydb", "user", "pass");
+Statement stmt = con.createStatement();
+ResultSet rs = stmt.executeQuery("SELECT * FROM users");
+        </pre>
+        </section>
+    </div>
+
+
+<div class="topic-container" id="unit6">
+    <h1>UNIT-VI: Java Server Pages (JSP)</h1>
+
+    <section class="section">
+        <h2>1. Introducing Java Server Pages</h2>
+        <p><strong>Java Server Pages (JSP)</strong> is a server-side technology that enables the creation of dynamic, platform-independent web content. JSP combines HTML with Java code.</p>
+    </section>
+
+    <section class="section">
+        <h2>2. JSP Overview</h2>
+        <p>JSP files have a <code>.jsp</code> extension and are translated into servlets at runtime. They allow embedding Java code directly into HTML using special JSP tags like <code>&lt;% %&gt;</code>.</p>
+        <pre class="matrix">
+Example:
+&lt;% out.println("Welcome to JSP!"); %&gt;
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Setting Up the JSP Environment</h2>
+        <p>To run JSP pages, a servlet container like Apache Tomcat is required. Pages are deployed inside the web application structure under the <code>webapps</code> folder.</p>
+    </section>
+
+    <section class="section">
+        <h2>4. Generating Dynamic Content</h2>
+        <p>JSP allows inserting Java expressions, scriptlets, and declarations within HTML to generate content based on user inputs or database values.</p>
+        <pre class="matrix">
+Example:
+&lt;h1&gt;Hello &lt;%= request.getParameter("name") %&gt;&lt;/h1&gt;
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Using Custom Tag Libraries and JSTL</h2>
+        <p><strong>Custom Tag Libraries</strong> allow encapsulating Java code into reusable tags. <strong>JSTL</strong> (JSP Standard Tag Library) provides common functions like loops and conditionals.</p>
+        <pre class="matrix">
+Example:
+&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %&gt;
+&lt;c:if test="${user != null}"&gt;
+  &lt;p&gt;Welcome, ${user}!&lt;/p&gt;
+&lt;/c:if&gt;
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Processing Input and Output</h2>
+        <p>Input from users is processed using <code>request.getParameter()</code>, and output is sent to the browser via <code>out</code> object or embedded expressions.</p>
+        <pre class="matrix">
+Example:
+&lt;% String email = request.getParameter("email"); %&gt;
+&lt;p&gt;Your email is: &lt;%= email %&gt;&lt;/p&gt;
+        </pre>
+    </section>
+</div>
+
+
+
+
+    <!-- Footer  -->
     <div id="footer-placeholder"></div>
 
     <!-- Script -->
     <script src="../script/include.js"></script>
-</body></html>
+</body>
+
+</html>
