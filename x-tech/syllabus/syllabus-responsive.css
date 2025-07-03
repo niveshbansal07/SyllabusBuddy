@@ -10,7 +10,7 @@
 .university-box {
   width: 100%;
   max-width: 300px;
-  margin: 10px auto;
+  /* margin: 10px auto; */
 }
 
 /* ✅ Responsive Header Padding */
