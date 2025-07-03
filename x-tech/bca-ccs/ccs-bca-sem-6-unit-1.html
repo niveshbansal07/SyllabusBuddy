@@ -57,6 +57,451 @@
         </div>
     </div>
 
+    <div class="topic-container" id="unit1">
+    <h1>UNIT-I: Introduction to Network Security and Cryptography</h1>
+
+    <section class="section">
+        <h2>1. Attacks, Services, and Security Mechanisms</h2>
+        <p>Computer networks are vulnerable to a variety of attacks. Understanding them helps in building secure systems.</p>
+        <ul>
+            <li><strong>Attack:</strong> Any action that compromises the security of information.</li>
+            <li><strong>Security Services:</strong> Functions that enhance security, such as confidentiality, integrity, authentication, and non-repudiation.</li>
+            <li><strong>Security Mechanisms:</strong> Tools or techniques that implement services (e.g., encryption, firewalls, digital signatures).</li>
+        </ul>
+        <pre class="matrix">
+Example:
+A hacker intercepts login data (attack), so SSL encryption (mechanism) is used to ensure data confidentiality (service).
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Model for Internetwork Security</h2>
+        <p>A general security model includes the following components:</p>
+        <ul>
+            <li><strong>Sender and Receiver:</strong> Endpoints that need to communicate securely.</li>
+            <li><strong>Transmission Medium:</strong> The insecure network used for data transfer.</li>
+            <li><strong>Security Transformations:</strong> Processes like encryption applied to secure the message.</li>
+            <li><strong>Secret Information:</strong> Keys used in encryption/decryption.</li>
+            <li><strong>Trusted Third Party:</strong> Like a Certificate Authority (CA) that manages public keys.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Sender encrypts the message → Transmits over the Internet → Receiver decrypts using the shared key.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Cryptography Basics</h2>
+        <p>Cryptography is the practice of securing information by transforming it into an unreadable format.</p>
+        <ul>
+            <li><strong>Plain Text:</strong> The original readable message.</li>
+            <li><strong>Encryption:</strong> Process of converting plain text to cipher text using a key.</li>
+            <li><strong>Key:</strong> A value used in the encryption/decryption process.</li>
+            <li><strong>Cipher Text:</strong> Encrypted, unreadable message.</li>
+            <li><strong>Decryption:</strong> Converting cipher text back to plain text using the key.</li>
+            <li><strong>Cryptanalysis:</strong> The study of breaking cryptographic systems without access to the key.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Plain Text: "HELLO"
+Key: 3 (Caesar Cipher)
+Cipher Text: "KHOOR"
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Public Key Encryption</h2>
+        <p>Also known as Asymmetric Encryption, it uses two keys:</p>
+        <ul>
+            <li><strong>Public Key:</strong> Shared with everyone for encryption.</li>
+            <li><strong>Private Key:</strong> Kept secret for decryption.</li>
+        </ul>
+        <p>It ensures secure communication without sharing a private key.</p>
+        <pre class="matrix">
+Example:
+Sender encrypts message using Receiver's Public Key → Only Receiver can decrypt using their Private Key.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Digital Signatures and Authentication</h2>
+        <p>Digital signatures ensure message integrity and authenticity. They use the sender's private key to sign the data.</p>
+        <ul>
+            <li><strong>Authentication:</strong> Confirms the identity of the sender.</li>
+            <li><strong>Digital Signature:</strong> Encrypted hash of the message using sender’s private key.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Sender hashes the message → Encrypts hash with their Private Key → Receiver decrypts with Public Key and verifies hash.
+        </pre>
+    </section>
+</div>
+
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Network Security – Authentication Applications</h1>
+
+    <section class="section">
+        <h2>1. Kerberos</h2>
+        <p><strong>Kerberos</strong> is a network authentication protocol designed to provide strong authentication using secret-key cryptography. It allows nodes to prove their identity over non-secure networks.</p>
+        <ul>
+            <li>Uses a Key Distribution Center (KDC) for ticket granting.</li>
+            <li>Authenticates once, then uses tickets to access multiple services.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+1. User logs in → sends request to KDC.
+2. KDC sends a Ticket Granting Ticket (TGT).
+3. User presents TGT to access services without re-entering password.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. X.509 Authentication Service</h2>
+        <p><strong>X.509</strong> is a standard defining the format of public key certificates. It is used in protocols like SSL/TLS for secure communications.</p>
+        <ul>
+            <li>Provides a certificate that binds a public key with an identity.</li>
+            <li>Issued by a trusted Certificate Authority (CA).</li>
+        </ul>
+        <pre class="matrix">
+Example:
+User A receives a digital certificate from a CA.
+The certificate includes: User A’s public key + digital signature of CA.
+Other users verify A’s identity by validating the certificate.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Directory Authentication Service</h2>
+        <p>This service is often implemented using <strong>LDAP (Lightweight Directory Access Protocol)</strong>, which allows users and systems to look up authentication credentials in a centralized directory.</p>
+        <ul>
+            <li>Stores usernames, passwords, digital certificates.</li>
+            <li>Supports authentication and access control.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+A user logs in → system queries LDAP directory → credentials verified → access granted.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Pretty Good Privacy (PGP)</h2>
+        <p><strong>PGP</strong> is a data encryption and decryption program used for secure communication and email encryption.</p>
+        <ul>
+            <li>Combines symmetric encryption, public-key cryptography, and hashing.</li>
+            <li>Used for signing, encrypting, and decrypting messages and files.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+1. Sender encrypts message using recipient’s public key.
+2. Signs message using sender’s private key.
+3. Receiver decrypts using private key and verifies signature with sender’s public key.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. S/MIME (Secure/Multipurpose Internet Mail Extensions)</h2>
+        <p><strong>S/MIME</strong> is a standard for public key encryption and signing of MIME data, widely used in securing email communication.</p>
+        <ul>
+            <li>Provides confidentiality, message integrity, authentication, and non-repudiation.</li>
+            <li>Uses X.509 certificates for key management.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+User sends an encrypted email using recipient’s public key.
+Recipient decrypts with their private key.
+Sender’s digital signature ensures message is authentic.
+        </pre>
+    </section>
+</div>
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: IP Security Architecture</h1>
+
+    <section class="section">
+        <h2>1. Overview of IP Security (IPSec)</h2>
+        <p><strong>IPSec</strong> is a suite of protocols that provide security for IP communications by authenticating and encrypting each IP packet. It operates at the network layer and ensures:</p>
+        <ul>
+            <li><strong>Confidentiality:</strong> Encrypts data to keep it private.</li>
+            <li><strong>Integrity:</strong> Ensures data is not altered during transit.</li>
+            <li><strong>Authentication:</strong> Verifies the sender of the data.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Without IPSec: Data travels over the internet in plain text.
+With IPSec: Data is encrypted and authenticated, making it unreadable and tamper-proof.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Authentication Header (AH)</h2>
+        <p><strong>Authentication Header</strong> is an IPSec protocol that provides data integrity and authentication of IP packets. It does not provide encryption.</p>
+        <ul>
+            <li>Ensures the packet is not modified in transit.</li>
+            <li>Verifies the identity of the sender.</li>
+            <li>Works by adding an additional header to the packet.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Sender → creates AH header with hash of the packet using a shared secret key.
+Receiver → recalculates hash and compares → if matched, data is authentic.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Encapsulating Security Payload (ESP)</h2>
+        <p><strong>ESP</strong> provides both encryption (confidentiality) and optional authentication. It can work in two modes:</p>
+        <ul>
+            <li><strong>Transport Mode:</strong> Only the payload is encrypted.</li>
+            <li><strong>Tunnel Mode:</strong> Entire IP packet is encrypted and encapsulated in a new IP packet.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Using ESP in Tunnel Mode:
+Original IP packet → Encrypted and encapsulated → New IP header added → Transmitted securely.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Combining Security Associations</h2>
+        <p><strong>Security Association (SA)</strong> is a relationship between two entities that defines how they communicate securely using IPSec.</p>
+        <ul>
+            <li>Each SA is unidirectional and uses a unique SPI (Security Parameter Index).</li>
+            <li>To achieve full-duplex communication, two SAs are required (one in each direction).</li>
+            <li>Multiple SAs can be combined for layered protection (e.g., AH + ESP).</li>
+        </ul>
+        <pre class="matrix">
+Example:
+To secure data with both integrity and encryption:
+1. Use ESP for encryption.
+2. Use AH for authentication.
+Combined SA: ESP + AH.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Key Management</h2>
+        <p><strong>Key Management</strong> in IPSec involves creating, distributing, and maintaining cryptographic keys used in secure communication. It can be:</p>
+        <ul>
+            <li><strong>Manual Keying:</strong> Keys are configured manually on both ends (not scalable).</li>
+            <li><strong>Automatic Keying:</strong> Uses protocols like IKE (Internet Key Exchange) to establish keys dynamically.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+IKE Phase 1: Establish secure channel between peers.
+IKE Phase 2: Negotiate IPSec SAs and generate keys for encryption/authentication.
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Web Security</h1>
+
+    <section class="section">
+        <h2>1. Web Security Requirements</h2>
+        <p>To ensure secure communication over the web, certain fundamental requirements must be met:</p>
+        <ul>
+            <li><strong>Confidentiality:</strong> Only the intended recipient should access the data.</li>
+            <li><strong>Integrity:</strong> Ensure that the data is not altered during transmission.</li>
+            <li><strong>Authentication:</strong> Both parties must verify each other's identity.</li>
+            <li><strong>Non-repudiation:</strong> The sender cannot deny sending the message.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+A user logs into a bank site → credentials are encrypted (confidentiality)
+→ server checks authenticity (authentication)
+→ a digital signature confirms user’s transaction (non-repudiation).
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Secure Socket Layer (SSL)</h2>
+        <p><strong>SSL</strong> is a standard security technology for establishing an encrypted link between a web server and a browser. It ensures that all data passed remains private.</p>
+        <ul>
+            <li>Uses both symmetric and asymmetric encryption.</li>
+            <li>Employs digital certificates to verify server authenticity.</li>
+            <li>Data is encrypted using session keys after handshake.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+1. Browser connects to a secure site (https).
+2. Server sends SSL certificate.
+3. Browser verifies certificate and creates a session key.
+4. All communication is encrypted using the session key.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Transport Layer Security (TLS)</h2>
+        <p><strong>TLS</strong> is the successor to SSL and provides improved security features. It is the most widely used protocol for securing internet communication today.</p>
+        <ul>
+            <li>Backwards-compatible with SSL but more secure.</li>
+            <li>Provides encryption, authentication, and integrity checks.</li>
+            <li>Used in web browsers, email, messaging, and VoIP.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+When you visit https://example.com, TLS ensures:
+- The server is authentic.
+- Data you submit is encrypted.
+- No third party can modify your messages.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Secure Electronic Transactions (SET)</h2>
+        <p><strong>SET</strong> is a protocol developed by Visa and MasterCard to secure credit card transactions over the internet. It focuses on confidentiality, integrity, and cardholder authentication.</p>
+        <ul>
+            <li>Encrypts payment information.</li>
+            <li>Separates payment and order information for privacy.</li>
+            <li>Uses digital certificates for both cardholder and merchant.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+1. Customer places order and encrypts payment info using merchant's and bank’s public keys.
+2. Merchant processes order but can't see card details.
+3. Bank decrypts payment info and completes transaction securely.
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Network Management Security</h1>
+
+    <section class="section">
+        <h2>1. Overview of SNMP Architecture</h2>
+        <p><strong>Simple Network Management Protocol (SNMP)</strong> is a protocol used for managing devices on IP networks such as routers, switches, servers, printers, and more.</p>
+        <ul>
+            <li><strong>Manager:</strong> The system used to control and monitor the activities of network devices.</li>
+            <li><strong>Agent:</strong> Software running on a managed device that reports information to the manager.</li>
+            <li><strong>Managed Devices:</strong> Devices like routers or switches that are monitored via SNMP.</li>
+            <li><strong>MIB (Management Information Base):</strong> A database used by SNMP to manage network objects.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Network Admin (Manager) → sends SNMP request to Router (Agent) 
+→ Router responds with system data using information from MIB.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. SNMPv1 Communication Facility</h2>
+        <p><strong>SNMPv1</strong> is the original version of SNMP and provides basic network monitoring features. It operates over UDP and uses a simple request-response communication model.</p>
+        <ul>
+            <li>Uses community strings (like passwords) for access control.</li>
+            <li>Messages are sent in plain text – no encryption.</li>
+            <li>Supported operations: <code>GET</code>, <code>SET</code>, <code>GETNEXT</code>, <code>TRAP</code>.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+GET request: Manager asks Agent for a value (e.g., CPU usage).
+SET request: Manager tells Agent to change a setting (e.g., restart service).
+TRAP: Agent sends an alert to Manager when a fault occurs.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. SNMPv3 – Enhanced Security</h2>
+        <p><strong>SNMPv3</strong> is the most secure version of SNMP. It adds strong authentication and data encryption features to SNMP communications.</p>
+        <ul>
+            <li><strong>Authentication:</strong> Ensures messages are from valid sources using protocols like HMAC-MD5 or SHA.</li>
+            <li><strong>Privacy (Encryption):</strong> Encrypts messages using DES or AES to prevent eavesdropping.</li>
+            <li><strong>Access Control:</strong> Defines what operations users can perform using user-based security model (USM).</li>
+        </ul>
+        <pre class="matrix">
+Example:
+1. SNMP Manager sends encrypted and authenticated GET request.
+2. Agent verifies message and responds securely.
+3. No sensitive data is exposed over the network.
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit6">
+    <h1>UNIT-VI: System Security</h1>
+
+    <section class="section">
+        <h2>1. Intruders</h2>
+        <p><strong>Intruders</strong> are individuals or automated programs that gain unauthorized access to systems to steal, modify, or destroy data.</p>
+        <ul>
+            <li><strong>Masquerader:</strong> An outsider who pretends to be an authorized user.</li>
+            <li><strong>Misfeasor:</strong> A legitimate user who misuses their access.</li>
+            <li><strong>Clandestine User:</strong> Gains control and hides their presence in the system.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+A hacker uses stolen credentials to access a company server and exfiltrate financial records.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Viruses and Related Threats</h2>
+        <p>Viruses and malicious software disrupt normal system operations and pose serious security threats.</p>
+        <ul>
+            <li><strong>Virus:</strong> Attaches itself to programs and spreads when executed.</li>
+            <li><strong>Worm:</strong> Self-replicates and spreads across networks.</li>
+            <li><strong>Trojan Horse:</strong> Disguises itself as legitimate software.</li>
+            <li><strong>Spyware:</strong> Secretly monitors user activity.</li>
+            <li><strong>Ransomware:</strong> Locks or encrypts data and demands ransom.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+A user downloads a free software (Trojan) → Trojan installs spyware → Spyware sends user data to attacker.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Firewall Design Principles</h2>
+        <p>A <strong>firewall</strong> is a hardware or software device that filters incoming and outgoing traffic based on a set of security rules.</p>
+        <ul>
+            <li><strong>Packet Filtering Firewall:</strong> Filters based on IP addresses, ports, and protocols.</li>
+            <li><strong>Stateful Inspection Firewall:</strong> Tracks active connections and decides based on state and context.</li>
+            <li><strong>Proxy Firewall:</strong> Acts as a middleman between user and the internet.</li>
+            <li><strong>Next-Generation Firewall (NGFW):</strong> Includes intrusion prevention, deep packet inspection, and application awareness.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Firewall Rule: Allow port 80 (HTTP) traffic → Deny all other incoming traffic.
+This blocks attacks but allows web browsing.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Comprehensive Examples Using Software Tools</h2>
+        <p>Several software tools can be used to simulate or detect system threats:</p>
+        <ul>
+            <li><strong>Wireshark:</strong> Packet analyzer for monitoring network traffic.</li>
+            <li><strong>Snort:</strong> Open-source intrusion detection and prevention system.</li>
+            <li><strong>ClamAV:</strong> Antivirus engine for detecting viruses and malware.</li>
+            <li><strong>Burp Suite:</strong> Security testing tool for web applications.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Using Wireshark:
+1. Start capture on network interface.
+2. Monitor incoming/outgoing packets.
+3. Detect suspicious IPs or packet payloads.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Configuration Management</h2>
+        <p><strong>Configuration Management (CM)</strong> is the process of systematically handling changes to a system to maintain integrity and traceability.</p>
+        <ul>
+            <li><strong>Version Control:</strong> Keeps track of code changes (e.g., Git).</li>
+            <li><strong>Change Management:</strong> Approves and documents system updates.</li>
+            <li><strong>Asset Management:</strong> Maintains an inventory of hardware/software.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Using Git:
+1. Developers push code to remote repository.
+2. Git tracks changes, merges branches, and logs authorship.
+3. CM ensures rollback if new update causes failure.
+        </pre>
+    </section>
+</div>
+
+
      <!-- Footer  -->
     <div id="footer-placeholder"></div>
 

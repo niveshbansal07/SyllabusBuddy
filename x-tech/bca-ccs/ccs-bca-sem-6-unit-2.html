@@ -67,6 +67,686 @@
     </div>
 
 
+<div class="topic-container" id="unit1">
+    <h1>UNIT-I: Overview of System Analysis and Design</h1>
+
+    <section class="section">
+        <h2>1. Systems Development Life Cycle (SDLC)</h2>
+        <p><strong>SDLC</strong> is a structured process for planning, creating, testing, and deploying an information system.</p>
+        <ul>
+            <li><strong>Phases:</strong> Planning → Analysis → Design → Implementation → Testing → Maintenance</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Building a Library Management System:
+1. Planning: Understand the need for automation.
+2. Analysis: Gather requirements (e.g., user logins, book issue).
+3. Design: Create database structure, interface mockups.
+4. Implementation: Code the system.
+5. Testing: Run sample use cases.
+6. Maintenance: Fix bugs, add features over time.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Requirements Determination</h2>
+        <p>Identifying what users need from the system through interviews, observations, and document analysis.</p>
+        <pre class="matrix">
+Example:
+For a hospital system, requirements may include:
+- Patient record management
+- Appointment scheduling
+- Billing and prescriptions
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Logical and Physical Design</h2>
+        <p><strong>Logical Design:</strong> Focuses on what the system will do (data flow, processes).</p>
+        <p><strong>Physical Design:</strong> Focuses on how the system will be implemented (hardware, software, files).</p>
+        <pre class="matrix">
+Example:
+Logical: Patient → Checkup → Bill generation
+Physical: SQL database → Web interface → Hospital LAN server
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Test Planning and Implementation</h2>
+        <p><strong>Test Planning:</strong> Deciding how to test the system for errors, performance, and usability.</p>
+        <p><strong>Implementation:</strong> Putting the system into use with proper installation and training.</p>
+        <pre class="matrix">
+Example:
+Test Plan: Unit Test, Integration Test, User Acceptance Test
+Implementation: Deploy system, train staff, monitor performance.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Performance Evaluation and Communication Skills</h2>
+        <p>Evaluation ensures the system meets requirements. Communication, interviewing, and presentation skills are vital for gathering accurate requirements and presenting solutions.</p>
+        <pre class="matrix">
+Example:
+Interviewing users helps identify missing features;
+Presenting a system demo to stakeholders ensures feedback.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Group Dynamics and Feasibility Analysis</h2>
+        <p><strong>Group Dynamics:</strong> How team members interact to achieve goals.</p>
+        <p><strong>Feasibility Analysis:</strong> Checks if a system is viable technically, economically, and operationally.</p>
+        <pre class="matrix">
+Example:
+Feasibility study of an eCommerce platform:
+- Technical: Can we build it with current tools?
+- Economic: Will the benefits outweigh the costs?
+- Operational: Will users adapt to the new system?
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Group-Based Approaches: JAD, Walkthroughs, Reviews</h2>
+        <ul>
+            <li><strong>JAD (Joint Application Development):</strong> Workshops involving users and developers to finalize requirements.</li>
+            <li><strong>Structured Walkthroughs:</strong> Peer reviews to evaluate system logic and design early.</li>
+            <li><strong>Design and Code Reviews:</strong> Systematic inspection of code and architecture for quality.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+In a JAD session for a college system,
+Admins, students, and developers meet to agree on features like marks entry, attendance tracking, etc.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>8. Prototyping and Database Design</h2>
+        <p><strong>Prototyping:</strong> Building a quick working model of the system to gather user feedback.</p>
+        <p><strong>Database Design:</strong> Structuring data storage to ensure consistency, security, and efficiency.</p>
+        <pre class="matrix">
+Example:
+Prototype: Build login and dashboard screens to show users.
+Database: Tables for Students, Courses, Grades with foreign key relationships.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>9. Software Quality Metrics</h2>
+        <p>Metrics help evaluate how well the software meets user needs. Common metrics include:</p>
+        <ul>
+            <li><strong>Defect Density:</strong> Number of defects per line of code.</li>
+            <li><strong>Reliability:</strong> System uptime without failure.</li>
+            <li><strong>Maintainability:</strong> Ease of updating the software.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+If 100 defects are found in 10,000 LOC,
+Defect Density = 100 / 10,000 = 0.01 or 1%
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>10. Application Categories and Software Package Acquisition</h2>
+        <p>Applications can be:</p>
+        <ul>
+            <li><strong>Custom-Built:</strong> Tailored for specific needs.</li>
+            <li><strong>Packaged Software:</strong> Ready-made like MS Office, Tally.</li>
+        </ul>
+        <p><strong>Software Package Evaluation:</strong> Involves comparing features, cost, vendor support before purchasing.</p>
+        <pre class="matrix">
+Example:
+For accounting, compare:
+- Tally vs. Zoho Books
+Based on cost, usability, support, integration options.
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Information Requirement Analysis</h1>
+
+    <section class="section">
+        <h2>1. Process Modeling with Data Flow Diagrams (DFD)</h2>
+        <p><strong>Data Flow Diagrams (DFD)</strong> are graphical tools used to represent the flow of data through a system. They help in understanding how data is processed, stored, and transferred.</p>
+        <ul>
+            <li><strong>Logical DFD:</strong> Focuses on what the system does, without implementation details.</li>
+            <li><strong>Physical DFD:</strong> Shows how the system is implemented, including hardware, files, and programs used.</li>
+            <li><strong>DFD Symbols:</strong> 
+                <ul>
+                    <li><strong>Process:</strong> Oval or circle – shows data transformation.</li>
+                    <li><strong>Data Flow:</strong> Arrow – shows data movement.</li>
+                    <li><strong>Data Store:</strong> Open rectangle – represents files or databases.</li>
+                    <li><strong>External Entity:</strong> Square – source or destination of data.</li>
+                </ul>
+            </li>
+        </ul>
+        <pre class="matrix">
+Example:
+Library Management System - Logical DFD (Level 0):
+[Student] → (Request Book) → [Library System] → (Issue Book) → [Student]
+
+Physical DFD may include:
+- Barcode scanner hardware
+- SQL database for book inventory
+- Web server handling book issue logic
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Logical DFD vs Physical DFD</h2>
+        <p>Both represent data flow, but with different purposes:</p>
+        <ul>
+            <li><strong>Logical DFD:</strong> Describes what happens logically in the system.</li>
+            <li><strong>Physical DFD:</strong> Describes how the system will be physically built and operated.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Logical DFD:
+Process: "Process Order"
+Input: Customer Order
+Output: Order Confirmation
+
+Physical DFD:
+Process: "Process Order" implemented using:
+- Web Form
+- Order table in MySQL database
+- Confirmation Email Server
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Data Modeling with Entity Relationship Diagrams (ERD)</h2>
+        <p><strong>Entity Relationship Diagrams (ERD)</strong> help in visualizing and designing the structure of a database. They model entities (objects), their attributes (properties), and relationships.</p>
+        <ul>
+            <li><strong>Entity:</strong> Real-world object (e.g., Student, Course).</li>
+            <li><strong>Attribute:</strong> Properties of an entity (e.g., Name, ID).</li>
+            <li><strong>Relationship:</strong> How entities are connected (e.g., "enrolls in").</li>
+            <li><strong>Types of Relationships:</strong> One-to-One, One-to-Many, Many-to-Many</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Student(ID, Name, Email)
+Course(Code, Title, Credits)
+Relationship: Student "enrolls in" Course
+
+One Student → can enroll in many Courses (1:M)
+One Course → can have many Students (M:M)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Logical ERD</h2>
+        <p>Logical ERDs represent the business requirements of the system in terms of entities and relationships, independent of the database software or implementation details.</p>
+        <pre class="matrix">
+Example:
+Entities: Customer, Order
+Attributes:
+- Customer: ID, Name, Phone
+- Order: OrderID, Date, Amount
+Relationship: Customer "places" Order (1:M)
+
+This logical view helps design a normalized and efficient database structure.
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Developing a Proposal and System Design</h1>
+
+    <section class="section">
+        <h2>1. Feasibility Study</h2>
+        <p>A <strong>Feasibility Study</strong> determines whether a proposed system is practical and achievable before development begins. It helps in decision-making and risk reduction.</p>
+        <ul>
+            <li><strong>Technical Feasibility:</strong> Can we build it with current technology?</li>
+            <li><strong>Economic Feasibility:</strong> Is it cost-effective?</li>
+            <li><strong>Operational Feasibility:</strong> Will the users accept it?</li>
+            <li><strong>Schedule Feasibility:</strong> Can we complete it in time?</li>
+        </ul>
+        <pre class="matrix">
+Example:
+A college plans to digitize student attendance.
+Feasibility study checks:
+- Availability of barcode scanners (Technical)
+- Budget for software and hardware (Economic)
+- Teachers' readiness to use it (Operational)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Cost Estimation</h2>
+        <p><strong>Cost Estimation</strong> predicts the resources and money required for the system. It includes development, training, testing, hardware, and maintenance costs.</p>
+        <ul>
+            <li>Estimation techniques: Expert Judgment, Analogous Estimation, COCOMO Model</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Estimated Cost for Inventory System:
+- Developer Salary: ₹1,00,000
+- Server Hosting: ₹10,000
+- Training Staff: ₹5,000
+- Total: ₹1,15,000
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Design of Input and Control</h2>
+        <p><strong>Input Design</strong> ensures the system gets accurate and complete data from users. <strong>Input Controls</strong> prevent errors and fraud.</p>
+        <ul>
+            <li>Validation checks (e.g., format, range, mandatory fields)</li>
+            <li>Dropdowns, radio buttons for structured input</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Login Form:
+- Username: must be email format
+- Password: must be at least 8 characters
+- Submit button disabled until all fields are filled
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Design of Output and Control</h2>
+        <p><strong>Output Design</strong> focuses on presenting system results clearly. <strong>Output Controls</strong> ensure accuracy and security of output.</p>
+        <ul>
+            <li>Readable reports, dashboards, charts</li>
+            <li>Access control to sensitive outputs</li>
+        </ul>
+        <pre class="matrix">
+Example:
+- Student result sheet: shows marks, grades, and GPA
+- Only admin can export the results to PDF
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. File Design / Database Design</h2>
+        <p><strong>File Design</strong> involves organizing files to store system data efficiently. <strong>Database Design</strong> structures data into tables, keys, and relationships.</p>
+        <ul>
+            <li>Normalization avoids redundancy</li>
+            <li>Primary and foreign keys establish links</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Table: Students(StudentID, Name, DepartmentID)
+Table: Departments(DepartmentID, Name)
+→ One-to-many relationship between Departments and Students
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Process Design</h2>
+        <p><strong>Process Design</strong> defines how the system performs its functions – step-by-step instructions for data processing.</p>
+        <ul>
+            <li>Includes data transformations, business rules, and algorithms</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Online Shopping Cart:
+1. Add Item → Update Quantity → Calculate Total → Checkout → Send Invoice
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. User Interface (UI) Design</h2>
+        <p><strong>UI Design</strong> involves creating interfaces that are simple, efficient, and enjoyable to use.</p>
+        <ul>
+            <li>Consistency, clarity, and responsiveness are key</li>
+            <li>Use icons, tooltips, colors for feedback</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Banking App Dashboard:
+- Buttons: Transfer Money, View Balance
+- Tooltips for icons, and real-time balance update after transaction
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>8. Prototyping</h2>
+        <p><strong>Prototyping</strong> is the process of building a quick working model of a system to understand and validate user requirements.</p>
+        <ul>
+            <li>Used for collecting feedback before actual development</li>
+            <li>Can be low-fidelity (sketch) or high-fidelity (interactive UI)</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Create a clickable prototype for a hostel booking system:
+- Students click “Book Room” → Select room type → Preview charges → Confirm
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>9. Software Constructors</h2>
+        <p><strong>Software Constructors</strong> are tools and platforms used to build applications without writing full code manually.</p>
+        <ul>
+            <li>Examples: Visual Studio, Android Studio, No-code tools like Bubble or Zoho Creator</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Use Visual Studio to drag-and-drop UI components and auto-generate backend code for a Windows Form App.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>10. Documentation</h2>
+        <p><strong>Documentation</strong> provides details about system design, usage, and maintenance. It ensures knowledge transfer and future updates.</p>
+        <ul>
+            <li><strong>User Documentation:</strong> Guides end-users</li>
+            <li><strong>Technical Documentation:</strong> For developers and administrators</li>
+        </ul>
+        <pre class="matrix">
+Example:
+User Manual: "Click 'Submit' to save your form."
+Technical Doc: "Function SaveData() commits the record to SQL Server."
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Application Development Methodologies and CASE Tools</h1>
+
+    <section class="section">
+        <h2>1. Application Development Methodologies</h2>
+        <p>Application development methodologies are structured approaches to planning, designing, developing, and deploying software systems. They ensure better quality, collaboration, and predictable results.</p>
+        <ul>
+            <li><strong>Information Engineering (IE):</strong> Focuses on strategic planning and uses top-down analysis, data models, and process models to design systems.</li>
+            <li><strong>Structured System Analysis and Design (SSAD):</strong> Breaks the system into modules using DFDs, ERDs, and flowcharts. Emphasizes logical development before physical implementation.</li>
+            <li><strong>Object-Oriented Methodology:</strong> Models systems as a set of interacting objects that encapsulate both data and behavior. Uses concepts like class, object, inheritance, polymorphism, etc.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Banking Application
+- IE: Analyze organizational data needs before system design.
+- SSAD: Use DFDs to show customer login → balance inquiry → transaction.
+- OOP: Class "Account" with attributes (balance) and methods (deposit, withdraw).
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Data Modeling</h2>
+        <p><strong>Data Modeling</strong> defines how data is structured, stored, and related in a system. It’s a blueprint for database design.</p>
+        <ul>
+            <li><strong>Conceptual Data Model:</strong> High-level view of entities and relationships.</li>
+            <li><strong>Logical Data Model:</strong> Adds attributes, primary keys, foreign keys.</li>
+            <li><strong>Physical Data Model:</strong> Specifies database type, indexes, storage details.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Entity: Student(ID, Name, CourseID)
+Entity: Course(CourseID, Title)
+Relationship: Student "enrolled in" Course (M:1)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Process Modeling</h2>
+        <p><strong>Process Modeling</strong> describes how business processes operate within a system. It uses tools like DFDs, flowcharts, and activity diagrams.</p>
+        <ul>
+            <li>Helps understand system functionality before coding begins.</li>
+            <li>Improves communication between developers and stakeholders.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Online Order Process:
+- Customer places order → System checks inventory → Processes payment → Generates invoice → Updates stock.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. User Interface (UI) Design and Prototyping</h2>
+        <p><strong>UI Design:</strong> Focuses on creating an interface that is intuitive, efficient, and user-friendly.</p>
+        <p><strong>Prototyping:</strong> Building an early sample/mockup of the system to collect feedback and refine requirements.</p>
+        <ul>
+            <li><strong>Low-fidelity Prototypes:</strong> Sketches or wireframes.</li>
+            <li><strong>High-fidelity Prototypes:</strong> Interactive UI with close-to-final design.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Online Fee Payment Portal Prototype:
+- Homepage → Login Page → Dashboard → Pay Now → Payment Confirmation
+Tested with students before building the full system.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Computer-Aided Software Engineering (CASE) Tools</h2>
+        <p><strong>CASE tools</strong> are software programs that help in automating the steps of software development such as analysis, design, and coding.</p>
+        <ul>
+            <li><strong>Upper CASE Tools:</strong> Used in analysis and design phases (e.g., Rational Rose, Visual Paradigm).</li>
+            <li><strong>Lower CASE Tools:</strong> Help in implementation, coding, testing (e.g., Eclipse, NetBeans).</li>
+            <li><strong>Integrated CASE Tools:</strong> Cover entire SDLC (e.g., Enterprise Architect).</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Using Visual Paradigm:
+- Draw ERD and DFD
+- Generate class diagrams
+- Auto-generate Java code for classes
+This reduces manual effort and improves accuracy.
+        </pre>
+    </section>
+</div>
+
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Design and Implementation on Object-Oriented (OO) Platform</h1>
+
+    <section class="section">
+        <h2>1. Object-Oriented Analysis and Design (OOAD)</h2>
+        <p><strong>OOAD</strong> is a methodology for analyzing and designing a system by visualizing it as a group of interacting objects, each defined by its class, attributes, and behaviors.</p>
+        <ul>
+            <li><strong>Object-Oriented Analysis (OOA):</strong> Focuses on understanding and modeling the problem domain using objects.</li>
+            <li><strong>Object-Oriented Design (OOD):</strong> Converts analysis models into detailed design models, ready for implementation.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+In a University System:
+- Classes: Student, Professor, Course
+- Behaviors: Student registers(), Professor assignsGrade()
+OOA identifies classes; OOD defines relationships and interactions.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Object Modeling Technique (OMT)</h2>
+        <p><strong>Object Modeling Technique</strong> by James Rumbaugh provides a structured method for modeling systems using three models:</p>
+        <ul>
+            <li><strong>Object Model:</strong> Represents the static structure using classes and associations.</li>
+            <li><strong>Dynamic Model:</strong> Shows system behavior over time using state diagrams.</li>
+            <li><strong>Functional Model:</strong> Describes data transformations using data flow diagrams (DFDs).</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Object Model → Class: Account (Attributes: balance, owner)
+Dynamic Model → State: Active → Overdrawn → Closed
+Functional Model → Input: Deposit → Process: Update → Output: New Balance
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Object Modeling</h2>
+        <p><strong>Object Modeling</strong> defines the objects, their classes, attributes, methods, and relationships in the system.</p>
+        <ul>
+            <li><strong>Class:</strong> Template for objects.</li>
+            <li><strong>Attributes:</strong> Data stored in an object.</li>
+            <li><strong>Methods:</strong> Functions associated with an object.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Class: Book
+Attributes: title, author, ISBN
+Methods: issue(), return(), checkAvailability()
+Relationship: A Library has many Books (1:M)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Dynamic Modeling</h2>
+        <p><strong>Dynamic Modeling</strong> captures how objects behave and interact over time. It uses:</p>
+        <ul>
+            <li><strong>State Diagrams:</strong> Show states and transitions of an object.</li>
+            <li><strong>Sequence Diagrams:</strong> Show object interactions in a time sequence.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+ATM Card State Diagram:
+States → Inserted → Verified → Transaction Processing → Ejected
+Transitions based on user actions and validations.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Functional Object-Oriented Design</h2>
+        <p>This approach merges traditional functional decomposition with object-oriented design. It ensures:</p>
+        <ul>
+            <li>Well-defined class responsibilities</li>
+            <li>Separation of concerns between data and behavior</li>
+            <li>Modular and reusable code</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Class: Invoice
+Function: calculateTotal() → Calls calculateTax(), applyDiscount()
+All logic grouped logically inside the class → clean & reusable.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Object-Oriented Programming Systems (OOPS)</h2>
+        <p><strong>OOPS</strong> is the implementation of OOAD concepts using programming languages like Java, C++, or Python.</p>
+        <ul>
+            <li><strong>Key Concepts:</strong> Inheritance, Encapsulation, Abstraction, Polymorphism</li>
+        </ul>
+        <pre class="matrix">
+Example (Java):
+class Animal {
+    void speak() { System.out.println("Sound"); }
+}
+class Dog extends Animal {
+    void speak() { System.out.println("Bark"); }
+}
+Polymorphism: Animal a = new Dog(); → a.speak() → Outputs "Bark"
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Object-Oriented Databases (OODB)</h2>
+        <p><strong>Object-Oriented Databases</strong> store data as objects, similar to OOP languages. They support class hierarchies, methods, and complex data types.</p>
+        <ul>
+            <li>Data is accessed using object-oriented query languages (OQL)</li>
+            <li>Supports persistence of objects without conversion to tables</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Object: Student(Name, RollNo, Courses[])
+Can be saved and retrieved as an object in OODB like db4o or ObjectDB
+No need for SQL table conversion → seamless with OOP code
+        </pre>
+    </section>
+</div>
+<div class="topic-container" id="unit6">
+    <h1>UNIT-VI: Managerial Issues in Software Projects</h1>
+
+    <section class="section">
+        <h2>1. Introduction to Software Markets</h2>
+        <p>Software markets involve the development, distribution, and support of software products and services. They can be categorized as:</p>
+        <ul>
+            <li><strong>Packaged Software:</strong> General-purpose, like MS Office or Photoshop.</li>
+            <li><strong>Custom Software:</strong> Tailored for specific clients (e.g., Hospital Management System).</li>
+            <li><strong>SaaS (Software as a Service):</strong> Cloud-based access (e.g., Google Workspace, Zoom).</li>
+        </ul>
+        <pre class="matrix">
+Example:
+TCS and Infosys develop custom software for banks,
+while Adobe sells packaged creative tools globally.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>2. Planning of Software Projects</h2>
+        <p><strong>Project planning</strong> defines the roadmap for delivering the software within time and budget. It includes:</p>
+        <ul>
+            <li>Goal setting and scope definition</li>
+            <li>Identifying tasks and assigning responsibilities</li>
+            <li>Estimating timelines and resources</li>
+            <li>Risk management planning</li>
+        </ul>
+        <pre class="matrix">
+Example:
+In a mobile app project:
+- Scope: User login, chat, and notifications
+- Resources: 2 developers, 1 designer, 2 months
+- Plan: Week-by-week tasks scheduled
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Size and Cost Estimation</h2>
+        <p><strong>Size estimation</strong> measures how big the software is, and <strong>cost estimation</strong> predicts the budget required to develop it.</p>
+        <ul>
+            <li><strong>Function Point (FP):</strong> Counts functionalities like inputs, outputs, user interfaces.</li>
+            <li><strong>Lines of Code (LOC):</strong> Counts the number of lines in the final codebase.</li>
+            <li><strong>COCOMO Model:</strong> A mathematical model to estimate cost based on size.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Estimated LOC = 5,000
+Developer cost = ₹25/LOC → Total = ₹1,25,000
+Add testing, documentation, buffer = Total ~ ₹1.5 lakhs
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Project Scheduling</h2>
+        <p><strong>Scheduling</strong> involves defining a timeline for each task and milestone. Tools used:</p>
+        <ul>
+            <li><strong>Gantt Chart:</strong> Bar chart showing tasks over time.</li>
+            <li><strong>PERT Chart:</strong> Diagram that shows task dependencies and timelines.</li>
+        </ul>
+        <pre class="matrix">
+Example:
+Gantt Chart shows:
+Week 1–2: Requirement gathering  
+Week 3–5: Design  
+Week 6–9: Coding  
+Week 10–11: Testing  
+Week 12: Deployment
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Measuring Software Quality and Productivity</h2>
+        <p><strong>Software Quality</strong> ensures the product is reliable, secure, and meets user needs. <strong>Productivity</strong> measures how efficiently a team delivers software.</p>
+        <ul>
+            <li><strong>Defect Density:</strong> Number of bugs per 1,000 LOC</li>
+            <li><strong>Test Coverage:</strong> % of code covered by automated tests</li>
+            <li><strong>Productivity:</strong> LOC or features delivered per developer per month</li>
+        </ul>
+        <pre class="matrix">
+Example:
+- 10 defects in 2000 LOC → Defect Density = 5 per 1,000 LOC  
+- 1 developer delivers 500 LOC/week → Good productivity
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. ISO and Capability Maturity Models (CMM)</h2>
+        <p><strong>ISO (International Organization for Standardization)</strong> provides global standards for quality management in software (e.g., ISO 9001).</p>
+        <p><strong>Capability Maturity Model (CMM)</strong> helps organizations improve their software processes through 5 maturity levels:</p>
+        <ol>
+            <li><strong>Level 1:</strong> Initial – Ad hoc and chaotic process</li>
+            <li><strong>Level 2:</strong> Repeatable – Basic processes established</li>
+            <li><strong>Level 3:</strong> Defined – Organization-wide standards followed</li>
+            <li><strong>Level 4:</strong> Managed – Metrics are used to monitor processes</li>
+            <li><strong>Level 5:</strong> Optimizing – Continuous process improvement</li>
+        </ol>
+        <pre class="matrix">
+Example:
+A company at CMM Level 3 has defined coding standards and testing procedures.  
+At Level 5, it uses AI-based tools to optimize project delivery continuously.
+        </pre>
+    </section>
+</div>
+
 
      <!-- Footer  -->
     <div id="footer-placeholder"></div>
