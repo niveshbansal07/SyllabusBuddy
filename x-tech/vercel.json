@@ -11,11 +11,14 @@
       ]
     }
   ],
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/",
-      "destination": "/index.html"
-    },
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
     {
       "source": "/ads.txt",
       "destination": "/ads.txt"
