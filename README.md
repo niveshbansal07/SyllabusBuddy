@@ -1,1 +1,1 @@
-# studyHub
+# SyllabusBuddy 
