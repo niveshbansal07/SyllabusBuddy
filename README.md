@@ -52,6 +52,6 @@ XML – SEO and structured data integration
 Stay updated with future releases and features!
 
 Made with 💙 by Syllabus Team - 
-Nivesh bansal 'https://github.com/niveshbansal07'
+Nivesh bansal 'https://github.com/niveshbansal07' & 
 Ujjwal bansal 'https://github.com/UjjwalBansal2002'
 
