@@ -50,7 +50,6 @@
 
 
     <script>
-        // const adLink = "https://www.profitableratecpm.com/byexf0t23z?key=d7715f97b2bb34b526c407a717ce0540";
 
         async function loadSemesters() {
             try {
@@ -62,7 +61,6 @@
                     container.appendChild(createSemesterDOM(sem, idx));
                 });
 
-                // setupAdLinks(); // Setup ad behavior after DOM is ready
                 scrollToHashIfPresent();
             } catch (error) {
                 console.error("Error loading semesters data:", error);
@@ -124,18 +122,6 @@
         }
 
 
-        // function setupAdLinks() {
-        //     document.querySelectorAll("a.download-link").forEach(link => {
-        //         const href = link.getAttribute("href");
-        //         if (href && (href.includes("drive.google.com") || href.includes("docs.google.com"))) {
-        //             link.addEventListener("click", (e) => {
-        //                 e.preventDefault();
-        //                 localStorage.setItem("pendingDownload", href);
-        //                 window.location.href = adLink;
-        //             });
-        //         }
-        //     });
-        // }
 
         function handleDownloadAfterAd() {
             const pending = localStorage.getItem("pendingDownload");
@@ -150,15 +136,9 @@
         // Run on page load
         document.addEventListener("DOMContentLoaded", () => {
             loadSemesters();
-            handleDownloadAfterAd();
         });
 
-        // Detect back navigation (from ad page)
-        window.addEventListener("pageshow", (event) => {
-            if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
-                handleDownloadAfterAd();
-            }
-        });
+
     </script>
 
 
