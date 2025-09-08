@@ -37,7 +37,6 @@
 
 
     <script>
-        const adLink = "https://www.profitableratecpm.com/j9mj7e73eh?key=1a9f3c908465ef639dae2d8a4abbc5df";
 
         async function loadSemesters() {
             try {
@@ -48,8 +47,6 @@
                 semestersData.forEach(sem => {
                     container.appendChild(createSemesterDOM(sem));
                 });
-
-                setupAdLinks(); // Setup ad behavior after DOM is ready
             } catch (error) {
                 console.error("Error loading semesters data:", error);
             }
@@ -96,41 +93,12 @@
             return semesterEl;
         }
 
-        function setupAdLinks() {
-            document.querySelectorAll("a.download-link").forEach(link => {
-                const href = link.getAttribute("href");
-                if (href && (href.includes("drive.google.com") || href.includes("docs.google.com"))) {
-                    link.addEventListener("click", (e) => {
-                        e.preventDefault();
-                        localStorage.setItem("pendingDownload", href);
-                        window.location.href = adLink;
-                    });
-                }
-            });
-        }
 
-        function handleDownloadAfterAd() {
-            const pending = localStorage.getItem("pendingDownload");
-            if (pending) {
-                localStorage.removeItem("pendingDownload");
-                setTimeout(() => {
-                    window.location.href = pending;
-                }, 500);
-            }
-        }
-
-        // Run on page load
         document.addEventListener("DOMContentLoaded", () => {
             loadSemesters();
-            handleDownloadAfterAd();
         });
 
-        // Detect back navigation (from ad page)
-        window.addEventListener("pageshow", (event) => {
-            if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
-                handleDownloadAfterAd();
-            }
-        });
+
     </script>
 
 
