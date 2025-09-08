@@ -871,45 +871,15 @@
   <button id="scrollTopBtn" title="Go to top">↑</button>
   <script src="../script/include.js"></script>
   <script>
-    console.log(document.querySelectorAll("a"))
-
-
-    const adLink = "https://www.profitableratecpm.com/byexf0t23z?key=d7715f97b2bb34b526c407a717ce0540";
-
-    function handleDownloadAfterAd() {
-      const pending = localStorage.getItem("pendingDownload");
-      if (pending) {
-        localStorage.removeItem("pendingDownload");
-        // Wait a moment to avoid race condition on back navigation
-        setTimeout(() => {
-          window.location.href = pending;
-        }, 500); // You can increase delay if needed
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      handleDownloadAfterAd(); // trigger download if coming back from ad
-
-      document.querySelectorAll("a").forEach(link => {
-        const href = link.getAttribute("href");
-        if (href && href.includes("drive.google.com") || href && href.includes("docs.google.com")) {
-          link.addEventListener("click", (e) => {
-            e.preventDefault();
-            localStorage.setItem("pendingDownload", href);
-            window.location.href = adLink; // open ad in same tab
-          });
-        }
-      });
-    });
 
 
 
-    // Also catch when coming back from ad (browser back)
-    window.addEventListener("pageshow", (event) => {
-      if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
-        handleDownloadAfterAd();
-      }
-    });
+
+
+
+
+
+
 
     const scrollTopBtn = document.getElementById("scrollTopBtn");
 
@@ -933,5 +903,6 @@
 
   </script>
 </body>
+
 
 </html>
