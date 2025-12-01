@@ -51,7 +51,7 @@
     transition: transform 0.2s ease, background 0.3s ease;
     font-weight: bold;
     animation: zoomIn 1s ease;
-    width: 60px;
+    width: 80px;
     height: 40px;
 }
 
@@ -114,7 +114,7 @@
     }
 
     .year-card {
-        width: 50px;
+        width: 60px;
         height: 40px;
         font-size: 14px;
     }
@@ -131,8 +131,9 @@
     }
 
     .year-card {
-        width: 45px;
+        width: 55px;
         height: 35px;
         font-size: 13px;
     }
 }
+
